@@ -1,9 +1,115 @@
-void setup() {
-  // put your setup code here, to run once:
+/******************************************************************************
+ * 
+ *****************************************************************************/
 
+
+// Config Variables //
+
+#define NUM_VM_PINS 2
+#define NUM_BTN_COLS 6
+#define NUM_BTN_ROWS 3
+
+// Software Debounce
+// Number of high or low senses that trigger a press or release
+#define MAX_DEBOUNCE 6
+
+#define VIBERATE_DURRATION_MS 100
+
+// Hardware Setup //
+
+static const uint8_t vibeMtrPins[NUM_VM_PINS] = {5, 6};
+static const uint8_t btnRowPins[NUM_BTN_ROWS] = {15, 14, 16};
+static const uint8_t btnColPins[NUM_BTN_COLS] = {2, 3, 4, 7, 8, 9};
+
+// Global Variables //
+
+static int8_t debounce_count[NUM_BTN_COLS][NUM_BTN_ROWS];
+
+void setup() {
+  Serial.begin(9600);
+  setupSwitchPins();
+  setupVibeMotorPins();
+
+  // Initialize the debounce counter array
+  for (uint8_t i = 0; i < NUM_BTN_COLS; i++) {
+    for (uint8_t j = 0; j < NUM_BTN_ROWS; j++) {
+      debounce_count[i][j] = 0;
+    }
+  }
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  scan();
+}
 
+static void scan() {
+  static uint8_t currentRow = 0;
+  uint8_t i;
+
+  digitalWrite(btnRowPins[currentRow], LOW);
+
+  
+  for ( i = 0; i < NUM_BTN_COLS; i++) {
+    if (digitalRead(btnColPins[i]) == LOW) {
+      if ( debounce_count[currentRow][i] < MAX_DEBOUNCE) {
+        debounce_count[currentRow][i]++;
+        if ( debounce_count[currentRow][i] == MAX_DEBOUNCE ) {
+          Serial.print("Key Down: "); 
+          Serial.println((currentRow * NUM_BTN_COLS) + i);
+          vibrate_on();
+        }
+      }
+    } else {
+      if ( debounce_count[currentRow][i] == MAX_DEBOUNCE) {
+        Serial.print("Key Up: ");
+        Serial.println((currentRow * NUM_BTN_COLS) + i);
+        debounce_count[currentRow][i] = 0;
+        vibrate_off();
+      }
+    }
+  }
+
+  // Once done scanning, de-select the switch rows
+  digitalWrite(btnRowPins[currentRow], HIGH);
+  
+  // Increment currentRow, so next time we scan the next row
+  currentRow++;
+  if (currentRow >= NUM_BTN_ROWS) {
+    currentRow = 0;
+  }
+}
+
+static void setupVibeMotorPins() {
+  for (uint8_t i = 0; i < NUM_VM_PINS; i++)  {
+    pinMode(vibeMtrPins[i], OUTPUT);
+    digitalWrite(vibeMtrPins[i], LOW);
+  }
+}
+
+static void vibrate_off() {
+  for (uint8_t i = 0; i < NUM_VM_PINS; i++)  {
+    digitalWrite(vibeMtrPins[i], LOW);
+  }
+}
+
+static void vibrate_on() {
+  for (uint8_t i = 0; i < NUM_VM_PINS; i++)  {
+    digitalWrite(vibeMtrPins[i], HIGH);
+  }
+  delay(VIBERATE_DURRATION_MS);
+}
+
+static void setupSwitchPins() {
+  uint8_t i;
+
+  // Button drive rows - written LOW when active, HIGH otherwise
+  for (i = 0; i < NUM_BTN_ROWS; i++)  {
+    pinMode(btnRowPins[i], OUTPUT);
+    digitalWrite(btnRowPins[i], HIGH);
+  }
+
+  // Buttn select columns. Pulled high through resistor. Will be LOW when active
+  for (i = 0; i < NUM_BTN_COLS; i++)  {
+    pinMode(btnColPins[i], INPUT_PULLUP);
+  }
 }
