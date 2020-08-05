@@ -39,7 +39,7 @@ function keyDownHandler(event)
 		$("#btn-c3r2").focus().click();
 	} else if (keyPressed == "T") {
 		$("#btn-c4r0").focus().click();
-	} else if (keyPressed == " ") {
+	} else if (keyPressed == "B") {
 		$("#btn-c4r2").focus().click();
 	} else if (keyPressed == "1"){
 		$("#btn-c5r0").focus().click();

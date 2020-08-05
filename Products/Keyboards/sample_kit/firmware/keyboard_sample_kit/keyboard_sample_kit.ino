@@ -27,7 +27,7 @@ static const uint8_t btnColPins[NUM_BTN_COLS] = {2, 3, 4, 7, 8, 9};
 static const char btnKeyCmds[NUM_BTN_ROWS][NUM_BTN_COLS] = {
   "qwert1",
   "asdf-2",
-  "zxcv 3"
+  "zxcvb3"
 };
 
 // Global Variables //
