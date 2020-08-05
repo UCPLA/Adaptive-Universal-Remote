@@ -1,0 +1,17 @@
+.btn-sm { 
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5rem 1rem;
+}
+
+.btn-md { 
+    width: 8rem;
+    height: 8rem;
+    margin: 0.5rem 1rem;
+}
+
+.btn-lg { 
+    width: 12rem;
+    height: 12rem;
+    margin: 0.8rem 1rem;
+}

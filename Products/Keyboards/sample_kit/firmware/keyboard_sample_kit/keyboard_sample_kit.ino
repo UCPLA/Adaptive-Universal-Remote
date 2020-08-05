@@ -25,9 +25,9 @@ static const uint8_t btnColPins[NUM_BTN_COLS] = {2, 3, 4, 7, 8, 9};
 
 // The key assigned to each button
 static const char btnKeyCmds[NUM_BTN_ROWS][NUM_BTN_COLS] = {
-  "abcdef",
-  "ghij k",
-  "lmnopq"
+  "qwert1",
+  "asdf-2",
+  "zxcv 3"
 };
 
 // Global Variables //
