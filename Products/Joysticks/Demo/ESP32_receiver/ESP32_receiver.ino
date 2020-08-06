@@ -183,7 +183,7 @@ void setup() {
   EEPROM.begin(EEPROM_SIZE);
 
   Keyboard.begin();
-  Mouse.begin();
+  // Mouse.begin();
 // Set device as a Wi-Fi Station
   WiFi.mode(WIFI_STA);
 
@@ -214,9 +214,9 @@ void setup() {
   gyrYOffset=EEPROM_readFloat(48);
   gyrZOffset=EEPROM_readFloat(51);
 
-  Serial.println(gyrXOffset);
-  Serial.println(gyrYOffset);
-  Serial.println(gyrZOffset);
+  //Serial.println(gyrXOffset);
+  //Serial.println(gyrYOffset);
+  //Serial.println(gyrZOffset);
   
   // Once ESPNow is successfully Init, we will register for recv CB to
   // get recv packer info
@@ -224,7 +224,7 @@ void setup() {
 }
  
 void loop() {
-  Serial.println(abs(pitch)+abs(roll)+abs(yaw));
+  //Serial.println(abs(pitch)+abs(roll)+abs(yaw));
     if (abs(pitch)+abs(roll)+abs(yaw)!=0){
       for (int i=0; i<numRows; i++){ //0,1,2,3,4    //Calculate RMS error and find closest position
           err[i]=errorCalc(pitch, roll, yaw, calibVal[i][0], calibVal[i][1], calibVal[i][2]);
@@ -235,7 +235,7 @@ void loop() {
       
       if (closestPos==closestPosPrev){
         Keyboard.releaseAll();
-        Mouse.release();
+        //Mouse.release();
         keyCount+=1;
       }
       else{
@@ -336,7 +336,7 @@ void loop() {
               case 1:
                 Keyboard.press(32);  
                 delay(10);
-                Keyboard.press(32);
+                Keyboard.releaseAll();
                 //Serial.println("Hold Mouse click");
                 break;
               case 2:
