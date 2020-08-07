@@ -1,3 +1,8 @@
+.container, h1 {
+	padding-top: 1.5rem;
+	padding-bottom: 0.5rem;
+}
+
 button, h1 {
 	font-weight: bold;
 }
