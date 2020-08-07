@@ -7,7 +7,6 @@
    Remote demo software.
  ****************************************************************************/
 
-
 #include "Keyboard.h"
 
 // Config Variables
@@ -18,7 +17,7 @@
 // Software Debounce
 // Number of high or low senses that trigger a press or release
 #define MAX_DEBOUNCE 6
-#define MAX_CAPT_DEBOUNCE 120
+#define MAX_CAPT_DEBOUNCE 220
 
 #define VIBERATE_DURRATION_MS 100
 
@@ -30,15 +29,15 @@ static const uint8_t capTouchPin = 20;
 
 // The key assigned to each button
 static const char btnKeyCmds[NUM_BTN_ROWS][NUM_BTN_COLS] = {
-  "qwert1",
-  "asdf-2",
-  "zxcvb3"
+  "qwert2",
+  "asdf-1",
+  "zxcvb0"
 };
 static const char capTouchCmd = btnKeyCmds[0][3];
 
 // Global Variables
 static int8_t debounce_count[NUM_BTN_ROWS][NUM_BTN_COLS];
-static int8_t capt_debounce_cnt;
+static int16_t capt_debounce_cnt;
 
 void setup() {
 
@@ -62,24 +61,76 @@ void loop() {
   scan_cap_touch();
 }
 
+static void send_key_down(char key_cmd) {
+  Serial.print("Key(s) Down: ");
+  switch (key_cmd) {
+    // Browser back 
+    case '0':
+      Serial.println("Alt + Left_arrow");
+      Keyboard.press(KEY_LEFT_ALT);
+      Keyboard.press(KEY_LEFT_ARROW);
+      break;
+    // Browser Home
+    case '1':
+      Serial.println("Alt + Home");
+      Keyboard.press(KEY_LEFT_ALT);
+      Keyboard.press(KEY_HOME);
+      break;
+    // Browser forward
+    case '2':
+      Serial.println("Alt + Right_arrow");
+      Keyboard.press(KEY_LEFT_ALT);
+      Keyboard.press(KEY_RIGHT_ARROW);
+      break;
+    // Press key_cmd
+    default:
+      Serial.println(key_cmd);
+      Keyboard.press(key_cmd);
+      vibrate_on();
+  }
+}
+
+static void send_key_up(char key_cmd) {
+  Serial.print("Key(s) Up: ");
+  switch (key_cmd) {
+    // Browser back 
+    case '0':
+      Serial.println("Alt + Left_arrow");
+      Keyboard.release(KEY_LEFT_ARROW);
+      Keyboard.release(KEY_LEFT_ALT);
+      break;
+    // Browser Home
+    case '1':
+      Serial.println("Alt + Home");
+      Keyboard.release(KEY_HOME);
+      Keyboard.release(KEY_LEFT_ALT);
+      break;
+    // Browser forward
+    case '2':
+      Serial.println("Alt + Right_arrow");
+      Keyboard.release(KEY_RIGHT_ARROW);
+      Keyboard.release(KEY_LEFT_ALT);
+      break;
+    // Press key_cmd
+    default:
+      Serial.println(key_cmd);
+      Keyboard.release(key_cmd);
+      vibrate_off();
+  }
+}
+
 static void scan_cap_touch() {
   if (digitalRead(capTouchPin) == HIGH) {
     if (capt_debounce_cnt < MAX_CAPT_DEBOUNCE) {
       capt_debounce_cnt++;
       if (capt_debounce_cnt == MAX_CAPT_DEBOUNCE) {
-        Serial.print("Key Down: ");
-        Serial.println(capTouchCmd);
-        Keyboard.press(capTouchCmd);
-        vibrate_on();
+        send_key_down(capTouchCmd);
       }
     }
   } else {
     if (capt_debounce_cnt > 0) {
       capt_debounce_cnt = 0;
-      Serial.print("Key Up: ");
-      Serial.println(capTouchCmd);
-      Keyboard.release(capTouchCmd);
-      vibrate_off();
+      send_key_up(capTouchCmd);
     }
   }
 }
@@ -95,28 +146,22 @@ static void scan_switch_matrix() {
       if (debounce_count[currentRow][i] < MAX_DEBOUNCE) {
         debounce_count[currentRow][i]++;
         if (debounce_count[currentRow][i] == MAX_DEBOUNCE) {
-          Serial.print("Key Down: ");
-          Serial.println(btnKeyCmds[currentRow][i]);
-          Keyboard.press(btnKeyCmds[currentRow][i]);
-          vibrate_on();
+          send_key_down(btnKeyCmds[currentRow][i]);
         }
       }
     } else {
       if (debounce_count[currentRow][i] > 0) {
         debounce_count[currentRow][i]--;
         if (debounce_count[currentRow][i] == 0 ) {
-          Serial.print("Key Up: ");
-          Serial.println(btnKeyCmds[currentRow][i]);
-          Keyboard.release(btnKeyCmds[currentRow][i]);
-          vibrate_off();
+          send_key_up(btnKeyCmds[currentRow][i]);
         }
       }
     }
   }
-  // Once done scanning, de-select the switch rows
+  
+  // Once done scanning, de-select the current row
   digitalWrite(btnRowPins[currentRow], HIGH);
-
-  // Increment currentRow, so next time we scan the next row
+  // Set the next row to be scanned
   currentRow++;
   if (currentRow >= NUM_BTN_ROWS) {
     currentRow = 0;
