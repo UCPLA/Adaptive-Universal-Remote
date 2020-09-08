@@ -18,33 +18,33 @@
 <layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
-<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="yes" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="yes"/>
-<layer number="51" name="tDocu" color="6" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
@@ -161,15 +161,6 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="48.26" x2="143.51" y2="48.26" width="0.254" layer="49"/>
-<wire x1="143.51" y1="48.26" x2="143.51" y2="2.54" width="0.254" layer="49"/>
-<wire x1="140.97" y1="0" x2="2.54" y2="0" width="0.254" layer="49"/>
-<wire x1="0" y1="2.54" x2="0" y2="17.78" width="0.254" layer="49"/>
-<wire x1="0" y1="17.78" x2="5.08" y2="17.78" width="0.254" layer="49"/>
-<wire x1="5.08" y1="17.78" x2="5.08" y2="30.48" width="0.254" layer="49"/>
-<wire x1="5.08" y1="30.48" x2="0" y2="30.48" width="0.254" layer="49"/>
-<wire x1="0" y1="30.48" x2="0" y2="48.26" width="0.254" layer="49"/>
-<wire x1="0" y1="2.54" x2="2.54" y2="0" width="0.254" layer="49" curve="90"/>
 <wire x1="140.97" y1="0" x2="143.51" y2="2.54" width="0.254" layer="49" curve="90"/>
 <wire x1="203.2" y1="149.86" x2="203.2" y2="2.54" width="0.1524" layer="20"/>
 <wire x1="203.2" y1="2.54" x2="200.66" y2="0" width="0.1524" layer="20" curve="-90"/>
@@ -179,237 +170,1048 @@
 <wire x1="0" y1="149.86" x2="2.54" y2="152.4" width="0.1524" layer="20" curve="-90"/>
 <wire x1="2.54" y1="152.4" x2="200.66" y2="152.4" width="0.1524" layer="20"/>
 <wire x1="200.66" y1="152.4" x2="203.2" y2="149.86" width="0.1524" layer="20" curve="-90"/>
+<wire x1="72.39" y1="149.86" x2="72.39" y2="96.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="72.3392" y1="96.52" x2="72.4408" y2="96.52" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="72.4408" y1="149.86" x2="72.3392" y2="149.86" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="72.39" y1="96.52" x2="74.93" y2="93.98" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="72.4408" y1="96.52" x2="72.3392" y2="96.52" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="74.93" y1="93.9292" x2="74.93" y2="94.0308" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="74.93" y1="93.98" x2="92.71" y2="93.98" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.71" y1="93.9292" x2="92.71" y2="94.0308" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="74.93" y1="94.0308" x2="74.93" y2="93.9292" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="92.71" y1="93.98" x2="95.25" y2="96.52" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="92.71" y1="94.0308" x2="92.71" y2="93.9292" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="95.3008" y1="96.52" x2="95.1992" y2="96.52" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="95.25" y1="96.52" x2="95.25" y2="149.86" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="95.3008" y1="149.86" x2="95.1992" y2="149.86" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="95.1992" y1="96.52" x2="95.3008" y2="96.52" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="95.25" y1="149.86" x2="92.71" y2="152.4" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="95.1992" y1="149.86" x2="95.3008" y2="149.86" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="92.71" y1="152.4508" x2="92.71" y2="152.3492" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="92.71" y1="152.4" x2="74.93" y2="152.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.93" y1="152.4508" x2="74.93" y2="152.3492" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="92.71" y1="152.3492" x2="92.71" y2="152.4508" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="74.93" y1="152.4" x2="72.39" y2="149.86" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="74.93" y1="152.3492" x2="74.93" y2="152.4508" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="72.3392" y1="149.86" x2="72.4408" y2="149.86" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<circle x="92.71" y="149.86" radius="1.524" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<circle x="74.93" y="149.86" radius="1.524" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.549" y1="153.1832" x2="87.5109" y2="153.1832" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.5109" y1="153.1832" x2="80.0871" y2="153.1832" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.0871" y1="153.1832" x2="80.049" y2="153.1832" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.049" y1="153.2213" x2="80.0109" y2="153.1832" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="80.0109" y1="153.1832" x2="80.049" y2="153.1451" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="87.549" y1="153.1451" x2="87.5871" y2="153.1832" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="87.5871" y1="153.1832" x2="87.549" y2="153.2213" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="80.049" y1="153.1832" x2="80.049" y2="148.2213" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.049" y1="148.2213" x2="80.049" y2="148.1832" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.0109" y1="148.1832" x2="80.049" y2="148.1451" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="80.049" y1="148.1451" x2="80.0871" y2="148.1832" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="80.0871" y1="153.1832" x2="80.0109" y2="153.1832" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="80.049" y1="148.1832" x2="87.5109" y2="148.1832" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.5109" y1="148.1832" x2="87.549" y2="148.1832" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.549" y1="148.1451" x2="87.5871" y2="148.1832" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="87.5871" y1="148.1832" x2="87.549" y2="148.2213" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="80.049" y1="148.2213" x2="80.049" y2="148.1451" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="87.549" y1="148.1832" x2="87.549" y2="153.1832" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.5871" y1="153.1832" x2="87.5109" y2="153.1832" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="87.5109" y1="148.1832" x2="87.5871" y2="148.1832" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.779" y1="153.8032" x2="87.819" y2="153.8032" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.819" y1="153.7651" x2="87.819" y2="153.8413" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.779" y1="153.8413" x2="79.779" y2="153.7651" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="87.819" y1="153.8032" x2="87.549" y2="153.1832" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.5141" y1="153.1984" x2="87.5839" y2="153.168" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="87.8539" y1="153.788" x2="87.7841" y2="153.8184" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.779" y1="153.8032" x2="80.049" y2="153.1832" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.0141" y1="153.168" x2="80.0839" y2="153.1984" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.8139" y1="153.8184" x2="79.7441" y2="153.788" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="101.07" x2="92.82" y2="101.22" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="101.22" x2="92.7593" y2="101.2217" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="101.2217" x2="92.7" y2="101.2351" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="101.2351" x2="92.6446" y2="101.2599" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="101.2599" x2="92.595" y2="101.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="101.295" x2="92.5506" y2="101.3507" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="101.3507" x2="92.5197" y2="101.4149" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="101.4149" x2="92.5038" y2="101.4844" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="101.4844" x2="92.5038" y2="101.5556" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="101.5556" x2="92.5197" y2="101.6251" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="101.6251" x2="92.5506" y2="101.6893" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="101.6893" x2="92.595" y2="101.745" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="101.745" x2="92.6446" y2="101.7801" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="101.7801" x2="92.7" y2="101.8049" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="101.8049" x2="92.7593" y2="101.8183" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="101.8183" x2="92.82" y2="101.82" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="101.82" x2="92.82" y2="101.97" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="101.97" x2="92.37" y2="101.97" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="101.97" x2="92.37" y2="101.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="101.07" x2="92.82" y2="101.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="102.34" x2="92.82" y2="102.49" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="102.49" x2="92.7593" y2="102.4917" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="102.4917" x2="92.7" y2="102.5051" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="102.5051" x2="92.6446" y2="102.5299" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="102.5299" x2="92.595" y2="102.565" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="102.565" x2="92.5506" y2="102.6207" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="102.6207" x2="92.5197" y2="102.6849" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="102.6849" x2="92.5038" y2="102.7544" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="102.7544" x2="92.5038" y2="102.8256" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="102.8256" x2="92.5197" y2="102.8951" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="102.8951" x2="92.5506" y2="102.9593" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="102.9593" x2="92.595" y2="103.015" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="103.015" x2="92.6446" y2="103.0501" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="103.0501" x2="92.7" y2="103.0749" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="103.0749" x2="92.7593" y2="103.0883" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="103.0883" x2="92.82" y2="103.09" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="103.09" x2="92.82" y2="103.24" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="103.24" x2="92.37" y2="103.24" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="103.24" x2="92.37" y2="102.34" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="102.34" x2="92.82" y2="102.34" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="103.61" x2="92.82" y2="103.76" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="103.76" x2="92.7593" y2="103.7617" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="103.7617" x2="92.7" y2="103.7751" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="103.7751" x2="92.6446" y2="103.7999" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="103.7999" x2="92.595" y2="103.835" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="103.835" x2="92.5506" y2="103.8907" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="103.8907" x2="92.5197" y2="103.9549" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="103.9549" x2="92.5038" y2="104.0244" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="104.0244" x2="92.5038" y2="104.0956" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="104.0956" x2="92.5197" y2="104.1651" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="104.1651" x2="92.5506" y2="104.2293" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="104.2293" x2="92.595" y2="104.285" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="104.285" x2="92.6446" y2="104.3201" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="104.3201" x2="92.7" y2="104.3449" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="104.3449" x2="92.7593" y2="104.3583" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="104.3583" x2="92.82" y2="104.36" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="104.36" x2="92.82" y2="104.51" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="104.51" x2="92.37" y2="104.51" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="104.51" x2="92.37" y2="103.61" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="103.61" x2="92.82" y2="103.61" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="104.88" x2="92.82" y2="105.03" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="105.03" x2="92.7593" y2="105.0317" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="105.0317" x2="92.7" y2="105.0451" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="105.0451" x2="92.6446" y2="105.0699" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="105.0699" x2="92.595" y2="105.105" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="105.105" x2="92.5506" y2="105.1607" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="105.1607" x2="92.5197" y2="105.2249" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="105.2249" x2="92.5038" y2="105.2944" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="105.2944" x2="92.5038" y2="105.3656" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="105.3656" x2="92.5197" y2="105.4351" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="105.4351" x2="92.5506" y2="105.4993" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="105.4993" x2="92.595" y2="105.555" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="105.555" x2="92.6446" y2="105.5901" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="105.5901" x2="92.7" y2="105.6149" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="105.6149" x2="92.7593" y2="105.6283" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="105.6283" x2="92.82" y2="105.63" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="105.63" x2="92.82" y2="105.78" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="105.78" x2="92.37" y2="105.78" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="105.78" x2="92.37" y2="104.88" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="104.88" x2="92.82" y2="104.88" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="106.15" x2="92.82" y2="106.3" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="106.3" x2="92.7593" y2="106.3017" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="106.3017" x2="92.7" y2="106.3151" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="106.3151" x2="92.6446" y2="106.3399" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="106.3399" x2="92.595" y2="106.375" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="106.375" x2="92.5506" y2="106.4307" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="106.4307" x2="92.5197" y2="106.4949" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="106.4949" x2="92.5038" y2="106.5644" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="106.5644" x2="92.5038" y2="106.6356" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="106.6356" x2="92.5197" y2="106.7051" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="106.7051" x2="92.5506" y2="106.7693" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="106.7693" x2="92.595" y2="106.825" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="106.825" x2="92.6446" y2="106.8601" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="106.8601" x2="92.7" y2="106.8849" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="106.8849" x2="92.7593" y2="106.8983" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="106.8983" x2="92.82" y2="106.9" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="106.9" x2="92.82" y2="107.05" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="107.05" x2="92.37" y2="107.05" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="107.05" x2="92.37" y2="106.15" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="106.15" x2="92.82" y2="106.15" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="107.42" x2="92.82" y2="107.57" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="107.57" x2="92.7593" y2="107.5717" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="107.5717" x2="92.7" y2="107.5851" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="107.5851" x2="92.6446" y2="107.6099" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="107.6099" x2="92.595" y2="107.645" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="107.645" x2="92.5506" y2="107.7007" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="107.7007" x2="92.5197" y2="107.7649" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="107.7649" x2="92.5038" y2="107.8344" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="107.8344" x2="92.5038" y2="107.9056" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="107.9056" x2="92.5197" y2="107.9751" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="107.9751" x2="92.5506" y2="108.0393" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="108.0393" x2="92.595" y2="108.095" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="108.095" x2="92.6446" y2="108.1301" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="108.1301" x2="92.7" y2="108.1549" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="108.1549" x2="92.7593" y2="108.1683" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="108.1683" x2="92.82" y2="108.17" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="108.17" x2="92.82" y2="108.32" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="108.32" x2="92.37" y2="108.32" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="108.32" x2="92.37" y2="107.42" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="107.42" x2="92.82" y2="107.42" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="108.69" x2="92.82" y2="108.84" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="108.84" x2="92.7593" y2="108.8417" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="108.8417" x2="92.7" y2="108.8551" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="108.8551" x2="92.6446" y2="108.8799" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="108.8799" x2="92.595" y2="108.915" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="108.915" x2="92.5506" y2="108.9707" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="108.9707" x2="92.5197" y2="109.0349" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="109.0349" x2="92.5038" y2="109.1044" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="109.1044" x2="92.5038" y2="109.1756" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="109.1756" x2="92.5197" y2="109.2451" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="109.2451" x2="92.5506" y2="109.3093" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="109.3093" x2="92.595" y2="109.365" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="109.365" x2="92.6446" y2="109.4001" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="109.4001" x2="92.7" y2="109.4249" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="109.4249" x2="92.7593" y2="109.4383" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="109.4383" x2="92.82" y2="109.44" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="109.44" x2="92.82" y2="109.59" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="109.59" x2="92.37" y2="109.59" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="109.59" x2="92.37" y2="108.69" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="108.69" x2="92.82" y2="108.69" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="109.96" x2="92.82" y2="110.11" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="110.11" x2="92.7593" y2="110.1117" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="110.1117" x2="92.7" y2="110.1251" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="110.1251" x2="92.6446" y2="110.1499" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="110.1499" x2="92.595" y2="110.185" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="110.185" x2="92.5506" y2="110.2407" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="110.2407" x2="92.5197" y2="110.3049" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="110.3049" x2="92.5038" y2="110.3744" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="110.3744" x2="92.5038" y2="110.4456" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="110.4456" x2="92.5197" y2="110.5151" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="110.5151" x2="92.5506" y2="110.5793" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="110.5793" x2="92.595" y2="110.635" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="110.635" x2="92.6446" y2="110.6701" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="110.6701" x2="92.7" y2="110.6949" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="110.6949" x2="92.7593" y2="110.7083" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="110.7083" x2="92.82" y2="110.71" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="110.71" x2="92.82" y2="110.86" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="110.86" x2="92.37" y2="110.86" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="110.86" x2="92.37" y2="109.96" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="109.96" x2="92.82" y2="109.96" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="111.23" x2="92.82" y2="111.38" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="111.38" x2="92.7593" y2="111.3817" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="111.3817" x2="92.7" y2="111.3951" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="111.3951" x2="92.6446" y2="111.4199" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="111.4199" x2="92.595" y2="111.455" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="111.455" x2="92.5506" y2="111.5107" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="111.5107" x2="92.5197" y2="111.5749" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="111.5749" x2="92.5038" y2="111.6444" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="111.6444" x2="92.5038" y2="111.7156" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="111.7156" x2="92.5197" y2="111.7851" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="111.7851" x2="92.5506" y2="111.8493" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="111.8493" x2="92.595" y2="111.905" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="111.905" x2="92.6446" y2="111.9401" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="111.9401" x2="92.7" y2="111.9649" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="111.9649" x2="92.7593" y2="111.9783" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="111.9783" x2="92.82" y2="111.98" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="111.98" x2="92.82" y2="112.13" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="112.13" x2="92.37" y2="112.13" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="112.13" x2="92.37" y2="111.23" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="111.23" x2="92.82" y2="111.23" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="112.5" x2="92.82" y2="112.65" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="112.65" x2="92.7593" y2="112.6517" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="112.6517" x2="92.7" y2="112.6651" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="112.6651" x2="92.6446" y2="112.6899" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="112.6899" x2="92.595" y2="112.725" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="112.725" x2="92.5506" y2="112.7807" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="112.7807" x2="92.5197" y2="112.8449" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="112.8449" x2="92.5038" y2="112.9144" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="112.9144" x2="92.5038" y2="112.9856" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="112.9856" x2="92.5197" y2="113.0551" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="113.0551" x2="92.5506" y2="113.1193" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="113.1193" x2="92.595" y2="113.175" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="113.175" x2="92.6446" y2="113.2101" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="113.2101" x2="92.7" y2="113.2349" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="113.2349" x2="92.7593" y2="113.2483" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="113.2483" x2="92.82" y2="113.25" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="113.25" x2="92.82" y2="113.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="113.4" x2="92.37" y2="113.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="113.4" x2="92.37" y2="112.5" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="112.5" x2="92.82" y2="112.5" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="113.77" x2="92.82" y2="113.92" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="113.92" x2="92.7593" y2="113.9217" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="113.9217" x2="92.7" y2="113.9351" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="113.9351" x2="92.6446" y2="113.9599" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="113.9599" x2="92.595" y2="113.995" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="113.995" x2="92.5506" y2="114.0507" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="114.0507" x2="92.5197" y2="114.1149" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="114.1149" x2="92.5038" y2="114.1844" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="114.1844" x2="92.5038" y2="114.2556" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="114.2556" x2="92.5197" y2="114.3251" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="114.3251" x2="92.5506" y2="114.3893" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="114.3893" x2="92.595" y2="114.445" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="114.445" x2="92.6446" y2="114.4801" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="114.4801" x2="92.7" y2="114.5049" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="114.5049" x2="92.7593" y2="114.5183" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="114.5183" x2="92.82" y2="114.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="114.52" x2="92.82" y2="114.67" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="114.67" x2="92.37" y2="114.67" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="114.67" x2="92.37" y2="113.77" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="113.77" x2="92.82" y2="113.77" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="115.04" x2="92.82" y2="115.19" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="115.19" x2="92.7593" y2="115.1917" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="115.1917" x2="92.7" y2="115.2051" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="115.2051" x2="92.6446" y2="115.2299" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="115.2299" x2="92.595" y2="115.265" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="115.265" x2="92.5506" y2="115.3207" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="115.3207" x2="92.5197" y2="115.3849" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="115.3849" x2="92.5038" y2="115.4544" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="115.4544" x2="92.5038" y2="115.5256" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="115.5256" x2="92.5197" y2="115.5951" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="115.5951" x2="92.5506" y2="115.6593" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="115.6593" x2="92.595" y2="115.715" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="115.715" x2="92.6446" y2="115.7501" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="115.7501" x2="92.7" y2="115.7749" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="115.7749" x2="92.7593" y2="115.7883" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="115.7883" x2="92.82" y2="115.79" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="115.79" x2="92.82" y2="115.94" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="115.94" x2="92.37" y2="115.94" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="115.94" x2="92.37" y2="115.04" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="115.04" x2="92.82" y2="115.04" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="116.31" x2="92.82" y2="116.46" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="116.46" x2="92.7593" y2="116.4617" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="116.4617" x2="92.7" y2="116.4751" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="116.4751" x2="92.6446" y2="116.4999" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="116.4999" x2="92.595" y2="116.535" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="116.535" x2="92.5506" y2="116.5907" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="116.5907" x2="92.5197" y2="116.6549" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="116.6549" x2="92.5038" y2="116.7244" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="116.7244" x2="92.5038" y2="116.7956" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="116.7956" x2="92.5197" y2="116.8651" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="116.8651" x2="92.5506" y2="116.9293" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="116.9293" x2="92.595" y2="116.985" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="116.985" x2="92.6446" y2="117.0201" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="117.0201" x2="92.7" y2="117.0449" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="117.0449" x2="92.7593" y2="117.0583" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="117.0583" x2="92.82" y2="117.06" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="117.06" x2="92.82" y2="117.21" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="117.21" x2="92.37" y2="117.21" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="117.21" x2="92.37" y2="116.31" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="116.31" x2="92.82" y2="116.31" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="117.58" x2="92.82" y2="117.73" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="117.73" x2="92.7593" y2="117.7317" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="117.7317" x2="92.7" y2="117.7451" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="117.7451" x2="92.6446" y2="117.7699" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="117.7699" x2="92.595" y2="117.805" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="117.805" x2="92.5506" y2="117.8607" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="117.8607" x2="92.5197" y2="117.9249" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="117.9249" x2="92.5038" y2="117.9944" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="117.9944" x2="92.5038" y2="118.0656" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5038" y1="118.0656" x2="92.5197" y2="118.1351" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5197" y1="118.1351" x2="92.5506" y2="118.1993" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.5506" y1="118.1993" x2="92.595" y2="118.255" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.595" y1="118.255" x2="92.6446" y2="118.2901" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.6446" y1="118.2901" x2="92.7" y2="118.3149" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7" y1="118.3149" x2="92.7593" y2="118.3283" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.7593" y1="118.3283" x2="92.82" y2="118.33" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="118.33" x2="92.82" y2="118.48" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="118.48" x2="92.37" y2="118.48" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="118.48" x2="92.37" y2="117.58" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.37" y1="117.58" x2="92.82" y2="117.58" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="101.07" x2="74.82" y2="101.22" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="101.22" x2="74.8807" y2="101.2217" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="101.2217" x2="74.94" y2="101.2351" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="101.2351" x2="74.9954" y2="101.2599" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="101.2599" x2="75.045" y2="101.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="101.295" x2="75.0894" y2="101.3507" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="101.3507" x2="75.1203" y2="101.4149" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="101.4149" x2="75.1362" y2="101.4844" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="101.4844" x2="75.1362" y2="101.5556" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="101.5556" x2="75.1203" y2="101.6251" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="101.6251" x2="75.0894" y2="101.6893" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="101.6893" x2="75.045" y2="101.745" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="101.745" x2="74.9954" y2="101.7801" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="101.7801" x2="74.94" y2="101.8049" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="101.8049" x2="74.8807" y2="101.8183" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="101.8183" x2="74.82" y2="101.82" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="101.82" x2="74.82" y2="101.97" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="101.97" x2="75.27" y2="101.97" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="101.97" x2="75.27" y2="101.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="101.07" x2="74.82" y2="101.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="102.34" x2="74.82" y2="102.49" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="102.49" x2="74.8807" y2="102.4917" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="102.4917" x2="74.94" y2="102.5051" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="102.5051" x2="74.9954" y2="102.5299" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="102.5299" x2="75.045" y2="102.565" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="102.565" x2="75.0894" y2="102.6207" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="102.6207" x2="75.1203" y2="102.6849" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="102.6849" x2="75.1362" y2="102.7544" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="102.7544" x2="75.1362" y2="102.8256" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="102.8256" x2="75.1203" y2="102.8951" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="102.8951" x2="75.0894" y2="102.9593" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="102.9593" x2="75.045" y2="103.015" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="103.015" x2="74.9954" y2="103.0501" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="103.0501" x2="74.94" y2="103.0749" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="103.0749" x2="74.8807" y2="103.0883" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="103.0883" x2="74.82" y2="103.09" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="103.09" x2="74.82" y2="103.24" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="103.24" x2="75.27" y2="103.24" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="103.24" x2="75.27" y2="102.34" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="102.34" x2="74.82" y2="102.34" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="103.61" x2="74.82" y2="103.76" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="103.76" x2="74.8807" y2="103.7617" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="103.7617" x2="74.94" y2="103.7751" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="103.7751" x2="74.9954" y2="103.7999" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="103.7999" x2="75.045" y2="103.835" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="103.835" x2="75.0894" y2="103.8907" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="103.8907" x2="75.1203" y2="103.9549" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="103.9549" x2="75.1362" y2="104.0244" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="104.0244" x2="75.1362" y2="104.0956" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="104.0956" x2="75.1203" y2="104.1651" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="104.1651" x2="75.0894" y2="104.2293" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="104.2293" x2="75.045" y2="104.285" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="104.285" x2="74.9954" y2="104.3201" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="104.3201" x2="74.94" y2="104.3449" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="104.3449" x2="74.8807" y2="104.3583" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="104.3583" x2="74.82" y2="104.36" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="104.36" x2="74.82" y2="104.51" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="104.51" x2="75.27" y2="104.51" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="104.51" x2="75.27" y2="103.61" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="103.61" x2="74.82" y2="103.61" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="104.88" x2="74.82" y2="105.03" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="105.03" x2="74.8807" y2="105.0317" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="105.0317" x2="74.94" y2="105.0451" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="105.0451" x2="74.9954" y2="105.0699" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="105.0699" x2="75.045" y2="105.105" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="105.105" x2="75.0894" y2="105.1607" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="105.1607" x2="75.1203" y2="105.2249" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="105.2249" x2="75.1362" y2="105.2944" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="105.2944" x2="75.1362" y2="105.3656" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="105.3656" x2="75.1203" y2="105.4351" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="105.4351" x2="75.0894" y2="105.4993" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="105.4993" x2="75.045" y2="105.555" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="105.555" x2="74.9954" y2="105.5901" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="105.5901" x2="74.94" y2="105.6149" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="105.6149" x2="74.8807" y2="105.6283" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="105.6283" x2="74.82" y2="105.63" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="105.63" x2="74.82" y2="105.78" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="105.78" x2="75.27" y2="105.78" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="105.78" x2="75.27" y2="104.88" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="104.88" x2="74.82" y2="104.88" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="106.15" x2="74.82" y2="106.3" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="106.3" x2="74.8807" y2="106.3017" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="106.3017" x2="74.94" y2="106.3151" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="106.3151" x2="74.9954" y2="106.3399" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="106.3399" x2="75.045" y2="106.375" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="106.375" x2="75.0894" y2="106.4307" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="106.4307" x2="75.1203" y2="106.4949" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="106.4949" x2="75.1362" y2="106.5644" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="106.5644" x2="75.1362" y2="106.6356" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="106.6356" x2="75.1203" y2="106.7051" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="106.7051" x2="75.0894" y2="106.7693" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="106.7693" x2="75.045" y2="106.825" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="106.825" x2="74.9954" y2="106.8601" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="106.8601" x2="74.94" y2="106.8849" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="106.8849" x2="74.8807" y2="106.8983" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="106.8983" x2="74.82" y2="106.9" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="106.9" x2="74.82" y2="107.05" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="107.05" x2="75.27" y2="107.05" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="107.05" x2="75.27" y2="106.15" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="106.15" x2="74.82" y2="106.15" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="107.42" x2="74.82" y2="107.57" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="107.57" x2="74.8807" y2="107.5717" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="107.5717" x2="74.94" y2="107.5851" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="107.5851" x2="74.9954" y2="107.6099" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="107.6099" x2="75.045" y2="107.645" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="107.645" x2="75.0894" y2="107.7007" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="107.7007" x2="75.1203" y2="107.7649" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="107.7649" x2="75.1362" y2="107.8344" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="107.8344" x2="75.1362" y2="107.9056" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="107.9056" x2="75.1203" y2="107.9751" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="107.9751" x2="75.0894" y2="108.0393" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="108.0393" x2="75.045" y2="108.095" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="108.095" x2="74.9954" y2="108.1301" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="108.1301" x2="74.94" y2="108.1549" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="108.1549" x2="74.8807" y2="108.1683" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="108.1683" x2="74.82" y2="108.17" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="108.17" x2="74.82" y2="108.32" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="108.32" x2="75.27" y2="108.32" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="108.32" x2="75.27" y2="107.42" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="107.42" x2="74.82" y2="107.42" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="108.69" x2="74.82" y2="108.84" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="108.84" x2="74.8807" y2="108.8417" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="108.8417" x2="74.94" y2="108.8551" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="108.8551" x2="74.9954" y2="108.8799" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="108.8799" x2="75.045" y2="108.915" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="108.915" x2="75.0894" y2="108.9707" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="108.9707" x2="75.1203" y2="109.0349" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="109.0349" x2="75.1362" y2="109.1044" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="109.1044" x2="75.1362" y2="109.1756" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="109.1756" x2="75.1203" y2="109.2451" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="109.2451" x2="75.0894" y2="109.3093" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="109.3093" x2="75.045" y2="109.365" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="109.365" x2="74.9954" y2="109.4001" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="109.4001" x2="74.94" y2="109.4249" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="109.4249" x2="74.8807" y2="109.4383" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="109.4383" x2="74.82" y2="109.44" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="109.44" x2="74.82" y2="109.59" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="109.59" x2="75.27" y2="109.59" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="109.59" x2="75.27" y2="108.69" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="108.69" x2="74.82" y2="108.69" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="109.96" x2="74.82" y2="110.11" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="110.11" x2="74.8807" y2="110.1117" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="110.1117" x2="74.94" y2="110.1251" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="110.1251" x2="74.9954" y2="110.1499" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="110.1499" x2="75.045" y2="110.185" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="110.185" x2="75.0894" y2="110.2407" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="110.2407" x2="75.1203" y2="110.3049" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="110.3049" x2="75.1362" y2="110.3744" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="110.3744" x2="75.1362" y2="110.4456" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="110.4456" x2="75.1203" y2="110.5151" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="110.5151" x2="75.0894" y2="110.5793" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="110.5793" x2="75.045" y2="110.635" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="110.635" x2="74.9954" y2="110.6701" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="110.6701" x2="74.94" y2="110.6949" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="110.6949" x2="74.8807" y2="110.7083" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="110.7083" x2="74.82" y2="110.71" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="110.71" x2="74.82" y2="110.86" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="110.86" x2="75.27" y2="110.86" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="110.86" x2="75.27" y2="109.96" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="109.96" x2="74.82" y2="109.96" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="111.23" x2="74.82" y2="111.38" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="111.38" x2="74.8807" y2="111.3817" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="111.3817" x2="74.94" y2="111.3951" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="111.3951" x2="74.9954" y2="111.4199" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="111.4199" x2="75.045" y2="111.455" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="111.455" x2="75.0894" y2="111.5107" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="111.5107" x2="75.1203" y2="111.5749" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="111.5749" x2="75.1362" y2="111.6444" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="111.6444" x2="75.1362" y2="111.7156" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="111.7156" x2="75.1203" y2="111.7851" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="111.7851" x2="75.0894" y2="111.8493" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="111.8493" x2="75.045" y2="111.905" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="111.905" x2="74.9954" y2="111.9401" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="111.9401" x2="74.94" y2="111.9649" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="111.9649" x2="74.8807" y2="111.9783" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="111.9783" x2="74.82" y2="111.98" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="111.98" x2="74.82" y2="112.13" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="112.13" x2="75.27" y2="112.13" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="112.13" x2="75.27" y2="111.23" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="111.23" x2="74.82" y2="111.23" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="112.5" x2="74.82" y2="112.65" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="112.65" x2="74.8807" y2="112.6517" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="112.6517" x2="74.94" y2="112.6651" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="112.6651" x2="74.9954" y2="112.6899" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="112.6899" x2="75.045" y2="112.725" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="112.725" x2="75.0894" y2="112.7807" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="112.7807" x2="75.1203" y2="112.8449" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="112.8449" x2="75.1362" y2="112.9144" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="112.9144" x2="75.1362" y2="112.9856" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="112.9856" x2="75.1203" y2="113.0551" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="113.0551" x2="75.0894" y2="113.1193" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="113.1193" x2="75.045" y2="113.175" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="113.175" x2="74.9954" y2="113.2101" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="113.2101" x2="74.94" y2="113.2349" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="113.2349" x2="74.8807" y2="113.2483" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="113.2483" x2="74.82" y2="113.25" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="113.25" x2="74.82" y2="113.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="113.4" x2="75.27" y2="113.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="113.4" x2="75.27" y2="112.5" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="112.5" x2="74.82" y2="112.5" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="113.77" x2="74.82" y2="113.92" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="113.92" x2="74.8807" y2="113.9217" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="113.9217" x2="74.94" y2="113.9351" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="113.9351" x2="74.9954" y2="113.9599" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="113.9599" x2="75.045" y2="113.995" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="113.995" x2="75.0894" y2="114.0507" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="114.0507" x2="75.1203" y2="114.1149" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="114.1149" x2="75.1362" y2="114.1844" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="114.1844" x2="75.1362" y2="114.2556" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="114.2556" x2="75.1203" y2="114.3251" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="114.3251" x2="75.0894" y2="114.3893" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="114.3893" x2="75.045" y2="114.445" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="114.445" x2="74.9954" y2="114.4801" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="114.4801" x2="74.94" y2="114.5049" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="114.5049" x2="74.8807" y2="114.5183" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="114.5183" x2="74.82" y2="114.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="114.52" x2="74.82" y2="114.67" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="114.67" x2="75.27" y2="114.67" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="114.67" x2="75.27" y2="113.77" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="113.77" x2="74.82" y2="113.77" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="115.04" x2="74.82" y2="115.19" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="115.19" x2="74.8807" y2="115.1917" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="115.1917" x2="74.94" y2="115.2051" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="115.2051" x2="74.9954" y2="115.2299" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="115.2299" x2="75.045" y2="115.265" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="115.265" x2="75.0894" y2="115.3207" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="115.3207" x2="75.1203" y2="115.3849" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="115.3849" x2="75.1362" y2="115.4544" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="115.4544" x2="75.1362" y2="115.5256" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="115.5256" x2="75.1203" y2="115.5951" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="115.5951" x2="75.0894" y2="115.6593" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="115.6593" x2="75.045" y2="115.715" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="115.715" x2="74.9954" y2="115.7501" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="115.7501" x2="74.94" y2="115.7749" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="115.7749" x2="74.8807" y2="115.7883" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="115.7883" x2="74.82" y2="115.79" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="115.79" x2="74.82" y2="115.94" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="115.94" x2="75.27" y2="115.94" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="115.94" x2="75.27" y2="115.04" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="115.04" x2="74.82" y2="115.04" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="116.31" x2="74.82" y2="116.46" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="116.46" x2="74.8807" y2="116.4617" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="116.4617" x2="74.94" y2="116.4751" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="116.4751" x2="74.9954" y2="116.4999" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="116.4999" x2="75.045" y2="116.535" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="116.535" x2="75.0894" y2="116.5907" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="116.5907" x2="75.1203" y2="116.6549" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="116.6549" x2="75.1362" y2="116.7244" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="116.7244" x2="75.1362" y2="116.7956" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="116.7956" x2="75.1203" y2="116.8651" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="116.8651" x2="75.0894" y2="116.9293" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="116.9293" x2="75.045" y2="116.985" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="116.985" x2="74.9954" y2="117.0201" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="117.0201" x2="74.94" y2="117.0449" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="117.0449" x2="74.8807" y2="117.0583" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="117.0583" x2="74.82" y2="117.06" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="117.06" x2="74.82" y2="117.21" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="117.21" x2="75.27" y2="117.21" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="117.21" x2="75.27" y2="116.31" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="116.31" x2="74.82" y2="116.31" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="117.58" x2="74.82" y2="117.73" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="117.73" x2="74.8807" y2="117.7317" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="117.7317" x2="74.94" y2="117.7451" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="117.7451" x2="74.9954" y2="117.7699" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="117.7699" x2="75.045" y2="117.805" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="117.805" x2="75.0894" y2="117.8607" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="117.8607" x2="75.1203" y2="117.9249" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="117.9249" x2="75.1362" y2="117.9944" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="117.9944" x2="75.1362" y2="118.0656" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1362" y1="118.0656" x2="75.1203" y2="118.1351" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.1203" y1="118.1351" x2="75.0894" y2="118.1993" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.0894" y1="118.1993" x2="75.045" y2="118.255" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.045" y1="118.255" x2="74.9954" y2="118.2901" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.9954" y1="118.2901" x2="74.94" y2="118.3149" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.94" y1="118.3149" x2="74.8807" y2="118.3283" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.8807" y1="118.3283" x2="74.82" y2="118.33" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="118.33" x2="74.82" y2="118.48" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="118.48" x2="75.27" y2="118.48" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="118.48" x2="75.27" y2="117.58" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="75.27" y1="117.58" x2="74.82" y2="117.58" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.905" y1="119.52" x2="84.755" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.755" y1="119.52" x2="84.7533" y2="119.4593" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.7533" y1="119.4593" x2="84.7399" y2="119.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.7399" y1="119.4" x2="84.7151" y2="119.3446" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.7151" y1="119.3446" x2="84.68" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.68" y1="119.295" x2="84.6243" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.6243" y1="119.2506" x2="84.5601" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.5601" y1="119.2197" x2="84.4906" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.4906" y1="119.2038" x2="84.4194" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.4194" y1="119.2038" x2="84.3499" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.3499" y1="119.2197" x2="84.2857" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.2857" y1="119.2506" x2="84.23" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.23" y1="119.295" x2="84.1854" y2="119.3625" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.1854" y1="119.3625" x2="84.1598" y2="119.4392" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.1598" y1="119.4392" x2="84.155" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.155" y1="119.52" x2="84.005" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.005" y1="119.52" x2="84.005" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.005" y1="119.07" x2="84.905" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.905" y1="119.07" x2="84.905" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.635" y1="119.52" x2="83.485" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.485" y1="119.52" x2="83.4833" y2="119.4593" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.4833" y1="119.4593" x2="83.4699" y2="119.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.4699" y1="119.4" x2="83.4451" y2="119.3446" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.4451" y1="119.3446" x2="83.41" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.41" y1="119.295" x2="83.3543" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.3543" y1="119.2506" x2="83.2901" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.2901" y1="119.2197" x2="83.2206" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.2206" y1="119.2038" x2="83.1494" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.1494" y1="119.2038" x2="83.0799" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.0799" y1="119.2197" x2="83.0157" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.0157" y1="119.2506" x2="82.96" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.96" y1="119.295" x2="82.9154" y2="119.3625" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.9154" y1="119.3625" x2="82.8898" y2="119.4392" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.8898" y1="119.4392" x2="82.885" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.885" y1="119.52" x2="82.735" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.735" y1="119.52" x2="82.735" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.735" y1="119.07" x2="83.635" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.635" y1="119.07" x2="83.635" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.175" y1="119.52" x2="86.025" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.025" y1="119.52" x2="86.0233" y2="119.4593" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.0233" y1="119.4593" x2="86.0099" y2="119.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.0099" y1="119.4" x2="85.9851" y2="119.3446" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.9851" y1="119.3446" x2="85.95" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.95" y1="119.295" x2="85.8943" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.8943" y1="119.2506" x2="85.8301" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.8301" y1="119.2197" x2="85.7606" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.7606" y1="119.2038" x2="85.6894" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.6894" y1="119.2038" x2="85.6199" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.6199" y1="119.2197" x2="85.5557" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.5557" y1="119.2506" x2="85.5" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.5" y1="119.295" x2="85.4554" y2="119.3625" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.4554" y1="119.3625" x2="85.4298" y2="119.4392" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.4298" y1="119.4392" x2="85.425" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.425" y1="119.52" x2="85.275" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.275" y1="119.52" x2="85.275" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.275" y1="119.07" x2="86.175" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.175" y1="119.07" x2="86.175" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.445" y1="119.52" x2="87.295" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.295" y1="119.52" x2="87.2933" y2="119.4593" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.2933" y1="119.4593" x2="87.2799" y2="119.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.2799" y1="119.4" x2="87.2551" y2="119.3446" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.2551" y1="119.3446" x2="87.22" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.22" y1="119.295" x2="87.1643" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.1643" y1="119.2506" x2="87.1001" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.1001" y1="119.2197" x2="87.0306" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.0306" y1="119.2038" x2="86.9594" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.9594" y1="119.2038" x2="86.8899" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.8899" y1="119.2197" x2="86.8257" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.8257" y1="119.2506" x2="86.77" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.77" y1="119.295" x2="86.7254" y2="119.3625" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.7254" y1="119.3625" x2="86.6998" y2="119.4392" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.6998" y1="119.4392" x2="86.695" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.695" y1="119.52" x2="86.545" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.545" y1="119.52" x2="86.545" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.545" y1="119.07" x2="87.445" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.445" y1="119.07" x2="87.445" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.715" y1="119.52" x2="88.565" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.565" y1="119.52" x2="88.5633" y2="119.4593" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.5633" y1="119.4593" x2="88.5499" y2="119.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.5499" y1="119.4" x2="88.5251" y2="119.3446" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.5251" y1="119.3446" x2="88.49" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.49" y1="119.295" x2="88.4343" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.4343" y1="119.2506" x2="88.3701" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.3701" y1="119.2197" x2="88.3006" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.3006" y1="119.2038" x2="88.2294" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.2294" y1="119.2038" x2="88.1599" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.1599" y1="119.2197" x2="88.0957" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.0957" y1="119.2506" x2="88.04" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.04" y1="119.295" x2="87.9954" y2="119.3625" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.9954" y1="119.3625" x2="87.9698" y2="119.4392" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.9698" y1="119.4392" x2="87.965" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.965" y1="119.52" x2="87.815" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.815" y1="119.52" x2="87.815" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.815" y1="119.07" x2="88.715" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.715" y1="119.07" x2="88.715" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.985" y1="119.52" x2="89.835" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.835" y1="119.52" x2="89.8333" y2="119.4593" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.8333" y1="119.4593" x2="89.8199" y2="119.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.8199" y1="119.4" x2="89.7951" y2="119.3446" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.7951" y1="119.3446" x2="89.76" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.76" y1="119.295" x2="89.7043" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.7043" y1="119.2506" x2="89.6401" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.6401" y1="119.2197" x2="89.5706" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.5706" y1="119.2038" x2="89.4994" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.4994" y1="119.2038" x2="89.4299" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.4299" y1="119.2197" x2="89.3657" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.3657" y1="119.2506" x2="89.31" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.31" y1="119.295" x2="89.2654" y2="119.3625" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.2654" y1="119.3625" x2="89.2398" y2="119.4392" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.2398" y1="119.4392" x2="89.235" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.235" y1="119.52" x2="89.085" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.085" y1="119.52" x2="89.085" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.085" y1="119.07" x2="89.985" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.985" y1="119.07" x2="89.985" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.365" y1="119.52" x2="82.215" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.215" y1="119.52" x2="82.2133" y2="119.4593" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.2133" y1="119.4593" x2="82.1999" y2="119.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.1999" y1="119.4" x2="82.1751" y2="119.3446" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.1751" y1="119.3446" x2="82.14" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.14" y1="119.295" x2="82.0843" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.0843" y1="119.2506" x2="82.0201" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.0201" y1="119.2197" x2="81.9506" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.9506" y1="119.2038" x2="81.8794" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.8794" y1="119.2038" x2="81.8099" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.8099" y1="119.2197" x2="81.7457" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.7457" y1="119.2506" x2="81.69" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.69" y1="119.295" x2="81.6454" y2="119.3625" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.6454" y1="119.3625" x2="81.6198" y2="119.4392" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.6198" y1="119.4392" x2="81.615" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.615" y1="119.52" x2="81.465" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.465" y1="119.52" x2="81.465" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.465" y1="119.07" x2="82.365" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="82.365" y1="119.07" x2="82.365" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.095" y1="119.52" x2="80.945" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.945" y1="119.52" x2="80.9433" y2="119.4593" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.9433" y1="119.4593" x2="80.9299" y2="119.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.9299" y1="119.4" x2="80.9051" y2="119.3446" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.9051" y1="119.3446" x2="80.87" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.87" y1="119.295" x2="80.8143" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.8143" y1="119.2506" x2="80.7501" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.7501" y1="119.2197" x2="80.6806" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.6806" y1="119.2038" x2="80.6094" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.6094" y1="119.2038" x2="80.5399" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.5399" y1="119.2197" x2="80.4757" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.4757" y1="119.2506" x2="80.42" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.42" y1="119.295" x2="80.3754" y2="119.3625" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.3754" y1="119.3625" x2="80.3498" y2="119.4392" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.3498" y1="119.4392" x2="80.345" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.345" y1="119.52" x2="80.195" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.195" y1="119.52" x2="80.195" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.195" y1="119.07" x2="81.095" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.095" y1="119.07" x2="81.095" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.825" y1="119.52" x2="79.675" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.675" y1="119.52" x2="79.6733" y2="119.4593" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.6733" y1="119.4593" x2="79.6599" y2="119.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.6599" y1="119.4" x2="79.6351" y2="119.3446" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.6351" y1="119.3446" x2="79.6" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.6" y1="119.295" x2="79.5443" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.5443" y1="119.2506" x2="79.4801" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.4801" y1="119.2197" x2="79.4106" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.4106" y1="119.2038" x2="79.3394" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.3394" y1="119.2038" x2="79.2699" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.2699" y1="119.2197" x2="79.2057" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.2057" y1="119.2506" x2="79.15" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.15" y1="119.295" x2="79.1054" y2="119.3625" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.1054" y1="119.3625" x2="79.0798" y2="119.4392" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.0798" y1="119.4392" x2="79.075" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.075" y1="119.52" x2="78.925" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.925" y1="119.52" x2="78.925" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.925" y1="119.07" x2="79.825" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.825" y1="119.07" x2="79.825" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.555" y1="119.52" x2="78.405" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.405" y1="119.52" x2="78.4033" y2="119.4593" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.4033" y1="119.4593" x2="78.3899" y2="119.4" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.3899" y1="119.4" x2="78.3651" y2="119.3446" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.3651" y1="119.3446" x2="78.33" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.33" y1="119.295" x2="78.2743" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.2743" y1="119.2506" x2="78.2101" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.2101" y1="119.2197" x2="78.1406" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.1406" y1="119.2038" x2="78.0694" y2="119.2038" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.0694" y1="119.2038" x2="77.9999" y2="119.2197" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="77.9999" y1="119.2197" x2="77.9357" y2="119.2506" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="77.9357" y1="119.2506" x2="77.88" y2="119.295" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="77.88" y1="119.295" x2="77.8354" y2="119.3625" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="77.8354" y1="119.3625" x2="77.8098" y2="119.4392" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="77.8098" y1="119.4392" x2="77.805" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="77.805" y1="119.52" x2="77.655" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="77.655" y1="119.52" x2="77.655" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="77.655" y1="119.07" x2="78.555" y2="119.07" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.555" y1="119.07" x2="78.555" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="119.52" x2="92.82" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="119.52" x2="92.82" y2="100.02" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="100.02" x2="92.82" y2="94.02" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="92.82" y1="94.02" x2="74.82" y2="94.02" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="94.02" x2="74.82" y2="100.02" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="100.02" x2="74.82" y2="119.52" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="74.82" y1="100.02" x2="92.82" y2="100.02" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="90.5907" y1="96.4348" x2="90.5907" y2="97.2144" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="90.5907" y1="97.2144" x2="90.5907" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="90.6161" y1="97.6042" x2="90.5653" y2="97.6042" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="90.5653" y1="96.4348" x2="90.6161" y2="96.4348" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="90.5907" y1="97.2144" x2="90.4138" y2="97.0375" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="90.4138" y1="97.0375" x2="90.3958" y2="97.0195" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="90.3958" y1="97.0195" x2="90.3778" y2="97.0015" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="90.3778" y1="97.0015" x2="89.8111" y2="96.4348" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.7931" y1="96.4528" x2="89.8291" y2="96.4168" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="90.6087" y1="97.1964" x2="90.5727" y2="97.2324" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="90.3958" y1="97.0195" x2="89.8111" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.8291" y1="97.6222" x2="89.7931" y2="97.5862" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="90.3778" y1="97.0015" x2="90.4138" y2="97.0375" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.8366" y1="97.6042" x2="89.2264" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.2264" y1="97.5788" x2="89.2264" y2="97.6296" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.8366" y1="97.6296" x2="88.8366" y2="97.5788" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="89.2264" y1="97.6042" x2="89.4213" y2="97.4093" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.4033" y1="97.3913" x2="89.4393" y2="97.4273" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="89.2444" y1="97.6222" x2="89.2084" y2="97.5862" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="89.4213" y1="97.4093" x2="89.4213" y2="97.2398" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.4213" y1="97.2398" x2="89.4213" y2="97.2144" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.4213" y1="97.2144" x2="89.4213" y2="97.189" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.4213" y1="97.189" x2="89.4213" y2="97.0195" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.3959" y1="97.0195" x2="89.4467" y2="97.0195" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="89.4467" y1="97.4093" x2="89.3959" y2="97.4093" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="89.4213" y1="97.0195" x2="89.2264" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.2084" y1="96.8426" x2="89.2444" y2="96.8066" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="89.4393" y1="97.0015" x2="89.4033" y2="97.0375" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="89.2264" y1="96.8246" x2="88.8366" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.8366" y1="96.85" x2="88.8366" y2="96.7992" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="89.2264" y1="96.7992" x2="89.2264" y2="96.85" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.8366" y1="96.8246" x2="88.6417" y2="97.0195" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.6597" y1="97.0375" x2="88.6237" y2="97.0015" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.8186" y1="96.8066" x2="88.8546" y2="96.8426" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.6417" y1="97.0195" x2="88.6417" y2="97.189" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.6417" y1="97.189" x2="88.6417" y2="97.2144" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.6671" y1="97.2144" x2="88.6417" y2="97.2398" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="88.6417" y1="97.2398" x2="88.6163" y2="97.2144" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="88.6163" y1="97.0195" x2="88.6671" y2="97.0195" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.6417" y1="97.2144" x2="89.4213" y2="97.2144" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="89.4213" y1="97.189" x2="89.4213" y2="97.2398" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.6417" y1="97.2398" x2="88.6417" y2="97.189" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="87.6672" y1="97.6042" x2="88.057" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.057" y1="97.5788" x2="88.057" y2="97.6296" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="87.6672" y1="97.6296" x2="87.6672" y2="97.5788" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.057" y1="97.6042" x2="88.2519" y2="97.4093" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.2339" y1="97.3913" x2="88.2699" y2="97.4273" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.075" y1="97.6222" x2="88.039" y2="97.5862" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.2519" y1="97.4093" x2="88.2519" y2="97.2398" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.2519" y1="97.2398" x2="88.2519" y2="97.2144" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.2519" y1="97.2144" x2="88.2519" y2="97.189" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.2519" y1="97.189" x2="88.2519" y2="97.0195" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.2265" y1="97.0195" x2="88.2773" y2="97.0195" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.2773" y1="97.4093" x2="88.2265" y2="97.4093" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.2519" y1="97.0195" x2="88.057" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.039" y1="96.8426" x2="88.075" y2="96.8066" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.2699" y1="97.0015" x2="88.2339" y2="97.0375" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.057" y1="96.8246" x2="87.6672" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.6672" y1="96.85" x2="87.6672" y2="96.7992" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="88.057" y1="96.7992" x2="88.057" y2="96.85" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="87.6672" y1="96.8246" x2="87.4723" y2="97.0195" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.4903" y1="97.0375" x2="87.4543" y2="97.0015" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="87.6492" y1="96.8066" x2="87.6852" y2="96.8426" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="87.4723" y1="97.0195" x2="87.4723" y2="97.189" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.4723" y1="97.189" x2="87.4723" y2="97.2144" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.4977" y1="97.2144" x2="87.4723" y2="97.2398" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="87.4723" y1="97.2398" x2="87.4469" y2="97.2144" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="87.4469" y1="97.0195" x2="87.4977" y2="97.0195" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="87.4723" y1="97.2144" x2="88.2519" y2="97.2144" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="88.2519" y1="97.189" x2="88.2519" y2="97.2398" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="87.4723" y1="97.2398" x2="87.4723" y2="97.189" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="87.0825" y1="97.994" x2="87.0825" y2="97.6296" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.0825" y1="97.6296" x2="87.0825" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.0825" y1="97.6042" x2="87.0825" y2="97.5788" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.0825" y1="97.5788" x2="87.0825" y2="96.85" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.0825" y1="96.85" x2="87.0825" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.0571" y1="96.8246" x2="87.0825" y2="96.7992" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="87.0825" y1="96.7992" x2="87.1079" y2="96.8246" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="87.1079" y1="97.994" x2="87.0571" y2="97.994" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="87.0825" y1="96.8246" x2="86.4978" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.4978" y1="96.85" x2="86.4978" y2="96.7992" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="87.0825" y1="96.7992" x2="87.0825" y2="96.85" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="86.4978" y1="96.8246" x2="86.3029" y2="97.0195" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.3209" y1="97.0375" x2="86.2849" y2="97.0015" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="86.4798" y1="96.8066" x2="86.5158" y2="96.8426" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="86.3029" y1="97.0195" x2="86.3029" y2="97.4093" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.3283" y1="97.4093" x2="86.2775" y2="97.4093" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="86.2775" y1="97.0195" x2="86.3283" y2="97.0195" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="86.3029" y1="97.4093" x2="86.4978" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="86.5158" y1="97.5862" x2="86.4798" y2="97.6222" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="86.2849" y1="97.4273" x2="86.3209" y2="97.3913" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="86.4978" y1="97.6042" x2="87.0825" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="87.0825" y1="97.5788" x2="87.0825" y2="97.6296" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="86.4978" y1="97.6296" x2="86.4978" y2="97.5788" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.7182" y1="97.6042" x2="85.3284" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.3284" y1="97.6296" x2="85.3284" y2="97.5788" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.7182" y1="97.5788" x2="85.7182" y2="97.6296" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.3284" y1="97.6042" x2="85.1335" y2="97.4093" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.1156" y1="97.4273" x2="85.1515" y2="97.3913" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.3464" y1="97.5862" x2="85.3105" y2="97.6222" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.1335" y1="97.4093" x2="85.1335" y2="97.0195" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.1081" y1="97.0195" x2="85.1589" y2="97.0195" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.1589" y1="97.4093" x2="85.1081" y2="97.4093" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.1335" y1="97.0195" x2="85.3284" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.3105" y1="96.8066" x2="85.3464" y2="96.8426" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.1515" y1="97.0375" x2="85.1156" y2="97.0015" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.3284" y1="96.8246" x2="85.7182" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.7182" y1="96.7992" x2="85.7182" y2="96.85" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.3284" y1="96.85" x2="85.3284" y2="96.7992" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.7182" y1="96.8246" x2="85.9131" y2="97.0195" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.9311" y1="97.0015" x2="85.8951" y2="97.0375" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.7003" y1="96.8426" x2="85.7362" y2="96.8066" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.9131" y1="97.0195" x2="85.9131" y2="97.4093" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.9385" y1="97.4093" x2="85.8877" y2="97.4093" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.8877" y1="97.0195" x2="85.9385" y2="97.0195" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.9131" y1="97.4093" x2="85.7182" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="85.7362" y1="97.6222" x2="85.7003" y2="97.5862" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="85.8951" y1="97.3913" x2="85.9311" y2="97.4273" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="84.7437" y1="96.8246" x2="84.7437" y2="97.4093" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.7691" y1="97.4093" x2="84.7183" y2="97.4093" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="84.7183" y1="96.8246" x2="84.7691" y2="96.8246" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="84.7437" y1="97.4093" x2="84.5488" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="84.5668" y1="97.6222" x2="84.5309" y2="97.5862" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="84.7258" y1="97.3913" x2="84.7617" y2="97.4273" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="84.5488" y1="97.6042" x2="83.9895" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.9895" y1="97.6042" x2="83.9641" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.9641" y1="97.6296" x2="83.9387" y2="97.6042" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="83.9387" y1="97.6042" x2="83.9641" y2="97.5788" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="84.5488" y1="97.5788" x2="84.5488" y2="97.6296" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="83.9641" y1="97.6042" x2="83.9641" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.9387" y1="96.8246" x2="83.9895" y2="96.8246" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="83.9895" y1="97.6042" x2="83.9387" y2="97.6042" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="83.3794" y1="96.6297" x2="83.3794" y2="97.4093" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.4048" y1="97.4093" x2="83.354" y2="97.4093" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="83.354" y1="96.6297" x2="83.4048" y2="96.6297" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="83.3794" y1="97.4093" x2="83.1845" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.2025" y1="97.6222" x2="83.1666" y2="97.5862" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="83.3615" y1="97.3913" x2="83.3974" y2="97.4273" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="83.5743" y1="96.8246" x2="83.1845" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="83.1845" y1="96.85" x2="83.1845" y2="96.7992" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="83.5743" y1="96.7992" x2="83.5743" y2="96.85" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="81.6253" y1="96.4348" x2="80.8711" y2="96.4348" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.8711" y1="96.4348" x2="80.8457" y2="96.4348" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.8457" y1="96.4602" x2="80.8203" y2="96.4348" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="80.8203" y1="96.4348" x2="80.8457" y2="96.4094" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="81.6253" y1="96.4094" x2="81.6253" y2="96.4602" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="80.8457" y1="96.4348" x2="80.8457" y2="96.6297" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.8711" y1="96.6297" x2="80.8203" y2="96.6297" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="80.8203" y1="96.4348" x2="80.8711" y2="96.4348" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="80.8457" y1="96.6297" x2="81.6253" y2="97.4093" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.6433" y1="97.3913" x2="81.6074" y2="97.4273" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="80.8278" y1="96.6477" x2="80.8637" y2="96.6117" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="81.6253" y1="97.4093" x2="81.6253" y2="97.5788" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.6253" y1="97.5788" x2="81.6253" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="81.6507" y1="97.6042" x2="81.6253" y2="97.6296" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="81.6253" y1="97.6296" x2="81.5999" y2="97.6042" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="81.5999" y1="97.4093" x2="81.6507" y2="97.4093" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="81.6253" y1="97.6042" x2="80.8457" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.8457" y1="97.6296" x2="80.8457" y2="97.5788" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="81.6253" y1="97.5788" x2="81.6253" y2="97.6296" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="80.261" y1="97.6042" x2="79.8712" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.8712" y1="97.6296" x2="79.8712" y2="97.5788" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="80.261" y1="97.5788" x2="80.261" y2="97.6296" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.8712" y1="97.6042" x2="79.6763" y2="97.4093" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.6584" y1="97.4273" x2="79.6943" y2="97.3913" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.8892" y1="97.5862" x2="79.8533" y2="97.6222" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.6763" y1="97.4093" x2="79.6763" y2="97.0195" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.6509" y1="97.0195" x2="79.7017" y2="97.0195" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.7017" y1="97.4093" x2="79.6509" y2="97.4093" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.6763" y1="97.0195" x2="79.8712" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.8533" y1="96.8066" x2="79.8892" y2="96.8426" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.6943" y1="97.0375" x2="79.6584" y2="97.0015" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.8712" y1="96.8246" x2="80.261" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.261" y1="96.7992" x2="80.261" y2="96.85" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.8712" y1="96.85" x2="79.8712" y2="96.7992" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="80.261" y1="96.8246" x2="80.4559" y2="97.0195" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.4739" y1="97.0015" x2="80.438" y2="97.0375" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="80.2431" y1="96.8426" x2="80.279" y2="96.8066" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="80.4559" y1="97.0195" x2="80.4559" y2="97.4093" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.4813" y1="97.4093" x2="80.4305" y2="97.4093" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="80.4305" y1="97.0195" x2="80.4813" y2="97.0195" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="80.4559" y1="97.4093" x2="80.261" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="80.279" y1="97.6222" x2="80.2431" y2="97.5862" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="80.438" y1="97.3913" x2="80.4739" y2="97.4273" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.2865" y1="97.6042" x2="79.2865" y2="96.85" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.2865" y1="96.85" x2="79.2865" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="79.2611" y1="96.8246" x2="79.2865" y2="96.7992" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="79.2865" y1="96.7992" x2="79.3119" y2="96.8246" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="79.3119" y1="97.6042" x2="79.2611" y2="97.6042" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.2865" y1="96.8246" x2="78.7018" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.7018" y1="96.85" x2="78.7018" y2="96.7992" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="79.2865" y1="96.7992" x2="79.2865" y2="96.85" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="78.7018" y1="96.8246" x2="78.5069" y2="97.0195" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.5249" y1="97.0375" x2="78.489" y2="97.0015" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="78.6839" y1="96.8066" x2="78.7198" y2="96.8426" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="78.5069" y1="97.0195" x2="78.5069" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.5323" y1="97.6042" x2="78.4815" y2="97.6042" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="78.4815" y1="97.0195" x2="78.5323" y2="97.0195" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="77.5324" y1="97.6042" x2="77.9222" y2="97.6042" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="77.9222" y1="97.5788" x2="77.9222" y2="97.6296" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="77.5324" y1="97.6296" x2="77.5324" y2="97.5788" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="77.9222" y1="97.6042" x2="78.1171" y2="97.4093" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.0992" y1="97.3913" x2="78.1351" y2="97.4273" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="77.9402" y1="97.6222" x2="77.9043" y2="97.5862" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="78.1171" y1="97.4093" x2="78.1171" y2="97.2398" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.1171" y1="97.2398" x2="78.1171" y2="97.2144" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.1171" y1="97.2144" x2="78.1171" y2="97.189" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.1171" y1="97.189" x2="78.1171" y2="97.0195" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.0917" y1="97.0195" x2="78.1425" y2="97.0195" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="78.1425" y1="97.4093" x2="78.0917" y2="97.4093" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="78.1171" y1="97.0195" x2="77.9222" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="77.9043" y1="96.8426" x2="77.9402" y2="96.8066" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="78.1351" y1="97.0015" x2="78.0992" y2="97.0375" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="77.9222" y1="96.8246" x2="77.5324" y2="96.8246" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="77.5324" y1="96.85" x2="77.5324" y2="96.7992" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="77.9222" y1="96.7992" x2="77.9222" y2="96.85" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="77.5324" y1="96.8246" x2="77.3375" y2="97.0195" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="77.3555" y1="97.0375" x2="77.3196" y2="97.0015" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="77.5145" y1="96.8066" x2="77.5504" y2="96.8426" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="77.3375" y1="97.0195" x2="77.3375" y2="97.189" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="77.3375" y1="97.189" x2="77.3375" y2="97.2144" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="77.3629" y1="97.2144" x2="77.3375" y2="97.2398" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="77.3375" y1="97.2398" x2="77.3121" y2="97.2144" width="0.001" layer="51" curve="90" grouprefs="ESP32-THING"/>
+<wire x1="77.3121" y1="97.0195" x2="77.3629" y2="97.0195" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="77.3375" y1="97.2144" x2="78.1171" y2="97.2144" width="0.001" layer="51" grouprefs="ESP32-THING"/>
+<wire x1="78.1171" y1="97.189" x2="78.1171" y2="97.2398" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<wire x1="77.3375" y1="97.2398" x2="77.3375" y2="97.189" width="0.001" layer="51" curve="180" grouprefs="ESP32-THING"/>
+<circle x="125.984" y="133.731" radius="6.35" width="1.27" layer="46"/>
 </plain>
 <libraries>
-<library name="SparkFun-Boards">
-<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
-This library contains footprints for SparkFun breakout boards, microcontrollers (Arduino, Particle, Teensy, etc.),  breadboards, non-RF modules, etc.
-&lt;br&gt;
-&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
-&lt;br&gt;
-&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
-&lt;br&gt;
-&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;
-&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-<package name="PRO_MICRO_C">
-<wire x1="-8.89" y1="16.51" x2="-8.89" y2="-16.51" width="0.1524" layer="51"/>
-<wire x1="-8.89" y1="-16.51" x2="8.89" y2="-16.51" width="0.1524" layer="51"/>
-<wire x1="8.89" y1="-16.51" x2="8.89" y2="16.51" width="0.1524" layer="51"/>
-<wire x1="8.89" y1="16.51" x2="-8.89" y2="16.51" width="0.1524" layer="51"/>
-<wire x1="-4.318" y1="10.541" x2="-4.318" y2="17.8435" width="0.2032" layer="21"/>
-<wire x1="-4.318" y1="17.8435" x2="4.318" y2="17.8435" width="0.2032" layer="21" curve="20.278025"/>
-<wire x1="4.318" y1="17.8435" x2="4.318" y2="10.541" width="0.2032" layer="21"/>
-<wire x1="4.318" y1="10.541" x2="-4.318" y2="10.541" width="0.2032" layer="21"/>
-<wire x1="-4.318" y1="17.8435" x2="4.318" y2="17.8435" width="0.2032" layer="21"/>
-<polygon width="0.0508" layer="49">
-<vertex x="8.89" y="4.2545"/>
-<vertex x="7.62" y="4.2545" curve="-87.205638"/>
-<vertex x="6.858" y="5.08" curve="-87.205638"/>
-<vertex x="7.62" y="5.9055"/>
-<vertex x="8.89" y="5.9055"/>
-</polygon>
-<wire x1="0" y1="2.413" x2="-4.953" y2="-2.54" width="0.2032" layer="21"/>
-<wire x1="-4.953" y1="-2.54" x2="0" y2="-7.493" width="0.2032" layer="21"/>
-<wire x1="0" y1="-7.493" x2="4.953" y2="-2.54" width="0.2032" layer="21"/>
-<wire x1="4.953" y1="-2.54" x2="0" y2="2.413" width="0.2032" layer="21"/>
-<wire x1="-5.08" y1="16.51" x2="-8.89" y2="16.51" width="0.2032" layer="21"/>
-<wire x1="-8.89" y1="16.51" x2="-8.89" y2="13.97" width="0.2032" layer="21"/>
-<wire x1="5.08" y1="16.51" x2="8.89" y2="16.51" width="0.2032" layer="21"/>
-<wire x1="8.89" y1="16.51" x2="8.89" y2="13.97" width="0.2032" layer="21"/>
-<wire x1="8.89" y1="-16.51" x2="-8.89" y2="-16.51" width="0.2032" layer="21"/>
-<smd name="21" x="8.89" y="5.08" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="22" x="8.89" y="7.62" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="23" x="8.89" y="10.16" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="24" x="8.89" y="12.7" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="20" x="8.89" y="2.54" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="19" x="8.89" y="0" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="18" x="8.89" y="-2.54" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="17" x="8.89" y="-5.08" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="16" x="8.89" y="-7.62" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="15" x="8.89" y="-10.16" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="14" x="8.89" y="-12.7" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="13" x="8.89" y="-15.24" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="12" x="-8.89" y="-15.24" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="11" x="-8.89" y="-12.7" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="10" x="-8.89" y="-10.16" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="9" x="-8.89" y="-7.62" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="8" x="-8.89" y="-5.08" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="7" x="-8.89" y="-2.54" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="6" x="-8.89" y="0" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="5" x="-8.89" y="2.54" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="4" x="-8.89" y="5.08" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="3" x="-8.89" y="7.62" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="2" x="-8.89" y="10.16" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<smd name="1" x="-8.89" y="12.7" dx="2.54" dy="1.27" layer="1" roundness="100"/>
-<polygon width="0.0508" layer="49">
-<vertex x="8.89" y="6.7945"/>
-<vertex x="7.62" y="6.7945" curve="-87.205638"/>
-<vertex x="6.858" y="7.62" curve="-87.205638"/>
-<vertex x="7.62" y="8.4455"/>
-<vertex x="8.89" y="8.4455"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="8.89" y="9.3345"/>
-<vertex x="7.62" y="9.3345" curve="-87.205638"/>
-<vertex x="6.858" y="10.16" curve="-87.205638"/>
-<vertex x="7.62" y="10.9855"/>
-<vertex x="8.89" y="10.9855"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="8.89" y="11.8745"/>
-<vertex x="7.62" y="11.8745" curve="-87.205638"/>
-<vertex x="6.858" y="12.7" curve="-87.205638"/>
-<vertex x="7.62" y="13.5255"/>
-<vertex x="8.89" y="13.5255"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="8.89" y="-5.9055"/>
-<vertex x="7.62" y="-5.9055" curve="-87.205638"/>
-<vertex x="6.858" y="-5.08" curve="-87.205638"/>
-<vertex x="7.62" y="-4.2545"/>
-<vertex x="8.89" y="-4.2545"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="8.89" y="-3.3655"/>
-<vertex x="7.62" y="-3.3655" curve="-87.205638"/>
-<vertex x="6.858" y="-2.54" curve="-87.205638"/>
-<vertex x="7.62" y="-1.7145"/>
-<vertex x="8.89" y="-1.7145"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="8.89" y="-0.8255"/>
-<vertex x="7.62" y="-0.8255" curve="-87.205638"/>
-<vertex x="6.858" y="0" curve="-87.205638"/>
-<vertex x="7.62" y="0.8255"/>
-<vertex x="8.89" y="0.8255"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="8.89" y="1.7145"/>
-<vertex x="7.62" y="1.7145" curve="-87.205638"/>
-<vertex x="6.858" y="2.54" curve="-87.205638"/>
-<vertex x="7.62" y="3.3655"/>
-<vertex x="8.89" y="3.3655"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="8.89" y="-16.0655"/>
-<vertex x="7.62" y="-16.0655" curve="-87.205638"/>
-<vertex x="6.858" y="-15.24" curve="-87.205638"/>
-<vertex x="7.62" y="-14.4145"/>
-<vertex x="8.89" y="-14.4145"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="8.89" y="-13.5255"/>
-<vertex x="7.62" y="-13.5255" curve="-87.205638"/>
-<vertex x="6.858" y="-12.7" curve="-87.205638"/>
-<vertex x="7.62" y="-11.8745"/>
-<vertex x="8.89" y="-11.8745"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="8.89" y="-10.9855"/>
-<vertex x="7.62" y="-10.9855" curve="-87.205638"/>
-<vertex x="6.858" y="-10.16" curve="-87.205638"/>
-<vertex x="7.62" y="-9.3345"/>
-<vertex x="8.89" y="-9.3345"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="8.89" y="-8.4455"/>
-<vertex x="7.62" y="-8.4455" curve="-87.205638"/>
-<vertex x="6.858" y="-7.62" curve="-87.205638"/>
-<vertex x="7.62" y="-6.7945"/>
-<vertex x="8.89" y="-6.7945"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="-8.89" y="-6.7945"/>
-<vertex x="-7.62" y="-6.7945" curve="-87.205638"/>
-<vertex x="-6.858" y="-7.62" curve="-87.205638"/>
-<vertex x="-7.62" y="-8.4455"/>
-<vertex x="-8.89" y="-8.4455"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="-8.89" y="-9.3345"/>
-<vertex x="-7.62" y="-9.3345" curve="-87.205638"/>
-<vertex x="-6.858" y="-10.16" curve="-87.205638"/>
-<vertex x="-7.62" y="-10.9855"/>
-<vertex x="-8.89" y="-10.9855"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="-8.89" y="-11.8745"/>
-<vertex x="-7.62" y="-11.8745" curve="-87.205638"/>
-<vertex x="-6.858" y="-12.7" curve="-87.205638"/>
-<vertex x="-7.62" y="-13.5255"/>
-<vertex x="-8.89" y="-13.5255"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="-8.89" y="-14.4145"/>
-<vertex x="-7.62" y="-14.4145" curve="-87.205638"/>
-<vertex x="-6.858" y="-15.24" curve="-87.205638"/>
-<vertex x="-7.62" y="-16.0655"/>
-<vertex x="-8.89" y="-16.0655"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="-8.89" y="3.3655"/>
-<vertex x="-7.62" y="3.3655" curve="-87.205638"/>
-<vertex x="-6.858" y="2.54" curve="-87.205638"/>
-<vertex x="-7.62" y="1.7145"/>
-<vertex x="-8.89" y="1.7145"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="-8.89" y="0.8255"/>
-<vertex x="-7.62" y="0.8255" curve="-87.205638"/>
-<vertex x="-6.858" y="0" curve="-87.205638"/>
-<vertex x="-7.62" y="-0.8255"/>
-<vertex x="-8.89" y="-0.8255"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="-8.89" y="-1.7145"/>
-<vertex x="-7.62" y="-1.7145" curve="-87.205638"/>
-<vertex x="-6.858" y="-2.54" curve="-87.205638"/>
-<vertex x="-7.62" y="-3.3655"/>
-<vertex x="-8.89" y="-3.3655"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="-8.89" y="-4.2545"/>
-<vertex x="-7.62" y="-4.2545" curve="-87.205638"/>
-<vertex x="-6.858" y="-5.08" curve="-87.205638"/>
-<vertex x="-7.62" y="-5.9055"/>
-<vertex x="-8.89" y="-5.9055"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="-8.89" y="13.5255"/>
-<vertex x="-7.62" y="13.5255" curve="-87.205638"/>
-<vertex x="-6.858" y="12.7" curve="-87.205638"/>
-<vertex x="-7.62" y="11.8745"/>
-<vertex x="-8.89" y="11.8745"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="-8.89" y="10.9855"/>
-<vertex x="-7.62" y="10.9855" curve="-87.205638"/>
-<vertex x="-6.858" y="10.16" curve="-87.205638"/>
-<vertex x="-7.62" y="9.3345"/>
-<vertex x="-8.89" y="9.3345"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="-8.89" y="8.4455"/>
-<vertex x="-7.62" y="8.4455" curve="-87.205638"/>
-<vertex x="-6.858" y="7.62" curve="-87.205638"/>
-<vertex x="-7.62" y="6.7945"/>
-<vertex x="-8.89" y="6.7945"/>
-</polygon>
-<polygon width="0.0508" layer="49">
-<vertex x="-8.89" y="5.9055"/>
-<vertex x="-7.62" y="5.9055" curve="-87.205638"/>
-<vertex x="-6.858" y="5.08" curve="-87.205638"/>
-<vertex x="-7.62" y="4.2545"/>
-<vertex x="-8.89" y="4.2545"/>
-</polygon>
-</package>
-</packages>
-</library>
 <library name="SparkFun-Switches">
 <description>&lt;h3&gt;SparkFun Switches, Buttons, Encoders&lt;/h3&gt;
 In this library you'll find switches, buttons, joysticks, and anything that moves to create or disrupt an electrical connection.
@@ -730,6 +1532,53 @@ MOTOR</description>
 </package3d>
 </packages3d>
 </library>
+<library name="SparkFun-Connectors">
+<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
+In this library you'll find connectors and sockets- basically anything that can be plugged into or onto.&lt;br&gt;&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
+&lt;br&gt;&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="1X12_SM_SQ_NOSILK">
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="2" x="2.54" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="3" x="5.08" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="4" x="7.62" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="5" x="10.16" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="6" x="12.7" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="7" x="15.24" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="8" x="17.78" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="9" x="20.32" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="10" x="22.86" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="11" x="25.4" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="12" x="27.94" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<text x="0" y="2.54" size="0.4064" layer="25">&gt;NAME</text>
+<text x="0" y="1.905" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
+<package name="1X16_SM_SQ_NOSILK">
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="2" x="2.54" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="3" x="5.08" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="4" x="7.62" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="5" x="10.16" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="6" x="12.7" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="7" x="15.24" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="8" x="17.78" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="9" x="20.32" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="10" x="22.86" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="11" x="25.4" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="12" x="27.94" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="13" x="30.48" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="14" x="33.02" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="15" x="35.56" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<pad name="16" x="38.1" y="0" drill="1.016" diameter="1.27" shape="square"/>
+<text x="0" y="2.54" size="0.4064" layer="25">&gt;NAME</text>
+<text x="0" y="1.905" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -911,8 +1760,10 @@ MOTOR</description>
 <param name="cfChangeDir" value="25"/>
 </pass>
 </autorouter>
+<groups>
+<board_group name="ESP32-THING"/>
+</groups>
 <elements>
-<element name="U1" library="SparkFun-Boards" package="PRO_MICRO_C" value="PRO_MICRO_C" x="83.82" y="135.89" smashed="yes"/>
 <element name="S1" library="SparkFun-Switches" package="CHERRY-MX-LED-1U" value="MECHANICAL-KEYBOARD1U" x="12.7" y="111.76" smashed="yes">
 <attribute name="NAME" x="15.24" y="121.285" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="29.21" y="121.285" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center"/>
@@ -1133,10 +1984,6 @@ MOTOR</description>
 <attribute name="NAME" x="72.81333125" y="5.842" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="VALUE" x="72.81333125" y="1.778" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="U$3" library="SparkFun-Hardware" package="STAND-OFF" value="" x="71.03533125" y="148.59" smashed="yes">
-<attribute name="NAME" x="71.03533125" y="150.622" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="VALUE" x="71.03533125" y="146.558" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
-</element>
 <element name="J1" library="SJ1-3513" package="CUI_SJ1-3513" value="SJ1-3513" x="21.59" y="149.86" smashed="yes" rot="R270">
 <attribute name="MANUFACTURER" value="CUI" x="21.59" y="149.86" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="NAME" x="29.59145" y="151.66033125" size="1.77831875" layer="25" rot="R270"/>
@@ -1197,35 +2044,37 @@ MOTOR</description>
 <attribute name="PROD_ID" value="DIO-08378" x="189.23" y="146.05" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="188.087" y="146.05" size="0.6096" layer="27" font="vector" ratio="20" rot="R270" align="top-center"/>
 </element>
-<element name="Q2" library="SparkFun-DiscreteSemi" library_urn="urn:adsk.eagle:library:514" package="TO-92-EZ" package3d_urn="urn:adsk.eagle:package:38451/1" value="200mA/40V" x="86.36" y="105.41" smashed="yes">
-<attribute name="NAME" x="86.36" y="108.458" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value="TRANS-08447" x="86.36" y="105.41" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="86.36" y="103.505" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="Q2" library="SparkFun-DiscreteSemi" library_urn="urn:adsk.eagle:library:514" package="TO-92-EZ" package3d_urn="urn:adsk.eagle:package:38451/1" value="200mA/40V" x="39.37" y="100.33" smashed="yes">
+<attribute name="NAME" x="39.37" y="103.378" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="PROD_ID" value="TRANS-08447" x="39.37" y="100.33" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="39.37" y="98.425" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="AXIAL-0.3" package3d_urn="urn:adsk.eagle:package:39658/1" value="1k" x="90.17" y="111.76" smashed="yes" rot="R180">
-<attribute name="NAME" x="90.17" y="110.744" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
-<attribute name="PROD_ID" value="RES-08380" x="90.17" y="111.76" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="90.17" y="112.776" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
+<element name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="AXIAL-0.3" package3d_urn="urn:adsk.eagle:package:39658/1" value="1k" x="48.26" y="104.14" smashed="yes" rot="R180">
+<attribute name="NAME" x="48.26" y="103.124" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
+<attribute name="PROD_ID" value="RES-08380" x="48.26" y="104.14" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="48.26" y="105.156" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="Q1" library="SparkFun-DiscreteSemi" library_urn="urn:adsk.eagle:library:514" package="TO-92-EZ" package3d_urn="urn:adsk.eagle:package:38451/1" value="200mA/40V" x="40.513" y="109.855" smashed="yes" rot="R180">
-<attribute name="NAME" x="40.513" y="106.807" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
-<attribute name="PROD_ID" value="TRANS-08447" x="48.133" y="102.235" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="40.513" y="111.76" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
+<element name="Q1" library="SparkFun-DiscreteSemi" library_urn="urn:adsk.eagle:library:514" package="TO-92-EZ" package3d_urn="urn:adsk.eagle:package:38451/1" value="200mA/40V" x="39.243" y="109.855" smashed="yes" rot="R180">
+<attribute name="NAME" x="39.243" y="106.807" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
+<attribute name="PROD_ID" value="TRANS-08447" x="46.863" y="102.235" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="39.243" y="111.76" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="AXIAL-0.3" package3d_urn="urn:adsk.eagle:package:39658/1" value="1k" x="73.66" y="107.95" smashed="yes" rot="R270">
-<attribute name="NAME" x="74.676" y="107.95" size="0.6096" layer="25" font="vector" ratio="20" rot="R270" align="bottom-center"/>
-<attribute name="PROD_ID" value="RES-08380" x="81.28" y="114.3" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="72.644" y="107.95" size="0.6096" layer="27" font="vector" ratio="20" rot="R270" align="top-center"/>
+<element name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" package="AXIAL-0.3" package3d_urn="urn:adsk.eagle:package:39658/1" value="1k" x="48.26" y="106.68" smashed="yes" rot="R180">
+<attribute name="NAME" x="48.26" y="105.664" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
+<attribute name="PROD_ID" value="RES-08380" x="54.61" y="99.06" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="48.26" y="107.696" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="M1" library="SparkFun-Electromechanical" library_urn="urn:adsk.eagle:library:516" package="VIBE-MOTOR-10MM" package3d_urn="urn:adsk.eagle:package:38555/1" value="MOTOR10MM" x="86.36" y="91.44" smashed="yes" rot="R270">
-<attribute name="NAME" x="86.36" y="96.647" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="PROD_ID" value="COMP-08572" x="86.36" y="91.44" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SF_SKU" value="ROB-08449" x="86.36" y="91.44" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="86.36" y="96.139" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="M1" library="SparkFun-Electromechanical" library_urn="urn:adsk.eagle:library:516" package="VIBE-MOTOR-10MM" package3d_urn="urn:adsk.eagle:package:38555/1" value="MOTOR10MM" x="43.18" y="90.17" smashed="yes" rot="R270">
+<attribute name="NAME" x="43.18" y="95.377" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
+<attribute name="PROD_ID" value="COMP-08572" x="43.18" y="90.17" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SF_SKU" value="ROB-08449" x="43.18" y="90.17" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VALUE" x="43.18" y="94.869" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="U$9" library="SparkFun-Hardware" package="STAND-OFF" value="" x="119.29533125" y="148.59" smashed="yes">
-<attribute name="NAME" x="119.29533125" y="150.622" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
-<attribute name="VALUE" x="119.29533125" y="146.558" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
+<element name="J6" library="SparkFun-Connectors" package="1X12_SM_SQ_NOSILK" value="ESP32_HDR" x="93.98" y="128.27" smashed="yes" rot="MR270" grouprefs="ESP32-THING">
+<attribute name="VALUE" x="92.075" y="128.27" size="0.4064" layer="28" rot="MR270"/>
+</element>
+<element name="J7" library="SparkFun-Connectors" package="1X16_SM_SQ_NOSILK" value="ESP32_HDR" x="73.66" y="138.43" smashed="yes" rot="R270" grouprefs="ESP32-THING">
+<attribute name="VALUE" x="75.565" y="138.43" size="0.4064" layer="27" rot="R270"/>
 </element>
 </elements>
 <signals>
@@ -1245,11 +2094,7 @@ MOTOR</description>
 <wire x1="17.09" y1="146.36" x2="49.84" y2="146.36" width="0.254" layer="1"/>
 <wire x1="49.84" y1="146.36" x2="52.07" y2="148.59" width="0.254" layer="1"/>
 <wire x1="52.07" y1="148.59" x2="55.88" y2="148.59" width="0.254" layer="1"/>
-<wire x1="60.96" y1="143.51" x2="60.96" y2="137.16" width="0.254" layer="1"/>
-<wire x1="67.31" y1="130.81" x2="60.96" y2="137.16" width="0.254" layer="1"/>
 <wire x1="55.88" y1="148.59" x2="60.96" y2="143.51" width="0.254" layer="1"/>
-<contactref element="U1" pad="8"/>
-<wire x1="74.93" y1="130.81" x2="67.31" y2="130.81" width="0.254" layer="1"/>
 <wire x1="15.748" y1="48.768" x2="15.748" y2="46.99" width="0.254" layer="1"/>
 <wire x1="15.748" y1="46.99" x2="16.51" y2="46.228" width="0.254" layer="1"/>
 <wire x1="16.51" y1="46.228" x2="18.415" y2="46.228" width="0.254" layer="1"/>
@@ -1267,6 +2112,10 @@ MOTOR</description>
 <wire x1="15.748" y1="122.428" x2="15.748" y2="120.65" width="0.254" layer="1"/>
 <wire x1="15.748" y1="120.65" x2="16.51" y2="119.888" width="0.254" layer="1"/>
 <wire x1="16.51" y1="119.888" x2="18.415" y2="119.888" width="0.254" layer="1"/>
+<contactref element="J7" pad="2"/>
+<wire x1="60.96" y1="143.51" x2="60.96" y2="139.7" width="0.254" layer="1"/>
+<wire x1="60.96" y1="139.7" x2="64.77" y2="135.89" width="0.254" layer="1"/>
+<wire x1="64.77" y1="135.89" x2="73.66" y2="135.89" width="0.254" layer="1"/>
 </signal>
 <signal name="N$7">
 <contactref element="S6" pad="S2"/>
@@ -1282,11 +2131,8 @@ MOTOR</description>
 <contactref element="J2" pad="2"/>
 <wire x1="53.92" y1="146.36" x2="53.92" y2="134.929" width="0.254" layer="1"/>
 <wire x1="53.92" y1="134.929" x2="55.245" y2="133.604" width="0.254" layer="1"/>
-<wire x1="55.245" y1="133.604" x2="55.245" y2="123.825" width="0.254" layer="1"/>
-<wire x1="55.245" y1="123.825" x2="69.215" y2="123.825" width="0.254" layer="1"/>
-<contactref element="U1" pad="9"/>
-<wire x1="74.93" y1="128.27" x2="73.66" y2="128.27" width="0.254" layer="1"/>
-<wire x1="73.66" y1="128.27" x2="69.215" y2="123.825" width="0.254" layer="1"/>
+<wire x1="55.245" y1="133.604" x2="55.245" y2="133.35" width="0.254" layer="1"/>
+<wire x1="55.245" y1="133.35" x2="55.245" y2="123.825" width="0.254" layer="1"/>
 <wire x1="55.245" y1="13.335" x2="55.245" y2="46.228" width="0.254" layer="1"/>
 <wire x1="53.34" y1="49.53" x2="52.578" y2="48.768" width="0.254" layer="1"/>
 <wire x1="53.34" y1="49.53" x2="54.61" y2="49.53" width="0.254" layer="1"/>
@@ -1308,6 +2154,8 @@ MOTOR</description>
 <wire x1="52.578" y1="122.428" x2="52.578" y2="120.65" width="0.254" layer="1"/>
 <wire x1="52.578" y1="120.65" x2="53.34" y2="119.888" width="0.254" layer="1"/>
 <wire x1="53.34" y1="119.888" x2="55.245" y2="119.888" width="0.254" layer="1"/>
+<contactref element="J7" pad="3"/>
+<wire x1="73.66" y1="133.35" x2="55.245" y2="133.35" width="0.254" layer="1"/>
 </signal>
 <signal name="N$8">
 <contactref element="S7" pad="S2"/>
@@ -1357,13 +2205,7 @@ MOTOR</description>
 <contactref element="S18" pad="S1"/>
 <contactref element="S13" pad="S1"/>
 <contactref element="J3" pad="2"/>
-<wire x1="103.505" y1="123.825" x2="103.505" y2="132.588" width="0.254" layer="1"/>
-<wire x1="90.424" y1="139.446" x2="90.424" y2="141.224" width="0.254" layer="1"/>
-<wire x1="90.424" y1="141.224" x2="91.44" y2="142.24" width="0.254" layer="1"/>
-<wire x1="91.44" y1="142.24" x2="95.25" y2="142.24" width="0.254" layer="1"/>
-<contactref element="U1" pad="20"/>
-<wire x1="92.71" y1="138.43" x2="91.44" y2="138.43" width="0.254" layer="1"/>
-<wire x1="91.44" y1="138.43" x2="90.424" y2="139.446" width="0.254" layer="1"/>
+<wire x1="103.505" y1="123.825" x2="103.505" y2="128.27" width="0.254" layer="1"/>
 <wire x1="103.505" y1="13.335" x2="103.505" y2="46.228" width="0.254" layer="1"/>
 <wire x1="101.6" y1="49.53" x2="100.838" y2="48.768" width="0.254" layer="1"/>
 <wire x1="101.6" y1="49.53" x2="102.87" y2="49.53" width="0.254" layer="1"/>
@@ -1386,11 +2228,12 @@ MOTOR</description>
 <wire x1="100.838" y1="120.65" x2="101.6" y2="119.888" width="0.254" layer="1"/>
 <wire x1="101.6" y1="119.888" x2="103.505" y2="119.888" width="0.254" layer="1"/>
 <wire x1="102.18" y1="146.36" x2="101.22" y2="147.32" width="0.254" layer="1"/>
-<wire x1="101.22" y1="147.32" x2="97.79" y2="147.32" width="0.254" layer="1"/>
-<wire x1="97.79" y1="147.32" x2="95.25" y2="144.78" width="0.254" layer="1"/>
-<wire x1="95.25" y1="144.78" x2="95.25" y2="142.24" width="0.254" layer="1"/>
-<wire x1="95.25" y1="142.24" x2="95.25" y2="140.843" width="0.254" layer="1"/>
-<wire x1="95.25" y1="140.843" x2="103.505" y2="132.588" width="0.254" layer="1"/>
+<wire x1="101.22" y1="147.32" x2="92.329" y2="147.32" width="0.254" layer="1"/>
+<wire x1="92.329" y1="147.32" x2="89.916" y2="144.907" width="0.254" layer="1"/>
+<wire x1="89.916" y1="144.907" x2="89.916" y2="132.334" width="0.254" layer="1"/>
+<wire x1="89.916" y1="132.334" x2="93.98" y2="128.27" width="0.254" layer="1"/>
+<contactref element="J6" pad="1"/>
+<wire x1="93.98" y1="128.27" x2="103.505" y2="128.27" width="0.254" layer="1"/>
 </signal>
 <signal name="COL4">
 <contactref element="S4" pad="S1"/>
@@ -1405,10 +2248,6 @@ MOTOR</description>
 <wire x1="109.6518" y1="137.481325" x2="123.308125" y2="123.825" width="0.254" layer="1"/>
 <wire x1="109.6518" y1="137.481325" x2="109.6518" y2="143.460875" width="0.254" layer="1"/>
 <wire x1="91.4339625" y1="149.5872" x2="87.8078" y2="145.9610375" width="0.254" layer="1"/>
-<contactref element="U1" pad="17"/>
-<wire x1="92.71" y1="130.81" x2="90.7288" y2="130.81" width="0.254" layer="1"/>
-<wire x1="87.8078" y1="133.731" x2="90.7288" y2="130.81" width="0.254" layer="1"/>
-<wire x1="87.8078" y1="145.9610375" x2="87.8078" y2="133.731" width="0.254" layer="1"/>
 <wire x1="140.335" y1="13.335" x2="140.335" y2="46.228" width="0.254" layer="1"/>
 <wire x1="138.43" y1="49.53" x2="137.668" y2="48.768" width="0.254" layer="1"/>
 <wire x1="138.43" y1="49.53" x2="139.7" y2="49.53" width="0.254" layer="1"/>
@@ -1429,6 +2268,9 @@ MOTOR</description>
 <wire x1="123.308125" y1="123.825" x2="137.668" y2="123.825" width="0.254" layer="1"/>
 <wire x1="137.668" y1="123.825" x2="140.335" y2="123.825" width="0.254" layer="1"/>
 <wire x1="137.668" y1="120.65" x2="137.668" y2="123.825" width="0.254" layer="1"/>
+<contactref element="J6" pad="4"/>
+<wire x1="87.8078" y1="126.8222" x2="93.98" y2="120.65" width="0.254" layer="1"/>
+<wire x1="87.8078" y1="145.9610375" x2="87.8078" y2="126.8222" width="0.254" layer="1"/>
 </signal>
 <signal name="ROW4">
 <contactref element="D14" pad="C"/>
@@ -1454,17 +2296,14 @@ MOTOR</description>
 <wire x1="66.276475" y1="44.45" x2="67.31" y2="45.483525" width="0.254" layer="16"/>
 <wire x1="115.57" y1="45.483525" x2="118.11" y2="48.023525" width="0.254" layer="1"/>
 <wire x1="118.11" y1="48.023525" x2="118.11" y2="127.381" width="0.254" layer="1"/>
-<wire x1="102.976875" y1="148.368" x2="97.446125" y2="148.368" width="0.254" layer="1"/>
+<wire x1="102.976875" y1="148.368" x2="92.234" y2="148.368" width="0.254" layer="1"/>
 <wire x1="108.4326" y1="137.0584" x2="108.4326" y2="142.912275" width="0.254" layer="1"/>
 <wire x1="108.4326" y1="142.912275" x2="102.976875" y2="148.368" width="0.254" layer="1"/>
-<wire x1="97.446125" y1="148.368" x2="93.858125" y2="144.78" width="0.254" layer="1"/>
-<wire x1="93.858125" y1="144.78" x2="91.44" y2="144.78" width="0.254" layer="1"/>
-<wire x1="91.44" y1="144.78" x2="89.662" y2="143.002" width="0.254" layer="1"/>
-<wire x1="89.662" y1="143.002" x2="89.662" y2="136.398" width="0.254" layer="1"/>
-<wire x1="90.17" y1="135.89" x2="89.662" y2="136.398" width="0.254" layer="1"/>
+<wire x1="92.234" y1="148.368" x2="89.154" y2="145.288" width="0.254" layer="1"/>
 <wire x1="118.11" y1="127.381" x2="108.4326" y2="137.0584" width="0.254" layer="1"/>
-<contactref element="U1" pad="19"/>
-<wire x1="92.71" y1="135.89" x2="90.17" y2="135.89" width="0.254" layer="1"/>
+<contactref element="J6" pad="2"/>
+<wire x1="89.154" y1="130.556" x2="93.98" y2="125.73" width="0.254" layer="1"/>
+<wire x1="89.154" y1="145.288" x2="89.154" y2="130.556" width="0.254" layer="1"/>
 </signal>
 <signal name="N$15">
 <contactref element="D5" pad="A"/>
@@ -1498,9 +2337,6 @@ MOTOR</description>
 <wire x1="174.117" y1="81.661" x2="188.087" y2="81.661" width="0.254" layer="16"/>
 <wire x1="189.357" y1="82.931" x2="188.087" y2="81.661" width="0.254" layer="16"/>
 <wire x1="67.31" y1="82.90733125" x2="69.85" y2="85.44733125" width="0.254" layer="1"/>
-<wire x1="69.85" y1="85.44733125" x2="69.85" y2="118.11" width="0.254" layer="1"/>
-<contactref element="U1" pad="11"/>
-<wire x1="74.93" y1="123.19" x2="69.85" y2="118.11" width="0.254" layer="1"/>
 <wire x1="115.57" y1="82.90733125" x2="115.57" y2="82.931" width="0.254" layer="16"/>
 <wire x1="67.31" y1="82.90733125" x2="67.31" y2="82.931" width="0.254" layer="16"/>
 <wire x1="151.15366875" y1="81.661" x2="152.4" y2="82.90733125" width="0.254" layer="16"/>
@@ -1511,6 +2347,9 @@ MOTOR</description>
 <wire x1="67.31" y1="82.90733125" x2="67.31" y2="82.804" width="0.254" layer="16"/>
 <wire x1="189.23" y1="82.90733125" x2="189.25366875" y2="82.931" width="0.254" layer="16"/>
 <wire x1="189.25366875" y1="82.931" x2="189.357" y2="82.931" width="0.254" layer="16"/>
+<contactref element="J7" pad="5"/>
+<wire x1="69.85" y1="124.46" x2="73.66" y2="128.27" width="0.254" layer="1"/>
+<wire x1="69.85" y1="85.44733125" x2="69.85" y2="124.46" width="0.254" layer="1"/>
 </signal>
 <signal name="COL5">
 <contactref element="S10" pad="S1"/>
@@ -1526,12 +2365,8 @@ MOTOR</description>
 <wire x1="124.46" y1="149.86" x2="120.65" y2="146.05" width="0.254" layer="1"/>
 <wire x1="120.65" y1="146.05" x2="107.95" y2="146.05" width="0.254" layer="1"/>
 <wire x1="91.186" y1="150.114" x2="87.122" y2="146.05" width="0.254" layer="1"/>
-<wire x1="87.122" y1="146.05" x2="87.122" y2="132.588" width="0.254" layer="1"/>
 <wire x1="107.95" y1="146.05" x2="103.886" y2="150.114" width="0.254" layer="1"/>
 <wire x1="103.886" y1="150.114" x2="91.186" y2="150.114" width="0.254" layer="1"/>
-<contactref element="U1" pad="16"/>
-<wire x1="92.71" y1="128.27" x2="91.44" y2="128.27" width="0.254" layer="1"/>
-<wire x1="91.44" y1="128.27" x2="87.122" y2="132.588" width="0.254" layer="1"/>
 <wire x1="177.165" y1="13.335" x2="177.165" y2="46.228" width="0.254" layer="1"/>
 <wire x1="175.26" y1="49.53" x2="174.498" y2="48.768" width="0.254" layer="1"/>
 <wire x1="175.26" y1="49.53" x2="176.53" y2="49.53" width="0.254" layer="1"/>
@@ -1553,18 +2388,17 @@ MOTOR</description>
 <wire x1="174.498" y1="122.428" x2="174.498" y2="120.65" width="0.254" layer="1"/>
 <wire x1="174.498" y1="120.65" x2="175.26" y2="119.888" width="0.254" layer="1"/>
 <wire x1="175.26" y1="119.888" x2="177.165" y2="119.888" width="0.254" layer="1"/>
+<contactref element="J6" pad="5"/>
+<wire x1="87.122" y1="124.968" x2="93.98" y2="118.11" width="0.254" layer="1"/>
+<wire x1="87.122" y1="146.05" x2="87.122" y2="124.968" width="0.254" layer="1"/>
 </signal>
 <signal name="BACKLIGHT">
-<contactref element="U1" pad="12"/>
 <contactref element="R1" pad="P$1"/>
-<wire x1="74.93" y1="120.65" x2="74.93" y2="118.11" width="0.254" layer="1"/>
-<wire x1="74.93" y1="118.11" x2="73.66" y2="116.84" width="0.254" layer="1"/>
-<wire x1="73.66" y1="116.84" x2="73.66" y2="111.76" width="0.254" layer="1"/>
+<contactref element="J7" pad="11"/>
+<wire x1="52.07" y1="106.68" x2="58.42" y2="113.03" width="0.254" layer="16"/>
+<wire x1="58.42" y1="113.03" x2="73.66" y2="113.03" width="0.254" layer="16"/>
 </signal>
 <signal name="GND">
-<contactref element="U1" pad="23"/>
-<contactref element="U1" pad="4"/>
-<contactref element="U1" pad="3"/>
 <contactref element="Q1" pad="1"/>
 <contactref element="Q2" pad="1"/>
 <polygon width="0.2032" layer="1">
@@ -1579,6 +2413,7 @@ MOTOR</description>
 <vertex x="203.2" y="0"/>
 <vertex x="203.2" y="152.4"/>
 </polygon>
+<contactref element="J7" pad="13"/>
 </signal>
 <signal name="ROW2">
 <contactref element="D1" pad="C"/>
@@ -1602,9 +2437,9 @@ MOTOR</description>
 <wire x1="172.72" y1="119.38" x2="173.99" y2="118.11" width="0.254" layer="16"/>
 <wire x1="173.99" y1="118.11" x2="187.96" y2="118.11" width="0.254" layer="16"/>
 <wire x1="187.96" y1="118.11" x2="189.23" y2="119.38" width="0.254" layer="16"/>
-<contactref element="U1" pad="10"/>
-<wire x1="74.93" y1="125.73" x2="73.66" y2="125.73" width="0.254" layer="1"/>
-<wire x1="73.66" y1="125.73" x2="67.31" y2="119.38" width="0.254" layer="1"/>
+<contactref element="J7" pad="4"/>
+<wire x1="67.31" y1="119.38" x2="67.31" y2="124.46" width="0.254" layer="1"/>
+<wire x1="67.31" y1="124.46" x2="73.66" y2="130.81" width="0.254" layer="1"/>
 </signal>
 <signal name="ROW1">
 <contactref element="D21" pad="C"/>
@@ -1616,8 +2451,6 @@ MOTOR</description>
 <wire x1="58.42" y1="142.24" x2="60.96" y2="144.78" width="0.254" layer="16"/>
 <wire x1="60.96" y1="144.78" x2="64.77" y2="144.78" width="0.254" layer="16"/>
 <wire x1="64.77" y1="144.78" x2="67.31" y2="142.24" width="0.254" layer="16"/>
-<wire x1="67.31" y1="142.24" x2="67.31" y2="135.89" width="0.254" layer="1"/>
-<wire x1="69.85" y1="133.35" x2="67.31" y2="135.89" width="0.254" layer="1"/>
 <wire x1="67.31" y1="142.24" x2="106.68" y2="142.24" width="0.254" layer="16"/>
 <wire x1="106.68" y1="142.24" x2="109.22" y2="144.78" width="0.254" layer="16"/>
 <wire x1="109.22" y1="144.78" x2="113.03" y2="144.78" width="0.254" layer="16"/>
@@ -1630,15 +2463,15 @@ MOTOR</description>
 <wire x1="180.34" y1="142.24" x2="182.88" y2="144.78" width="0.254" layer="16"/>
 <wire x1="182.88" y1="144.78" x2="186.69" y2="144.78" width="0.254" layer="16"/>
 <wire x1="186.69" y1="144.78" x2="189.23" y2="142.24" width="0.254" layer="16"/>
-<contactref element="U1" pad="7"/>
-<wire x1="74.93" y1="133.35" x2="69.85" y2="133.35" width="0.254" layer="1"/>
+<contactref element="J7" pad="1"/>
+<wire x1="67.31" y1="142.24" x2="71.12" y2="138.43" width="0.254" layer="1"/>
+<wire x1="71.12" y1="138.43" x2="73.66" y2="138.43" width="0.254" layer="1"/>
 </signal>
 <signal name="HAPTIC">
-<contactref element="U1" pad="13"/>
 <contactref element="R2" pad="P$1"/>
-<wire x1="93.98" y1="116.84" x2="92.71" y2="118.11" width="0.254" layer="1"/>
-<wire x1="92.71" y1="120.65" x2="92.71" y2="118.11" width="0.254" layer="1"/>
-<wire x1="93.98" y1="116.84" x2="93.98" y2="111.76" width="0.254" layer="1"/>
+<contactref element="J7" pad="12"/>
+<wire x1="52.07" y1="104.14" x2="58.42" y2="110.49" width="0.254" layer="16"/>
+<wire x1="58.42" y1="110.49" x2="73.66" y2="110.49" width="0.254" layer="16"/>
 </signal>
 <signal name="N$1">
 <contactref element="S11" pad="S2"/>
@@ -1706,28 +2539,25 @@ MOTOR</description>
 <contactref element="D17" pad="C"/>
 <contactref element="D16" pad="C"/>
 <contactref element="D20" pad="C"/>
-<wire x1="152.4" y1="8.128" x2="188.468" y2="8.128" width="0.254" layer="16"/>
-<wire x1="189.23" y1="8.89" x2="188.468" y2="8.128" width="0.254" layer="16"/>
-<wire x1="152.4" y1="8.128" x2="152.4" y2="8.89" width="0.254" layer="16"/>
-<wire x1="152.4" y1="8.128" x2="115.57" y2="8.128" width="0.254" layer="16"/>
-<wire x1="115.57" y1="8.128" x2="67.31" y2="8.128" width="0.254" layer="16"/>
-<wire x1="115.57" y1="8.128" x2="115.57" y2="8.89" width="0.254" layer="16"/>
-<wire x1="30.48" y1="8.89" x2="31.242" y2="8.128" width="0.254" layer="16"/>
-<wire x1="67.31" y1="8.128" x2="31.242" y2="8.128" width="0.254" layer="16"/>
-<wire x1="67.31" y1="8.128" x2="67.31" y2="8.89" width="0.254" layer="16"/>
+<wire x1="152.4" y1="7.62" x2="187.96" y2="7.62" width="0.254" layer="16"/>
+<wire x1="189.23" y1="8.89" x2="187.96" y2="7.62" width="0.254" layer="16"/>
+<wire x1="152.4" y1="7.62" x2="152.4" y2="8.89" width="0.254" layer="16"/>
+<wire x1="152.4" y1="7.62" x2="115.57" y2="7.62" width="0.254" layer="16"/>
+<wire x1="115.57" y1="7.62" x2="67.31" y2="7.62" width="0.254" layer="16"/>
+<wire x1="115.57" y1="7.62" x2="115.57" y2="8.89" width="0.254" layer="16"/>
+<wire x1="30.48" y1="8.89" x2="31.75" y2="7.62" width="0.254" layer="16"/>
+<wire x1="67.31" y1="7.62" x2="31.75" y2="7.62" width="0.254" layer="16"/>
+<wire x1="67.31" y1="7.62" x2="67.31" y2="8.89" width="0.254" layer="16"/>
 <wire x1="108.9152" y1="143.313575" x2="103.251175" y2="148.9776" width="0.254" layer="1"/>
-<wire x1="103.251175" y1="148.9776" x2="96.028825" y2="148.9776" width="0.254" layer="1"/>
-<wire x1="91.6737" y1="147.2946" x2="88.4174" y2="144.0383" width="0.254" layer="1"/>
+<wire x1="103.251175" y1="148.9776" x2="91.7057" y2="148.9776" width="0.254" layer="1"/>
 <wire x1="108.9152" y1="143.313575" x2="108.9152" y2="137.3327" width="0.254" layer="1"/>
-<wire x1="94.345825" y1="147.2946" x2="91.6737" y2="147.2946" width="0.254" layer="1"/>
-<wire x1="96.028825" y1="148.9776" x2="94.345825" y2="147.2946" width="0.254" layer="1"/>
-<contactref element="U1" pad="18"/>
-<wire x1="88.4174" y1="135.128" x2="88.4174" y2="144.0383" width="0.254" layer="1"/>
-<wire x1="92.71" y1="133.35" x2="90.1954" y2="133.35" width="0.254" layer="1"/>
-<wire x1="90.1954" y1="133.35" x2="88.4174" y2="135.128" width="0.254" layer="1"/>
+<wire x1="91.7057" y1="148.9776" x2="88.4174" y2="145.6893" width="0.254" layer="1"/>
 <wire x1="118.618" y1="11.938" x2="115.57" y2="8.89" width="0.254" layer="1"/>
 <wire x1="108.9152" y1="137.3327" x2="118.618" y2="127.6299" width="0.254" layer="1"/>
 <wire x1="118.618" y1="127.6299" x2="118.618" y2="11.938" width="0.254" layer="1"/>
+<contactref element="J6" pad="3"/>
+<wire x1="88.4174" y1="128.7526" x2="93.98" y2="123.19" width="0.254" layer="1"/>
+<wire x1="88.4174" y1="145.6893" x2="88.4174" y2="128.7526" width="0.254" layer="1"/>
 </signal>
 <signal name="N$20">
 <contactref element="J5" pad="1"/>
@@ -1757,16 +2587,15 @@ MOTOR</description>
 <signal name="N$29">
 <contactref element="Q2" pad="2"/>
 <contactref element="R2" pad="P$2"/>
-<wire x1="86.36" y1="107.315" x2="86.36" y2="111.76" width="0.254" layer="1"/>
+<wire x1="44.45" y1="104.14" x2="41.275" y2="104.14" width="0.254" layer="1"/>
+<wire x1="39.37" y1="102.235" x2="41.275" y2="104.14" width="0.254" layer="1"/>
 </signal>
 <signal name="N$30">
 <contactref element="Q2" pad="3"/>
 <contactref element="M1" pad="-"/>
-<wire x1="87.63" y1="105.41" x2="87.63" y2="101.6" width="0.254" layer="1"/>
-<wire x1="87.63" y1="101.6" x2="83.82" y2="97.79" width="0.254" layer="1"/>
+<wire x1="40.64" y1="100.33" x2="40.64" y2="96.52" width="0.254" layer="1"/>
 </signal>
 <signal name="VCC">
-<contactref element="U1" pad="21"/>
 <contactref element="S17" pad="A"/>
 <contactref element="S12" pad="A"/>
 <contactref element="S7" pad="A"/>
@@ -1784,12 +2613,6 @@ MOTOR</description>
 <contactref element="S10" pad="A"/>
 <contactref element="S5" pad="A"/>
 <contactref element="M1" pad="+"/>
-<wire x1="92.71" y1="140.97" x2="93.98" y2="140.97" width="0.254" layer="1"/>
-<wire x1="97.79" y1="137.16" x2="97.79" y2="100.33" width="0.254" layer="1"/>
-<wire x1="97.79" y1="100.33" x2="93.9" y2="96.44" width="0.254" layer="1"/>
-<wire x1="93.98" y1="140.97" x2="97.79" y2="137.16" width="0.254" layer="1"/>
-<wire x1="93.9" y1="96.44" x2="82.46" y2="96.44" width="0.254" layer="1"/>
-<wire x1="82.46" y1="96.44" x2="40.72" y2="96.44" width="0.254" layer="16"/>
 <contactref element="S1" pad="A"/>
 <contactref element="S6" pad="A"/>
 <contactref element="S11" pad="A"/>
@@ -1801,27 +2624,17 @@ MOTOR</description>
 <wire x1="19.05" y1="11.176" x2="19.05" y2="7.62" width="0.254" layer="1"/>
 <wire x1="19.05" y1="42.545" x2="20.955" y2="42.545" width="0.254" layer="1"/>
 <wire x1="20.955" y1="5.715" x2="19.05" y2="7.62" width="0.254" layer="1"/>
-<wire x1="40.72" y1="96.44" x2="20.955" y2="116.205" width="0.254" layer="16"/>
-<wire x1="20.955" y1="5.715" x2="22.479" y2="7.239" width="0.254" layer="16"/>
-<wire x1="22.479" y1="7.239" x2="57.785" y2="7.239" width="0.254" layer="16"/>
-<wire x1="57.785" y1="7.239" x2="57.785" y2="5.715" width="0.254" layer="16"/>
-<wire x1="57.785" y1="7.239" x2="106.045" y2="7.239" width="0.254" layer="16"/>
-<wire x1="106.045" y1="7.239" x2="106.045" y2="5.715" width="0.254" layer="16"/>
-<wire x1="106.045" y1="7.239" x2="142.875" y2="7.239" width="0.254" layer="16"/>
-<wire x1="142.875" y1="7.239" x2="142.875" y2="5.715" width="0.254" layer="16"/>
-<wire x1="142.875" y1="7.239" x2="178.181" y2="7.239" width="0.254" layer="16"/>
-<wire x1="178.181" y1="7.239" x2="179.705" y2="5.715" width="0.254" layer="16"/>
 <wire x1="19.05" y1="79.375" x2="19.05" y2="52.451" width="0.254" layer="1"/>
 <wire x1="19.05" y1="52.451" x2="20.574" y2="50.927" width="0.254" layer="1"/>
 <wire x1="20.574" y1="50.927" x2="20.574" y2="49.53" width="0.254" layer="1"/>
 <wire x1="19.05" y1="48.006" x2="20.574" y2="49.53" width="0.254" layer="1"/>
 <wire x1="19.05" y1="79.375" x2="20.955" y2="79.375" width="0.254" layer="1"/>
 <wire x1="19.05" y1="42.545" x2="19.05" y2="48.006" width="0.254" layer="1"/>
-<wire x1="19.05" y1="116.205" x2="19.05" y2="89.281" width="0.254" layer="1"/>
+<wire x1="19.05" y1="114.3" x2="19.05" y2="89.281" width="0.254" layer="1"/>
 <wire x1="19.05" y1="89.281" x2="20.574" y2="87.757" width="0.254" layer="1"/>
 <wire x1="20.574" y1="87.757" x2="20.574" y2="86.36" width="0.254" layer="1"/>
 <wire x1="19.05" y1="84.836" x2="20.574" y2="86.36" width="0.254" layer="1"/>
-<wire x1="19.05" y1="116.205" x2="20.955" y2="116.205" width="0.254" layer="1"/>
+<wire x1="19.05" y1="114.3" x2="20.955" y2="116.205" width="0.254" layer="1"/>
 <wire x1="19.05" y1="79.375" x2="19.05" y2="84.836" width="0.254" layer="1"/>
 <wire x1="55.88" y1="15.621" x2="55.88" y2="42.545" width="0.254" layer="1"/>
 <wire x1="55.88" y1="15.621" x2="57.404" y2="14.097" width="0.254" layer="1"/>
@@ -1899,30 +2712,29 @@ MOTOR</description>
 <wire x1="177.8" y1="84.836" x2="179.324" y2="86.36" width="0.254" layer="1"/>
 <wire x1="177.8" y1="116.205" x2="179.705" y2="116.205" width="0.254" layer="1"/>
 <wire x1="177.8" y1="79.375" x2="177.8" y2="84.836" width="0.254" layer="1"/>
+<contactref element="J7" pad="15"/>
+<wire x1="73.66" y1="102.87" x2="65.96" y2="95.17" width="0.254" layer="16"/>
+<wire x1="65.96" y1="95.17" x2="39.28" y2="95.17" width="0.254" layer="16"/>
+<wire x1="20.955" y1="116.205" x2="20.955" y2="108.585" width="0.254" layer="16"/>
+<wire x1="34.37" y1="95.17" x2="39.28" y2="95.17" width="0.254" layer="16"/>
+<wire x1="20.955" y1="108.585" x2="34.37" y2="95.17" width="0.254" layer="16"/>
+<wire x1="20.955" y1="42.545" x2="22.86" y2="40.64" width="0.254" layer="16"/>
+<wire x1="177.8" y1="40.64" x2="179.705" y2="42.545" width="0.254" layer="16"/>
+<wire x1="22.86" y1="40.64" x2="57.785" y2="40.64" width="0.254" layer="16"/>
+<wire x1="57.785" y1="40.64" x2="106.045" y2="40.64" width="0.254" layer="16"/>
+<wire x1="106.045" y1="40.64" x2="142.875" y2="40.64" width="0.254" layer="16"/>
+<wire x1="142.875" y1="40.64" x2="177.8" y2="40.64" width="0.254" layer="16"/>
+<wire x1="142.875" y1="42.545" x2="142.875" y2="40.64" width="0.254" layer="16"/>
+<wire x1="106.045" y1="42.545" x2="106.045" y2="40.64" width="0.254" layer="16"/>
+<wire x1="57.785" y1="42.545" x2="57.785" y2="40.64" width="0.254" layer="16"/>
 </signal>
 <signal name="N$34">
 <contactref element="Q1" pad="2"/>
 <contactref element="R1" pad="P$2"/>
-<wire x1="40.513" y1="107.95" x2="44.323" y2="104.14" width="0.254" layer="16"/>
-<wire x1="44.323" y1="104.14" x2="73.66" y2="104.14" width="0.254" layer="16"/>
+<wire x1="39.243" y1="107.95" x2="40.513" y2="106.68" width="0.254" layer="1"/>
+<wire x1="40.513" y1="106.68" x2="44.45" y2="106.68" width="0.254" layer="1"/>
 </signal>
 <signal name="LED-">
-<wire x1="23.495" y1="42.545" x2="53.975" y2="42.545" width="0.254" layer="16"/>
-<wire x1="53.975" y1="42.545" x2="55.88" y2="40.64" width="0.254" layer="16"/>
-<wire x1="55.88" y1="40.64" x2="58.42" y2="40.64" width="0.254" layer="16"/>
-<wire x1="58.42" y1="40.64" x2="60.325" y2="42.545" width="0.254" layer="16"/>
-<wire x1="60.325" y1="42.545" x2="102.235" y2="42.545" width="0.254" layer="16"/>
-<wire x1="102.235" y1="42.545" x2="104.14" y2="40.64" width="0.254" layer="16"/>
-<wire x1="104.14" y1="40.64" x2="106.68" y2="40.64" width="0.254" layer="16"/>
-<wire x1="106.68" y1="40.64" x2="108.585" y2="42.545" width="0.254" layer="16"/>
-<wire x1="108.585" y1="42.545" x2="139.065" y2="42.545" width="0.254" layer="16"/>
-<wire x1="139.065" y1="42.545" x2="140.97" y2="40.64" width="0.254" layer="16"/>
-<wire x1="140.97" y1="40.64" x2="143.51" y2="40.64" width="0.254" layer="16"/>
-<wire x1="143.51" y1="40.64" x2="145.415" y2="42.545" width="0.254" layer="16"/>
-<wire x1="145.415" y1="42.545" x2="175.895" y2="42.545" width="0.254" layer="16"/>
-<wire x1="175.895" y1="42.545" x2="177.8" y2="40.64" width="0.254" layer="16"/>
-<wire x1="177.8" y1="40.64" x2="180.34" y2="40.64" width="0.254" layer="16"/>
-<wire x1="180.34" y1="40.64" x2="182.245" y2="42.545" width="0.254" layer="16"/>
 <contactref element="S1" pad="K"/>
 <contactref element="S6" pad="K"/>
 <contactref element="S11" pad="K"/>
@@ -1944,26 +2756,6 @@ MOTOR</description>
 <contactref element="S15" pad="K"/>
 <contactref element="S20" pad="K"/>
 <contactref element="Q1" pad="3"/>
-<wire x1="54.61" y1="6.35" x2="24.13" y2="6.35" width="0.254" layer="16"/>
-<wire x1="23.495" y1="5.715" x2="24.13" y2="6.35" width="0.254" layer="16"/>
-<wire x1="54.61" y1="6.35" x2="57.15" y2="3.81" width="0.254" layer="16"/>
-<wire x1="57.15" y1="3.81" x2="58.42" y2="3.81" width="0.254" layer="16"/>
-<wire x1="58.42" y1="3.81" x2="60.325" y2="5.715" width="0.254" layer="16"/>
-<wire x1="102.87" y1="6.35" x2="60.96" y2="6.35" width="0.254" layer="16"/>
-<wire x1="60.325" y1="5.715" x2="60.96" y2="6.35" width="0.254" layer="16"/>
-<wire x1="102.87" y1="6.35" x2="105.41" y2="3.81" width="0.254" layer="16"/>
-<wire x1="105.41" y1="3.81" x2="106.68" y2="3.81" width="0.254" layer="16"/>
-<wire x1="106.68" y1="3.81" x2="108.585" y2="5.715" width="0.254" layer="16"/>
-<wire x1="108.585" y1="5.715" x2="109.22" y2="6.35" width="0.254" layer="16"/>
-<wire x1="139.7" y1="6.35" x2="109.22" y2="6.35" width="0.254" layer="16"/>
-<wire x1="139.7" y1="6.35" x2="142.24" y2="3.81" width="0.254" layer="16"/>
-<wire x1="142.24" y1="3.81" x2="143.51" y2="3.81" width="0.254" layer="16"/>
-<wire x1="143.51" y1="3.81" x2="145.415" y2="5.715" width="0.254" layer="16"/>
-<wire x1="145.415" y1="5.715" x2="146.05" y2="6.35" width="0.254" layer="16"/>
-<wire x1="176.53" y1="6.35" x2="146.05" y2="6.35" width="0.254" layer="16"/>
-<wire x1="176.53" y1="6.35" x2="179.07" y2="3.81" width="0.254" layer="16"/>
-<wire x1="179.07" y1="3.81" x2="180.34" y2="3.81" width="0.254" layer="16"/>
-<wire x1="180.34" y1="3.81" x2="182.245" y2="5.715" width="0.254" layer="16"/>
 <wire x1="23.495" y1="79.375" x2="53.975" y2="79.375" width="0.254" layer="16"/>
 <wire x1="53.975" y1="79.375" x2="55.88" y2="77.47" width="0.254" layer="16"/>
 <wire x1="55.88" y1="77.47" x2="58.42" y2="77.47" width="0.254" layer="16"/>
@@ -1980,22 +2772,6 @@ MOTOR</description>
 <wire x1="175.895" y1="79.375" x2="177.8" y2="77.47" width="0.254" layer="16"/>
 <wire x1="177.8" y1="77.47" x2="180.34" y2="77.47" width="0.254" layer="16"/>
 <wire x1="180.34" y1="77.47" x2="182.245" y2="79.375" width="0.254" layer="16"/>
-<wire x1="23.495" y1="116.205" x2="53.975" y2="116.205" width="0.254" layer="16"/>
-<wire x1="53.975" y1="116.205" x2="55.88" y2="114.3" width="0.254" layer="16"/>
-<wire x1="55.88" y1="114.3" x2="58.42" y2="114.3" width="0.254" layer="16"/>
-<wire x1="58.42" y1="114.3" x2="60.325" y2="116.205" width="0.254" layer="16"/>
-<wire x1="60.325" y1="116.205" x2="102.235" y2="116.205" width="0.254" layer="16"/>
-<wire x1="102.235" y1="116.205" x2="104.14" y2="114.3" width="0.254" layer="16"/>
-<wire x1="104.14" y1="114.3" x2="106.68" y2="114.3" width="0.254" layer="16"/>
-<wire x1="106.68" y1="114.3" x2="108.585" y2="116.205" width="0.254" layer="16"/>
-<wire x1="108.585" y1="116.205" x2="139.065" y2="116.205" width="0.254" layer="16"/>
-<wire x1="139.065" y1="116.205" x2="140.97" y2="114.3" width="0.254" layer="16"/>
-<wire x1="140.97" y1="114.3" x2="143.51" y2="114.3" width="0.254" layer="16"/>
-<wire x1="143.51" y1="114.3" x2="145.415" y2="116.205" width="0.254" layer="16"/>
-<wire x1="145.415" y1="116.205" x2="175.895" y2="116.205" width="0.254" layer="16"/>
-<wire x1="175.895" y1="116.205" x2="177.8" y2="114.3" width="0.254" layer="16"/>
-<wire x1="177.8" y1="114.3" x2="180.34" y2="114.3" width="0.254" layer="16"/>
-<wire x1="180.34" y1="114.3" x2="182.245" y2="116.205" width="0.254" layer="16"/>
 <wire x1="60.325" y1="79.375" x2="60.325" y2="80.645" width="0.254" layer="1"/>
 <wire x1="60.325" y1="80.645" x2="62.23" y2="82.55" width="0.254" layer="1"/>
 <wire x1="56.642" y1="91.186" x2="56.642" y2="112.522" width="0.254" layer="1"/>
@@ -2016,7 +2792,8 @@ MOTOR</description>
 <wire x1="62.23" y1="11.938" x2="56.642" y2="17.526" width="0.254" layer="1"/>
 <wire x1="23.495" y1="79.375" x2="23.495" y2="80.645" width="0.254" layer="1"/>
 <wire x1="23.495" y1="80.645" x2="25.4" y2="82.55" width="0.254" layer="1"/>
-<wire x1="19.812" y1="91.186" x2="19.812" y2="112.522" width="0.254" layer="1"/>
+<wire x1="19.812" y1="91.186" x2="19.812" y2="109.855" width="0.254" layer="1"/>
+<wire x1="19.812" y1="109.855" x2="19.812" y2="112.522" width="0.254" layer="1"/>
 <wire x1="19.812" y1="112.522" x2="23.495" y2="116.205" width="0.254" layer="1"/>
 <wire x1="25.4" y1="82.55" x2="25.4" y2="85.598" width="0.254" layer="1"/>
 <wire x1="25.4" y1="85.598" x2="19.812" y2="91.186" width="0.254" layer="1"/>
@@ -2032,9 +2809,6 @@ MOTOR</description>
 <wire x1="19.812" y1="38.862" x2="23.495" y2="42.545" width="0.254" layer="1"/>
 <wire x1="25.4" y1="8.89" x2="25.4" y2="11.938" width="0.254" layer="1"/>
 <wire x1="25.4" y1="11.938" x2="19.812" y2="17.526" width="0.254" layer="1"/>
-<wire x1="39.243" y1="109.855" x2="39.243" y2="113.157" width="0.254" layer="1"/>
-<wire x1="39.243" y1="113.157" x2="36.195" y2="116.205" width="0.254" layer="1"/>
-<wire x1="36.195" y1="116.205" x2="23.495" y2="116.205" width="0.254" layer="1"/>
 <wire x1="108.585" y1="79.375" x2="108.585" y2="80.645" width="0.254" layer="1"/>
 <wire x1="108.585" y1="80.645" x2="110.49" y2="82.55" width="0.254" layer="1"/>
 <wire x1="104.902" y1="91.186" x2="104.902" y2="112.522" width="0.254" layer="1"/>
@@ -2089,6 +2863,7 @@ MOTOR</description>
 <wire x1="178.562" y1="38.862" x2="182.245" y2="42.545" width="0.254" layer="1"/>
 <wire x1="184.15" y1="8.89" x2="184.15" y2="11.938" width="0.254" layer="1"/>
 <wire x1="184.15" y1="11.938" x2="178.562" y2="17.526" width="0.254" layer="1"/>
+<wire x1="37.973" y1="109.855" x2="19.812" y2="109.855" width="0.254" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
@@ -2115,6 +2890,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.5" severity="warning">
+Since Version 9.5, EAGLE supports persistent groups with
+schematics, and board files. Those persistent groups
+will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
