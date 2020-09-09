@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="16" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="14" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="2" name="Route2" color="16" fill="1" visible="yes" active="no"/>
+<layer number="3" name="Route3" color="17" fill="1" visible="yes" active="no"/>
+<layer number="4" name="Route4" color="18" fill="1" visible="yes" active="no"/>
+<layer number="5" name="Route5" color="19" fill="1" visible="yes" active="no"/>
+<layer number="6" name="Route6" color="25" fill="1" visible="yes" active="no"/>
+<layer number="7" name="Route7" color="26" fill="1" visible="yes" active="no"/>
+<layer number="8" name="Route8" color="27" fill="1" visible="yes" active="no"/>
+<layer number="9" name="Route9" color="28" fill="1" visible="yes" active="no"/>
+<layer number="10" name="Route10" color="29" fill="1" visible="yes" active="no"/>
+<layer number="11" name="Route11" color="30" fill="1" visible="yes" active="no"/>
+<layer number="12" name="Route12" color="20" fill="1" visible="yes" active="no"/>
+<layer number="13" name="Route13" color="21" fill="1" visible="yes" active="no"/>
+<layer number="14" name="Route14" color="22" fill="1" visible="yes" active="no"/>
+<layer number="15" name="Route15" color="23" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,19 +53,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="6" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -4532,22 +4532,57 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <part name="D23" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="-KIT" value="200mA/100V/1V"/>
 <part name="D24" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="-KIT" value="200mA/100V/1V"/>
 <part name="D25" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="-KIT" value="200mA/100V/1V"/>
-<part name="Q2" library="SparkFun-DiscreteSemi" library_urn="urn:adsk.eagle:library:514" deviceset="TRANS_NPN" device="-2N3904-EZ" package3d_urn="urn:adsk.eagle:package:38451/1" value="200mA/40V"/>
-<part name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-5%" package3d_urn="urn:adsk.eagle:package:39658/1" value="1k"/>
+<part name="Q2" library="SparkFun-DiscreteSemi" library_urn="urn:adsk.eagle:library:514" deviceset="TRANS_NPN" device="-2N3904-EZ" package3d_urn="urn:adsk.eagle:package:38451/1" value="2N3904"/>
+<part name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-5%" package3d_urn="urn:adsk.eagle:package:39658/1" value="330"/>
 <part name="GND2" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="Q1" library="SparkFun-DiscreteSemi" library_urn="urn:adsk.eagle:library:514" deviceset="TRANS_NPN" device="-2N3904-EZ" package3d_urn="urn:adsk.eagle:package:38451/1" value="200mA/40V"/>
-<part name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-5%" package3d_urn="urn:adsk.eagle:package:39658/1" value="1k"/>
+<part name="Q1" library="SparkFun-DiscreteSemi" library_urn="urn:adsk.eagle:library:514" deviceset="TRANS_NPN" device="-2N3904-EZ" package3d_urn="urn:adsk.eagle:package:38451/1" value="2N3904"/>
+<part name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-5%" package3d_urn="urn:adsk.eagle:package:39658/1" value="330"/>
 <part name="M1" library="SparkFun-Electromechanical" library_urn="urn:adsk.eagle:library:516" deviceset="MOTOR" device="10MM" package3d_urn="urn:adsk.eagle:package:38555/1"/>
 <part name="J6" library="SparkFun-Connectors" deviceset="CONN_12" device="SM_SQ_NO_SILK" value="ESP32_HDR"/>
 <part name="J7" library="SparkFun-Connectors" deviceset="CONN_16" device="1X16_SM_SQ_NOSILK" value="ESP32_HDR"/>
 <part name="GND5" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="R3" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-5%" package3d_urn="urn:adsk.eagle:package:39658/1" value="330"/>
+<part name="R4" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="1KOHM" device="-HORIZ-1/4W-5%" package3d_urn="urn:adsk.eagle:package:39658/1" value="1k"/>
+<part name="GND3" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="27.94" y="220.98" size="2.54" layer="94">Keyswitch Matrix</text>
 <text x="246.38" y="195.58" size="2.54" layer="94">Pro Micro C Header</text>
+<text x="245.618" y="152.654" size="1.6764" layer="97">GPIO
+
+23^
+22^
+14^
+32
+15
+33
+27
+12
+13
+VUSB
+EN
+VBAT</text>
+<text x="280.162" y="142.24" size="1.6764" layer="97">GPIO
+
+21^
+17^
+16^
+19^
+18^
+05
+04
+36*
+39*
+34*
+25
+26
+GND
+NC
+3.3V
+Reset</text>
 </plain>
 <instances>
 <instance part="S1" gate="G$1" x="58.42" y="142.24" smashed="yes">
@@ -4776,16 +4811,27 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <attribute name="NAME" x="276.86" y="114.3" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="276.86" y="116.84" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="J6" gate="G$1" x="269.24" y="160.02" smashed="yes">
-<attribute name="VALUE" x="269.24" y="139.954" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="269.24" y="175.768" size="1.778" layer="95" font="vector"/>
+<instance part="J6" gate="G$1" x="261.62" y="167.64" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="261.62" y="147.574" size="1.778" layer="96" font="vector" rot="MR0"/>
+<attribute name="NAME" x="261.62" y="183.388" size="1.778" layer="95" font="vector" rot="MR0"/>
 </instance>
-<instance part="J7" gate="G$1" x="264.16" y="165.1" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="264.16" y="139.954" size="1.778" layer="96" font="vector" rot="MR0"/>
-<attribute name="NAME" x="264.16" y="185.928" size="1.778" layer="95" font="vector" rot="MR0"/>
+<instance part="J7" gate="G$1" x="269.24" y="160.02" smashed="yes" rot="MR180">
+<attribute name="VALUE" x="269.24" y="185.166" size="1.778" layer="96" font="vector" rot="MR180"/>
+<attribute name="NAME" x="269.24" y="139.192" size="1.778" layer="95" font="vector" rot="MR180"/>
 </instance>
-<instance part="GND5" gate="1" x="233.68" y="172.72" smashed="yes">
-<attribute name="VALUE" x="233.68" y="172.466" size="1.778" layer="96" align="top-center"/>
+<instance part="GND5" gate="1" x="297.18" y="147.32" smashed="yes">
+<attribute name="VALUE" x="297.18" y="147.066" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="R3" gate="G$1" x="266.7" y="60.96" smashed="yes">
+<attribute name="NAME" x="266.7" y="62.484" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="266.7" y="59.436" size="1.778" layer="96" font="vector" align="top-center"/>
+</instance>
+<instance part="R4" gate="G$1" x="281.94" y="60.96" smashed="yes">
+<attribute name="NAME" x="281.94" y="62.484" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="281.94" y="59.436" size="1.778" layer="96" font="vector" align="top-center"/>
+</instance>
+<instance part="GND3" gate="1" x="287.02" y="55.88" smashed="yes">
+<attribute name="VALUE" x="287.02" y="55.626" size="1.778" layer="96" align="top-center"/>
 </instance>
 </instances>
 <busses>
@@ -4815,9 +4861,9 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <wire x1="215.9" y1="99.06" x2="215.9" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="279.4" y1="147.32" x2="281.94" y2="147.32" width="0.1524" layer="91"/>
-<label x="281.94" y="147.32" size="1.27" layer="95" rot="MR180" xref="yes"/>
-<pinref part="J6" gate="G$1" pin="2"/>
+<wire x1="251.46" y1="170.18" x2="243.84" y2="170.18" width="0.1524" layer="91"/>
+<label x="243.84" y="170.18" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="J6" gate="G$1" pin="8"/>
 </segment>
 </net>
 <net name="COL1" class="0">
@@ -4845,9 +4891,9 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <junction x="45.72" y="170.18"/>
 </segment>
 <segment>
-<wire x1="254" y1="147.32" x2="251.46" y2="147.32" width="0.1524" layer="91"/>
-<label x="251.46" y="147.32" size="1.27" layer="95" rot="MR0" xref="yes"/>
-<pinref part="J7" gate="G$1" pin="2"/>
+<wire x1="279.4" y1="175.26" x2="287.02" y2="175.26" width="0.1524" layer="91"/>
+<label x="287.02" y="175.26" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<pinref part="J7" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="COL2" class="0">
@@ -4875,9 +4921,9 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <junction x="78.74" y="170.18"/>
 </segment>
 <segment>
-<wire x1="254" y1="149.86" x2="251.46" y2="149.86" width="0.1524" layer="91"/>
-<label x="251.46" y="149.86" size="1.27" layer="95" rot="MR0" xref="yes"/>
-<pinref part="J7" gate="G$1" pin="3"/>
+<wire x1="279.4" y1="170.18" x2="287.02" y2="170.18" width="0.1524" layer="91"/>
+<label x="287.02" y="170.18" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<pinref part="J7" gate="G$1" pin="5"/>
 </segment>
 </net>
 <net name="COL3" class="0">
@@ -4905,9 +4951,9 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <junction x="114.3" y="170.18"/>
 </segment>
 <segment>
-<label x="281.94" y="144.78" size="1.27" layer="95" rot="MR180" xref="yes"/>
-<wire x1="279.4" y1="144.78" x2="281.94" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="J6" gate="G$1" pin="1"/>
+<label x="243.84" y="175.26" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="251.46" y1="175.26" x2="243.84" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="J6" gate="G$1" pin="10"/>
 </segment>
 </net>
 <net name="COL4" class="0">
@@ -4935,9 +4981,9 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <junction x="149.86" y="170.18"/>
 </segment>
 <segment>
-<wire x1="279.4" y1="152.4" x2="281.94" y2="152.4" width="0.1524" layer="91"/>
-<label x="281.94" y="152.4" size="1.27" layer="95" rot="MR180" xref="yes"/>
-<pinref part="J6" gate="G$1" pin="4"/>
+<wire x1="279.4" y1="180.34" x2="287.02" y2="180.34" width="0.1524" layer="91"/>
+<label x="287.02" y="180.34" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<pinref part="J7" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -5044,9 +5090,9 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <wire x1="215.9" y1="132.08" x2="215.9" y2="127" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="254" y1="154.94" x2="251.46" y2="154.94" width="0.1524" layer="91"/>
-<label x="251.46" y="154.94" size="1.27" layer="95" rot="MR0" xref="yes"/>
-<pinref part="J7" gate="G$1" pin="5"/>
+<wire x1="279.4" y1="165.1" x2="287.02" y2="165.1" width="0.1524" layer="91"/>
+<label x="287.02" y="165.1" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<pinref part="J7" gate="G$1" pin="7"/>
 </segment>
 </net>
 <net name="COL5" class="0">
@@ -5074,9 +5120,9 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <junction x="185.42" y="170.18"/>
 </segment>
 <segment>
-<wire x1="279.4" y1="154.94" x2="281.94" y2="154.94" width="0.1524" layer="91"/>
-<label x="281.94" y="154.94" size="1.27" layer="95" rot="MR180" xref="yes"/>
-<pinref part="J6" gate="G$1" pin="5"/>
+<wire x1="279.4" y1="177.8" x2="287.02" y2="177.8" width="0.1524" layer="91"/>
+<label x="287.02" y="177.8" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<pinref part="J7" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="BACKLIGHT" class="0">
@@ -5086,9 +5132,9 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<wire x1="254" y1="170.18" x2="251.46" y2="170.18" width="0.1524" layer="91"/>
-<label x="251.46" y="170.18" size="1.27" layer="95" rot="MR0" xref="yes"/>
-<pinref part="J7" gate="G$1" pin="11"/>
+<wire x1="279.4" y1="152.4" x2="287.02" y2="152.4" width="0.1524" layer="91"/>
+<label x="287.02" y="152.4" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<pinref part="J7" gate="G$1" pin="12"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -5103,9 +5149,14 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="254" y1="175.26" x2="233.68" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="279.4" y1="149.86" x2="297.18" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="J7" gate="G$1" pin="13"/>
 <pinref part="GND5" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="287.02" y1="58.42" x2="287.02" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<pinref part="R4" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="ROW2" class="0">
@@ -5132,9 +5183,9 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <pinref part="D5" gate="G$1" pin="C"/>
 </segment>
 <segment>
-<wire x1="254" y1="152.4" x2="251.46" y2="152.4" width="0.1524" layer="91"/>
-<label x="251.46" y="152.4" size="1.27" layer="95" rot="MR0" xref="yes"/>
-<pinref part="J7" gate="G$1" pin="4"/>
+<wire x1="279.4" y1="167.64" x2="287.02" y2="167.64" width="0.1524" layer="91"/>
+<label x="287.02" y="167.64" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<pinref part="J7" gate="G$1" pin="6"/>
 </segment>
 </net>
 <net name="ROW1" class="0">
@@ -5161,9 +5212,9 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <pinref part="D25" gate="G$1" pin="C"/>
 </segment>
 <segment>
-<wire x1="254" y1="144.78" x2="251.46" y2="144.78" width="0.1524" layer="91"/>
-<label x="251.46" y="144.78" size="1.27" layer="95" rot="MR0" xref="yes"/>
-<pinref part="J7" gate="G$1" pin="1"/>
+<wire x1="279.4" y1="172.72" x2="287.02" y2="172.72" width="0.1524" layer="91"/>
+<label x="287.02" y="172.72" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<pinref part="J7" gate="G$1" pin="4"/>
 </segment>
 </net>
 <net name="HAPTIC" class="0">
@@ -5173,9 +5224,9 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <pinref part="R2" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<wire x1="254" y1="172.72" x2="251.46" y2="172.72" width="0.1524" layer="91"/>
-<label x="251.46" y="172.72" size="1.27" layer="95" rot="MR0" xref="yes"/>
-<pinref part="J7" gate="G$1" pin="12"/>
+<wire x1="279.4" y1="154.94" x2="287.02" y2="154.94" width="0.1524" layer="91"/>
+<label x="287.02" y="154.94" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<pinref part="J7" gate="G$1" pin="11"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -5370,9 +5421,9 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <wire x1="215.9" y1="66.04" x2="215.9" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="279.4" y1="149.86" x2="281.94" y2="149.86" width="0.1524" layer="91"/>
-<label x="281.94" y="149.86" size="1.27" layer="95" rot="MR180" xref="yes"/>
-<pinref part="J6" gate="G$1" pin="3"/>
+<wire x1="251.46" y1="172.72" x2="243.84" y2="172.72" width="0.1524" layer="91"/>
+<label x="243.84" y="172.72" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="J6" gate="G$1" pin="9"/>
 </segment>
 </net>
 <net name="N$20" class="0">
@@ -5523,8 +5574,8 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <pinref part="M1" gate="G$1" pin="+"/>
 </segment>
 <segment>
-<wire x1="254" y1="180.34" x2="251.46" y2="180.34" width="0.1524" layer="91"/>
-<label x="251.46" y="180.34" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="279.4" y1="144.78" x2="287.02" y2="144.78" width="0.1524" layer="91"/>
+<label x="287.02" y="144.78" size="1.27" layer="95" xref="yes"/>
 <pinref part="J7" gate="G$1" pin="15"/>
 </segment>
 </net>
@@ -5535,12 +5586,44 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <wire x1="58.42" y1="22.86" x2="63.5" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="VBAT" class="0">
+<segment>
+<pinref part="J6" gate="G$1" pin="1"/>
+<wire x1="251.46" y1="152.4" x2="243.84" y2="152.4" width="0.1524" layer="91"/>
+<label x="243.84" y="152.4" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<wire x1="261.62" y1="60.96" x2="259.08" y2="60.96" width="0.1524" layer="91"/>
+<label x="259.08" y="60.96" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="VBAT_SENS" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="271.78" y1="60.96" x2="274.32" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="274.32" y1="60.96" x2="276.86" y2="60.96" width="0.1524" layer="91"/>
+<label x="274.32" y="66.04" size="1.27" layer="95" rot="MR90" xref="yes"/>
+<wire x1="274.32" y1="66.04" x2="274.32" y2="60.96" width="0.1524" layer="91"/>
+<junction x="274.32" y="60.96"/>
+</segment>
+<segment>
+<wire x1="279.4" y1="157.48" x2="287.02" y2="157.48" width="0.1524" layer="91"/>
+<label x="287.02" y="157.48" size="1.27" layer="95" xref="yes"/>
+<pinref part="J7" gate="G$1" pin="10"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
