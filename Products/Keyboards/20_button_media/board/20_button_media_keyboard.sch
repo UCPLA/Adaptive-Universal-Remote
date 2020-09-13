@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -9129,8 +9129,9 @@ Reset</text>
 <junction x="185.42" y="198.12"/>
 </segment>
 <segment>
-<wire x1="391.16" y1="248.92" x2="398.78" y2="248.92" width="0.1524" layer="91"/>
-<label x="398.78" y="248.92" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<label x="398.7546" y="248.92" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<wire x1="391.16" y1="248.92" x2="398.7546" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="391.1346" y1="248.92" x2="391.16" y2="248.92" width="0.1524" layer="91"/>
 <pinref part="J7" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -9268,9 +9269,10 @@ Reset</text>
 <junction x="220.98" y="198.12"/>
 </segment>
 <segment>
-<wire x1="391.16" y1="246.38" x2="398.78" y2="246.38" width="0.1524" layer="91"/>
-<label x="398.78" y="246.38" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<wire x1="391.1346" y1="246.38" x2="391.16" y2="246.38" width="0.1524" layer="91"/>
 <pinref part="J7" gate="G$1" pin="2"/>
+<label x="398.7546" y="246.38" size="1.27" layer="95" rot="MR180" xref="yes"/>
+<wire x1="391.16" y1="246.38" x2="398.7546" y2="246.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BACKLIGHT" class="0">
