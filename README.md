@@ -5,13 +5,13 @@ This project is brought to you by the [UCPLA Hackaday Prize 2020 Dream Team Chal
 
 ## Repository Contents
 
-* **/Documentation** - Users Guide, additional information
-* **/Products** - Products designed to interface with the software
-* **/Software** - The latest Adaptive Universal Remote software
+* **Accessories** - Additional products to be used with Universal Remote joysticks and or keyboards
+* **Joysticks** - Products that resemble or are used for direction input
+* **Keyboards** - Products designed as a button gird
 
 ## License Information
 
-This product is _**open source**_! 
+This product is _**open source**_!
 
 Please review the LICENSE.md file for license information. 
 

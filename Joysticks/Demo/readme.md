@@ -6,8 +6,7 @@ For this first test, we want to see if we can distinguish between different body
 
 > Please note that while the joysticks have an internal battery, this demo is not very battery friendly, and the devices will only last for a few minutes (~15 min).
 
-1. **Pair the joystick with a computer via Bluetooth.** Plug in the Atom (small grey unit) to the display unit. 
- * The device should already be paired. if not you can click on the bluetooth icon and add a new device. It will appear as bluetooth keyboard/mouse device (ESP32 Keyboard/Mouse). Select it and pair. Keep the Atom plugged in for the entire duration of use.
+1. **Plug in the Atom (small grey unit) to the display unit.** The device should already be paired. if not you can click on the bluetooth icon and add a new device. It will appear as bluetooth keyboard/mouse device (ESP32 Keyboard/Mouse). Select it and pair. Keep the Atom plugged in for the entire duration of use.
 
 2. **Turn on the Joystick attached to the wristband.** Attach the joystick to a limb of the user that they feel comfortable moving. This can be the wrist, arm, leg, ankle, or even head. This can be achieved using the included wristband or the device can be taped to the user. The user can also simply hold the device if they wish.
 
@@ -37,7 +36,7 @@ For each step:
 
  1. Hold Joystick 1 at the position shown.
  2. While the user is holding the joystick at the position, press the big button on the M5stick showing the position on the screen.
- 3. Keep holding that position until the display turn green. (~2 seconds)
+ 3. Keep holding that position until the display turns green. (~2 seconds)
  4. Repeat until all positions are calibrated.
 
 > **HOLD NORMAL** should be a neutral, comfortable resting position. The other positions can be whatever fits the user's mobility. These positions don't have to be exact, but they do need to be different enough from each other. Try to move in the general directions shown as it will make the games more intuitive.
