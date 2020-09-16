@@ -50,7 +50,7 @@ const byte vbatSensePin = A2;
 // Backlight brightness and 
 // how much to increase the brightness with each fn button press
 int brightness = 0;
-int stepAmount = 255/4;
+int stepAmount = 255/3;
 
 int vbatValue = 0;
 int vbatLowValue = 3600;
