@@ -1,11 +1,11 @@
 # 20 Button Media Keyboard
 
-![](images\20_button_media_pcb.jpg)
+![](images/20_button_media_pcb.jpg)
 
 In this case we created and order PCBs using the board and schematics files in this directory.
 
 You can also solder everything by hand if you must using the Cherry MX breakout boards
-![](images\20_button_media_wire.jpg)
+![](images/20_button_media_wire.jpg)
 
 # BOM
 
