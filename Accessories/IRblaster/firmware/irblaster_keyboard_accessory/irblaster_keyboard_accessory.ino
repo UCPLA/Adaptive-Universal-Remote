@@ -12,6 +12,7 @@
 #include <ESP8266WiFi.h>
 #include <espnow.h>
 #include <IRremoteESP8266.h>
+#include <singleLEDLibrary.h>
 #include <IRsend.h>
 //#include <IRrecv.h>
 //#include <IRac.h>
@@ -21,8 +22,10 @@
 #define ESP_OK 0
 
 // Define Pins
-const uint16_t kIrLedPin = 4;
-const uint16_t kRecvPin = 13;
+const uint8_t kIrLedPin = 4;
+const uint8_t kRecvPin = 13;
+
+sllib statusLed(2);
 
 // As this program is a special purpose capture/decoder, let us use a larger
 // than normal buffer so we can handle Air Conditioner remote codes.
@@ -76,11 +79,11 @@ const uint64_t ROKU_NEC_VOL_UP    = 0x57E3F00F;
 const uint64_t ROKU_NEC_VOL_DOWN  = 0x57E308F7;
 const uint64_t ROKU_NEC_MUTE      = 0x57E304FB;
 
-const uint64_t irCodes[26] = {0,0,0,0,0,0,
-                                ROKU_NEC_POWER, ROKU_NEC_MUTE,     ROKU_NEC_BACK,   ROKU_NEC_UP,   ROKU_NEC_HOME,
-                                ROKU_NEC_UP,    ROKU_NEC_VOL_UP,   ROKU_NEC_LEFT,   ROKU_NEC_OK,   ROKU_NEC_RIGHT,
-                                ROKU_NEC_DOWN,  ROKU_NEC_VOL_DOWN, ROKU_NEC_BACK20, ROKU_NEC_DOWN, ROKU_NEC_ASTERIX,
-                                0,              ROKU_NEC_HOME,     ROKU_NEC_REWIND, ROKU_NEC_PLAY, ROKU_NEC_FORWARD};
+const uint64_t irCodes[26] = { 0,              0,                 0,               0,             0,
+                               ROKU_NEC_POWER, ROKU_NEC_HOME,     ROKU_NEC_BACK,   ROKU_NEC_UP,   ROKU_NEC_HOME,
+                               ROKU_NEC_UP,    ROKU_NEC_VOL_UP,   ROKU_NEC_LEFT,   ROKU_NEC_OK,   ROKU_NEC_RIGHT,
+                               ROKU_NEC_DOWN,  ROKU_NEC_VOL_DOWN, ROKU_NEC_BACK20, ROKU_NEC_DOWN, ROKU_NEC_ASTERIX,
+                               0,              ROKU_NEC_MUTE,     ROKU_NEC_REWIND, ROKU_NEC_PLAY, ROKU_NEC_FORWARD};
 
 // The IR transmitter.
 IRsend irsend(kIrLedPin);
@@ -96,35 +99,50 @@ enum key_cmd {
 
 // Structure to send cmd to IR blaster
 typedef struct cmd_data {
-  int key;
-  int cmd;
+  uint8_t key;
+  uint8_t cmd;
 
 } cmd_data;
 
 // Create cmdData struct
 cmd_data cmdData;
 
+void ledStatusLearn() {
+  int pattern[] = {100,100,100,1200};
+  statusLed.setPatternSingle(pattern, 4);
+}
+
+void ledStatusOff() {
+  statusLed.setOffSingle();
+}
+
 void onReceiveData(uint8_t *mac, uint8_t *data, uint8_t len) {
  
-  Serial.print(F("Received from MAC: "));
+  memcpy(&cmdData, data, sizeof(cmd_data));
+  
+  Serial.print (F("Received Key: "));
+  Serial.print (cmdData.key);
+  Serial.print (F(", Cmd: "));
+  Serial.print (cmdData.cmd);
+
+  Serial.print(F(" from MAC: "));
  
   for (int i = 0; i < 6; i++) { 
     Serial.printf("%02X", mac[i]);
-    if (i < 5)Serial.print(":");
+    if (i < 5) {
+      Serial.print(F(":"));
+    } else {
+      Serial.println();
+    }
   }
-
-  memcpy(&cmdData, data, sizeof(cmd_data));
-  
-  Serial.print (F("Key: "));
-  Serial.print (cmdData.key);
-  Serial.print (F(", Cmd: "));
-  Serial.println (cmdData.cmd);
 
   switch (cmdData.cmd) {
     case send_ir:
         irsend.sendNEC(irCodes[cmdData.key]);
+        ledStatusOff();
       break;
     case learn_ir:
+        ledStatusLearn();
 //        irrecv.enableIRIn();  // Start the receiver
 //        if (irrecv.decode(&results)) {
 //          // Display a crude timestamp.
@@ -157,8 +175,11 @@ void onReceiveData(uint8_t *mac, uint8_t *data, uint8_t len) {
 
 void setup() {
   Serial.begin(115200);
- 
+  delay(1000); // Wait 1 sec for Serial Monitor
+  
   WiFi.mode(WIFI_STA);
+  Serial.println();
+  Serial.print(F("MAC Address: "));
   Serial.println(WiFi.macAddress());
  
   if (esp_now_init() != ESP_OK) {
@@ -177,4 +198,6 @@ void setup() {
   irsend.begin();
 }
  
-void loop() {}
+void loop() {
+  statusLed.update();
+}
