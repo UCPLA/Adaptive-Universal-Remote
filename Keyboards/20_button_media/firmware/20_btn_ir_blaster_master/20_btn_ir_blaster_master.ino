@@ -7,6 +7,7 @@
    Configured as a Roku TV remote.
 
     Depends on:
+   * https://github.com/espressif/arduino-esp32
    * https://github.com/nickgammon/Keypad_Matrix
  ****************************************************************************/
 
@@ -18,7 +19,8 @@
 
 enum key_cmd {
   send_ir,
-  learn_ir
+  learn_ir,
+  f_reset
 };
 
 // Structure to send cmd to IR blaster
@@ -43,10 +45,7 @@ eeprom_data edata;
 
 const uint16_t EEPROM_DATA_ADDR = 0;
 
-uint16_t vbatMaxVal = 0;
-uint16_t vbatMinVal = 5000;
-
-const uint8_t DEFAULT_SLEEP_TIMEOUT_S = 10;
+const uint8_t DEFAULT_SLEEP_TIMEOUT_S = 60;
 const uint8_t LOWBAT_SLEEP_TIMEOUT_S = 10;
 
 // GPIO for the key matrix scanning
@@ -65,7 +64,12 @@ const char KEY_LAYOUT[ROWS][COLS] = {
   {20,21,22,23,24},
 };
 
-const char FN_KEY_VAL = 20;
+const char FN_KEY = 20;
+const char PWR_KEY = 5;
+const uint16_t FACTORY_RESET_HOLD_MS = 8000;
+
+bool pwr_key_is_down = false;
+unsigned long lastPwrKeyDown = 0;
 
 // TODO: Redesign hardware to use RTC pins for all rows and columns.
 // RTC GPIO for wake up, We can only use GPIO 4, 14, 15, 32 from key matrix.
@@ -75,11 +79,13 @@ const uint32_t WAKE_PINS_BITMASK = 0x100008010; // GPIO: 4, 15, 32
 const byte RTC_COLS = 1; // Ideally we would just us COLS, but not all cols are RTC
 const gpio_num_t RTC_COL_PINS[RTC_COLS] = {GPIO_NUM_14};
 
-// Pins for other functions
-const byte BACKLIGHT_PIN = 26;
-const byte HAPTIC_PIN = 25;
 const byte VBAT_SENSE_PIN = A2;
 
+const byte HAPTIC_PIN = 25;
+const uint8_t HAPTIC_DUR_MS = 200;
+unsigned long hapticStopMils = 0;
+
+const byte BACKLIGHT_PIN = 26;
 // Use first PWM channel of 16 channels
 const uint8_t BACKLIGHT_CH = 0;
 // Use 13 bit precision for LEDC timer
@@ -100,8 +106,8 @@ uint8_t backlightPatTimes = 0;
 // These values are use to determine when to consider the battery at certain states.
 // Since this can fluctuate between board builds, these values will need to be
 // determined for each board.
-const uint16_t VBAT_LOW = 0; // 3670
-const uint16_t VBAT_CRITICAL = 0; // 3640
+const uint16_t VBAT_LOW = 3680;
+const uint16_t VBAT_CRITICAL = 3630;
 bool lowBattery = false;
 
 // Esp now tx retry
@@ -136,10 +142,50 @@ void stepBacklightBrightness() {
   setBacklight(backlightBrightness);
 }
 
+// Non repeating flash pattern for backlight
+// First entry always turns the backlight on
+void updateBacklight () {
+  if(backlightPatCnt < backlightPatTimes) {
+    if((backlightMilOld + backlightPatDurMs) < millis()) {
+      backlightMilOld = millis();
+      if(backlightPatCnt % 2 == 0) {
+          setBacklight(backlightBrightness);
+      } else {
+          setBacklight(0);
+      }
+      backlightPatCnt++;
+    }
+  }
+}
+
+void backlightSetPattern(uint16_t duration, uint8_t times) {
+  backlightPatCnt = 0;
+  backlightMilOld = 0;
+  backlightPatDurMs = duration;
+  backlightPatTimes = times;
+}
+
+void backlightLowBattery() {
+  backlightSetPattern(100, 7);
+}
+
+void backlightLearnModeSent() {
+  backlightSetPattern(100, 5);
+}
+
+void backlightDataSaved() {
+  backlightSetPattern(100, 11);
+}
+
 void hapticVibrate() {
+  hapticStopMils = millis() + HAPTIC_DUR_MS;
   digitalWrite(HAPTIC_PIN, HIGH);
-  delay(200);
-  digitalWrite(HAPTIC_PIN, LOW);
+}
+
+void updateHaptic() {
+  if (millis() >= hapticStopMils) {
+    digitalWrite(HAPTIC_PIN, LOW);
+  }
 }
 
 ///////////////////////////////////////////////////////////
@@ -162,7 +208,7 @@ void calcSaveAnalogOffset() {
   EEPROM.commit();
   Serial.print(F("Analog Offset: "));
   Serial.println(edata.analogOffset);
-  backlightSetPattern(100, 11);
+  backlightDataSaved();
 }
 
 void saveBrodcastAddr(uint8_t macAddr[]) {
@@ -171,7 +217,7 @@ void saveBrodcastAddr(uint8_t macAddr[]) {
   printBrodcastAddress();
   EEPROM.put(EEPROM_DATA_ADDR, edata);
   EEPROM.commit();
-  backlightSetPattern(100, 11);
+  backlightDataSaved();
 }
 
 // Key Press Handler
@@ -186,14 +232,14 @@ void keyDown (const char which) {
   
   cmdData.key = (int)which;
 
-  if (which == FN_KEY_VAL) {
+  if (which == FN_KEY) {
     cmdData.cmd = learn_ir;
-  } else {
-    sendCmd(cmdData);
-    if(cmdData.cmd == learn_ir) {
-      backlightLearnModeSent();
-    }
-  }    
+  }
+
+  if (which == PWR_KEY) {
+    pwr_key_is_down = true;
+    lastPwrKeyDown = millis();
+  }
   
   Serial.print (F("Key down: "));
   Serial.println (cmdData.key);
@@ -204,23 +250,42 @@ void keyUp (const char which) {
   Serial.print (F("Key up: "));
   Serial.println ((int)which);
   
-  if (which == FN_KEY_VAL && cmdData.key == FN_KEY_VAL) {
-    stepBacklightBrightness();
-//    uint8_t macAddr[] = {};
-//    saveBrodcastAddr(uint8_t macAddr[]);
+  if (which == FN_KEY || cmdData.cmd == f_reset) {
+    cmdData.cmd = send_ir;
+    if (cmdData.key == FN_KEY) {
+      stepBacklightBrightness();
+    }
+  } else {
+    sendCmd(cmdData);
+    if(cmdData.cmd == learn_ir) {
+      backlightLearnModeSent();
+    }
+  }
+
+  if (which == PWR_KEY) {
+    pwr_key_is_down = false;
   }
   
-  cmdData.cmd = send_ir;
+}
+
+void checkLongPress() {
+  unsigned long now = millis();
+  if (pwr_key_is_down && (now - lastPwrKeyDown) > FACTORY_RESET_HOLD_MS) {
+    cmdData.cmd = f_reset;
+    sendCmd(cmdData);
+    pwr_key_is_down = false;
+    backlightDataSaved();
+    Serial.println(F("Sending Factory Reset"));
+  }
 }
 
 void sendCmd(cmd_data cmdData) {     
   esp_err_t result = esp_now_send(edata.broadcastAddress, (uint8_t *) &cmdData, sizeof(cmd_data));
      
-  if (result == ESP_OK) {
-    Serial.println(F("Sent with success"));
-  } else {
+  if (result != ESP_OK) {
     Serial.println(F("Error sending the data"));
   }
+  
   Serial.print(F("key: "));
   Serial.print(cmdData.key);
   Serial.print(F(", cmd: "));
@@ -281,41 +346,6 @@ void IRAM_ATTR startDeepSleep() {
   Serial.println("Entering Deep Sleep");
   delay(1000);
   esp_deep_sleep_start();
-}
-
-// Non repeating flash pattern for backlight
-// First entry always turns the backlight on
-void updateBacklight () {
-  if(backlightPatCnt < backlightPatTimes) {
-    if((backlightMilOld + backlightPatDurMs) < millis()) {
-      backlightMilOld = millis();
-      if(backlightPatCnt % 2 == 0) {
-          setBacklight(backlightBrightness);
-      } else {
-          setBacklight(0);
-      }
-      backlightPatCnt++;
-    }
-  }
-}
-
-void backlightSetPattern(uint16_t duration, uint8_t times) {
-  backlightPatCnt = 0;
-  backlightMilOld = 0;
-  backlightPatDurMs = duration;
-  backlightPatTimes = times;
-}
-
-void backlightOn() {
-  backlightSetPattern(0, 0);
-}
-
-void backlightLowBattery() {
-  backlightSetPattern(100, 7);
-}
-
-void backlightLearnModeSent() {
-  backlightSetPattern(100, 5);
 }
 
 void checkBattery() {
@@ -446,5 +476,7 @@ void setup() {
 
 void loop() {
   kpd.scan();
+  checkLongPress();
   updateBacklight();
+  updateHaptic();
 }
