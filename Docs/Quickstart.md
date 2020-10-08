@@ -46,7 +46,7 @@ Remove the small piece of masking tape used to keep the power switch in the off 
 
 ### Contents
 
-![](Images/content_list.png)
+![](Images/starter_kit_content_map.png)
 
 1. AUR Keyboard
 2. AUR IR Blaster
