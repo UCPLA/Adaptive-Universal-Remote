@@ -2,26 +2,27 @@
 
 AUR Keyboards and AUR IR Blasters
 
-![20201005_085926_(Cropped).png](/core/preview?fileId=2320061&x=1024&y=1024&a=true#mimetype=image%2Fpng&hasPreview=true&fileId=2320061)
+![](Images/20201005_085926_(Cropped).png)
 
 ## Unpacking
 
 The shipment includes several Adaptive Universal Remotes (AUR) individually packaged in their own box. It will also contain a Roku Express for each AUR.
 
-![20201005_125406.jpg](/core/preview?fileId=2320083&x=1024&y=1024&a=true#mimetype=image%2Fjpeg&hasPreview=true&fileId=2320083)
+![](Images/20201005_125406.jpg)
 
 Carefully open the individual boxes - take care not to cut the contents inside the box when cutting through the tape.
 
-![20201005_124047.jpg](/core/preview?fileId=2319898&x=1024&y=1024&a=true#mimetype=image%2Fjpeg&hasPreview=true&fileId=2319898)
+![](Images/20201005_124047.jpg)
 
-![20201005_123025.png](/core/preview?fileId=2320279&x=1024&y=1024&a=true#mimetype=image%2Fpng&hasPreview=true&fileId=2320279)
+![](Images/20201005_123025.png)
+*Important*: Keep the contents of each set separate to prevent mixing the paired components.
 
 Remove the small piece of masking tape used to keep the power switch in the off position during shipping.\
-![20201005_123600.jpg](/core/preview?fileId=2319895&x=1024&y=1024&a=true#mimetype=image%2Fjpeg&hasPreview=true&fileId=2319895)*Important*: Keep the contents of each set separate to prevent mixing the paired components.
+![](Images/20201005_123600.jpg)
 
 ### Contents
 
-![Content List.png](/core/preview?fileId=2320508&x=1024&y=1024&a=true#mimetype=image%2Fpng&hasPreview=true&fileId=2320508)
+![](Images/Content List.png)
 
 1. AUR Keyboard
 2. AUR IR Blaster
@@ -31,7 +32,7 @@ Remove the small piece of masking tape used to keep the power switch in the off 
 
 ## Setup Overview
 
-![setup_overview.png](/core/preview?fileId=2320638&x=1024&y=1024&a=true#mimetype=image%2Fpng&hasPreview=true&fileId=2320638)
+![](Images/setup_overview.png)
 
 ## Initial Setup
 
@@ -39,7 +40,7 @@ The Adaptive Universal Remote is pre-configured to work out of the box with any 
 
 ### IR Blaster
 
-![IR_Blaster.png](/core/preview?fileId=2320588&x=1024&y=1024&a=true#mimetype=image%2Fpng&hasPreview=true&fileId=2320588)The IR blaster has a short range (up to 10 feet) from the devices you are controlling. 
+![](Images/IR_Blaster.png)The IR blaster has a short range (up to 10 feet) from the devices you are controlling. 
 
 #### Placement
 
@@ -106,7 +107,7 @@ The keyboard will automatically go into a deep-sleep state after 60 seconds of i
 
 To wake up the keyboard you will need to press the skip-back or left arrow button. When awake the keyboard backlight will be on. 
 
-![Wake_Buttons.PNG](/core/preview?fileId=2320712&x=1024&y=1024&a=true#mimetype=image%2Fpng&hasPreview=true&fileId=2320712)
+![](Images/Wake_Buttons.PNG)
 
 ## Factory Reset
 
