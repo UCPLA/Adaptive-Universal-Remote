@@ -22,28 +22,31 @@ Adaptive Universal Remote Kit
      * [Haptic Feedback](#haptic-feedback)
      * [Power Saving](#power-saving)
 3. [Troubleshooting](#troubleshooting)
-   * [Intermittent Control](#intermittent-control)
-   * [Factory Reset](#factory-reset)
+   * [Unresponsive Keyboard](#unresponsive-keyboard)
+   * [Intermittent or No Control](#intermittent-or-no-control)   
+4. [Factory Reset](#factory-reset)
 
 ## [Unpacking](#unpacking)
 
 The shipment includes three Adaptive Universal Remotes individually packaged in their own box. It will also contain a Roku Express for each AUR.
 
-![](Images/20201005_125406.jpg)
+![](Images/20201005_125406.png)
 
 Carefully open the individual boxes - take care not to cut the contents inside the box when cutting through the tape.
 
-![](Images/20201005_124047.jpg)
+![](Images/20201005_124047.png)
 
-![](Images/20201005_085926_\(Cropped\).png)
 *Important*: Keep the contents of each box separate to prevent mixing up the IR blasters that are linked to a specific keyboard.
+![](Images/20201005_085926_(Cropped).png)
+
+*You can compare the labels on the backs of the keyboard(s) and IR blaster(s) to verify the "Device MAC" number on the IR blaster matches the "Paired Device" number on the keyboard.*
 
 Remove the small piece of masking tape used to keep the power switch in the off position during shipping.\
-![](Images/20201005_123600.jpg)
+![](Images/20201005_123600.png)
 
 ### [Contents](#contents)
 
-![](Images/Content%20List.png)
+![](Images/Content_List.png)
 
 1. AUR Keyboard
 2. AUR IR Blaster
@@ -55,13 +58,13 @@ Remove the small piece of masking tape used to keep the power switch in the off 
 
 ### [Setup Overview](#setup-overview)
 
-[![](Images/setup_overview.png)](https://roku.com)
+![](Images/setup_overview.png)
 
 The Adaptive Universal Remote is pre-configured to work out of the box with any Roku device that is compatible with an IR remote (including Roku Smart TV's). 
 
 ### [Roku](#roku)
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Roku_logo.svg/800px-Roku_logo.svg.png)
+![](Images/Roku_logo.png)
 
 Please follow the instructions in the Getting Started Guide that came with your Roku. You can also find helpful videos at [Roku - Setup and troubleshooting](https://support.roku.com/en-gb/category/115001360548).
 
@@ -72,11 +75,11 @@ Please follow the instructions in the Getting Started Guide that came with your 
 
 If you are using this with a Roku Smart TV then no setup is required. Simply place the IR Blaster as instructed and use the keyboard just like any other Roku Remote.
 
-*Note: There are 3 extra buttons not needed by a Roku Smart TV; Input Select, Channel Up, and Channel Down. While they are pre-configured to still be useful with the Roku TV, they can be reprogrammed for another IR device if desired.*
+*Note: There are 3 extra buttons not needed by a Roku Smart TV; Input Select, Channel Up, and Channel Down. While they are pre-configured to still be useful with the Roku TV, they can be programmed for another IR device if desired.*
 
-If you wish to use any other device, continue to the [Programming Commands](#ir-blaster-programming) instructions. 
+If you wish to use any other device, continue to the [Programming Commands](#programming-commands) instructions. 
 
-*When using a TV with a Roku box you only need to reprogram seven buttons: Power, Input Select, Volume Up, Volume Down, Mute, Channel Up, and Channel Down.*
+*When using a TV with a Roku box you only need to program seven buttons: Power, Input Select, Volume Up, Volume Down, Mute, Channel Up, and Channel Down.*
 
 #### [Placement](#placement)
 
@@ -88,25 +91,25 @@ In our tests, we had great results by placing the IR blaster directly under the 
 
 #### [Programming Commands](#programming-commands)
 
-Any button on the keyboard can easily be reprogrammed to control any IR device with these two steps.
+Any button on the keyboard can easily be programmed to control any IR device with these two steps.
 
-1. Hold down the brightness button (bottom left) and then press and release the button you want to reprogram. Release the brightness button. The keyboard will flash twice indicating that a button is ready to be reprogrammed.
+1. Hold down the brightness button (bottom left) and then press and release the button you want to program. Release the brightness button. The keyboard will flash twice indicating that a button is ready to be programmed.
 
-   The IR Blaster window will also begin to flash a bright red every 1.5 seconds until it has learned the new IR command or another button on the keyboard is pressed.
+   The IR Blaster window will also begin to flash a bright red every 1.5 seconds until it has learned the new IR command or programming is canceled.
+   
+   *Note: You can cancel the programming of a button at any time by pressing any key (except the backlight brightness key) on the keyboard.*
+   
 2. Point the original remote at the IR blaster and press the button that you want the Universal remote to learn.
 
    The IR blaster window will blink red twice when it has learned the new command.
 
    The button you chose in step 1 has now been programmed with the new command.
 
-   *Note: You can cancel the reprogramming of a button by simply pressing any key on the keyboard.*
-
 That's it! Be sure to test this button to be sure it is working as expected. Repeat for each button as many times as needed.
 
 ### [Keyboard](#keyboard)
 
 Each keyboard is wirelessly linked to a specific IR blaster. No line of sight is needed between the keyboard and th IR blaster, as long as they are withing range (300 ft) of each other.
-*If needed, you can compare the labels on the backs of the keyboard(s) and IR blaster(s) to verify the paired MAC addresses match.*
 
 ##### [On / Off Switch](#on--off-switch)
 
@@ -139,16 +142,23 @@ The keyboard will automatically go into a deep-sleep state after 60 seconds of i
 
 To wake up the keyboard you will need to press the skip-back or left arrow button. When awake the keyboard backlight will be on. 
 
-![](Images/Wake_Buttons.PNG)
+![](Images/Wake_Buttons.png)
 
 ## [Troubleshooting](#troubleshooting)
 
-### [Intermittent Control](#intermittent-control)
+### [Unresponsive Keyboard](#unresponsive-keyboard)
 
-If the Adaptive Universal Remote only appears to work some of the time, it is most likely because the IR blaster doesn't have a good line of sight to the device you are trying to control. Try moving the IR blaster closer and try facing the red window in different directions to find the optimal placement.
+* Make sure the power switch is switched to the on position.
+* Make sure the keyboard is awake when trying to use. See [Keyboard - Power Saving](#power-saving) section above for more details.
+* Make sure the keyboard is charged. See [Keyboard - Battery and Charging](#battery-and-charging) section above for more details.
 
-You can also verify that the keyboard is communicating with the IR blaster by following step one of the [Programming Commands](#ir-blaster-programming) section. The red window on the IR blaster should flash if they are connected and communicating. You can cancel the reprogramming of a button by simple pressing any key on the keyboard.
+### [Intermittent or No Control](#intermittent-or-no-control)
 
-### [Factory Reset](#factory-reset)
+* Make sure the IR blaster is plugged in and has power. The red window on the IR blaster will flash once the moment it is provided power.
+* Verify that the keyboard is communicating with the IR blaster by following step one of the [Programming Commands](#programming-commands) section. The red window on the IR blaster should flash if they are connected and communicating. Then cancel the programming of a button by pressing any key (except the backlight brightness key) on the keyboard.
+* Verify that the keyboard and IR blaster are the right ones by comparing the labels to verify the "Device MAC" number on the IR blaster matches the "Paired Device" number on the keyboard.
+* If the Adaptive Universal Remote only appears to work some of the time, it is most likely because the IR blaster doesn't have a good line of sight to the device you are trying to control. Try moving the IR blaster closer and try facing the red window in different directions to find the optimal placement.
 
-If at any time you want to restore the AUR to it's original configuration (stock Roku remote), you can preform a factory reset. This is done by holding down the brightness button and then the power button for 8 seconds. Both devices will start to blink, indicating that you can release the buttons. All learned commands will be forgotten and the AUR is once again configured as a Roku Smart TV remote.
+## [Factory Reset](#factory-reset)
+
+If at any time you want to restore the AUR to it's original configuration you can preform a factory reset. This is done by holding down the brightness button and then the power button for 8 seconds. Both devices will start to blink, indicating that you can release the buttons. All learned commands will be forgotten and the AUR is once again configured as a Roku Smart TV remote.
