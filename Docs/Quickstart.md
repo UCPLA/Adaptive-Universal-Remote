@@ -10,19 +10,19 @@ Adaptive Universal Remote Kit
    * [Contents](#contents)
 2. [Getting Started](#getting-started)
    * [Setup Overview](#setup-overview)
-   * [Roku](#roku-setup)
-   * [IR Blaster](#ir-blaster-setup)
-     * [Placement](#ir-blaster-placement)
-     * [Programming Commands](#ir-blaster-programming)
-   * [Keyboard](#keyboard-features)
-     * [On / Off Switch](#keyboard-on-off)
-     * [Battery and Charging](#keyboard-charging)
-     * [Low Battery](#keyboard-low-battery)
-     * [Backlight Brightness](#keyboard-backlight)
-     * [Haptic Feedback](#keyboard-haptic)
-     * [Power Saving](#keyboard-power-saving)
+   * [Roku](#roku)
+   * [IR Blaster](#ir-blaster)
+     * [Placement](#placement)
+     * [Programming Commands](#programming-commands)
+   * [Keyboard](#keyboard)
+     * [On / Off Switch](#on--off-switch)
+     * [Battery and Charging](#battery-and-charging)
+     * [Low Battery](#low-battery)
+     * [Backlight Brightness](#backlight-brightness)
+     * [Haptic Feedback](#haptic-feedback)
+     * [Power Saving](#power-saving)
 3. [Troubleshooting](#troubleshooting)
-   * [Intermittent Control](#intermittent)
+   * [Intermittent Control](#intermittent-control)
    * [Factory Reset](#factory-reset)
 
 ## [Unpacking](#unpacking)
@@ -59,13 +59,13 @@ Remove the small piece of masking tape used to keep the power switch in the off 
 
 The Adaptive Universal Remote is pre-configured to work out of the box with any Roku device that is compatible with an IR remote (including Roku Smart TV's). 
 
-### [Roku](#roku-setup)
+### [Roku](#roku)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Roku_logo.svg/800px-Roku_logo.svg.png)
 
 Please follow the instructions in the Getting Started Guide that came with your Roku. You can also find helpful videos at [Roku - Setup and troubleshooting](https://support.roku.com/en-gb/category/115001360548).
 
-### [IR Blaster](#ir-blaster-setup)
+### [IR Blaster](#ir-blaster)
 
 ![](Images/IR_Blaster.png) 
 
@@ -78,7 +78,7 @@ If you wish to use any other device, continue to the [Programming Commands](#ir-
 
 *When using a TV with a Roku box you only need to reprogram seven buttons: Power, Input Select, Volume Up, Volume Down, Mute, Channel Up, and Channel Down.*
 
-#### [Placement](#ir-blaster-placement)
+#### [Placement](#placement)
 
 Place the IR Blaster within 10 feet of and with the red window facing the device(s) you would like to control. For best results place the IR blaster within 2 ft of the other device(s).
 
@@ -86,7 +86,7 @@ In our tests, we had great results by placing the IR blaster directly under the 
 
 *When using with multiple devices, the IR blaster red window will need to generally point towards all of the devices you intend on controlling.*
 
-#### [Programming Commands](#ir-blaster-programming)
+#### [Programming Commands](#programming-commands)
 
 Any button on the keyboard can easily be reprogrammed to control any IR device with these two steps.
 
@@ -103,16 +103,16 @@ Any button on the keyboard can easily be reprogrammed to control any IR device w
 
 That's it! Be sure to test this button to be sure it is working as expected. Repeat for each button as many times as needed.
 
-### [Keyboard](#keyboard-features)
+### [Keyboard](#keyboard)
 
 Each keyboard is wirelessly linked to a specific IR blaster. No line of sight is needed between the keyboard and th IR blaster, as long as they are withing range (300 ft) of each other.
 *If needed, you can compare the labels on the backs of the keyboard(s) and IR blaster(s) to verify the paired MAC addresses match.*
 
-##### [On / Off Switch](#keyboard-on-off)
+##### [On / Off Switch](#on--off-switch)
 
 The on-off switch is the small switch located on the back of the keyboard. The switch must be set to "ON" when the devices is in use and when charging the battery.
 
-##### [Battery and Charging](#keyboard-charging)
+##### [Battery and Charging](#battery-and-charging)
 
 Currently the keyboard can run for about 10 - 14 days on a single charge regardless of how frequently it is used. We are working on overcoming this limitation in future versions. For the time being It is **important to keep the battery charged** when it gets low. Also, to prevent the battery from being damaged from being over-discharged the keyboard will need to be switched "OFF" when it is not going to be used for several days.
 
@@ -121,19 +121,19 @@ To charge the keyboard, simply plug a micro-USB cable into the back of the keybo
 The keyboard is fully functional while it is charging, so you can continue using it without interruptions.
 
 
-##### [Low Battery](#keyboard-low-battery)
+##### [Low Battery](#low-battery)
 
 If the battery is low, the backlight will only light up to the minimum brightness and the haptic feedback will be disabled. The keyboards backlight will also flash 3 times when waking it up, or attempting to change the backlight brightness.
 
-##### [Backlight Brightness](#keyboard-backlight)
+##### [Backlight Brightness](#backlight-brightness)
 
 The backlight default brightness it the minimum brightness level. The brightness of the backlight can be changed by pressing the brightness level button in the bottom left corner of the keyboard. Each time the button is pressed it will increase in brightness. If the button is pressed after it has reached the maximum brightness, it will go back to the minimum brightness setting. The brightness level will be remembered as log as the keyboard is on. When switched off it will return to the default brightness level.
 
-##### [Haptic Feedback](#keyboard-haptic)
+##### [Haptic Feedback](#haptic-feedback)
 
 The keyboard has a vibrator motor that can provide addition feedback to a user when a button is pressed. This can be turned on by setting the backlight brightness to it's maximum setting.
 
-##### [Power Saving](#keyboard-power-saving)
+##### [Power Saving](#power-saving)
 
 The keyboard will automatically go into a deep-sleep state after 60 seconds of inactivity or 10 seconds of inactivity when the battery is low. When asleep the backlight will turn off.
 
@@ -143,7 +143,7 @@ To wake up the keyboard you will need to press the skip-back or left arrow butto
 
 ## [Troubleshooting](#troubleshooting)
 
-### [Intermittent Control](#intermittent)
+### [Intermittent Control](#intermittent-control)
 
 If the Adaptive Universal Remote only appears to work some of the time, it is most likely because the IR blaster doesn't have a good line of sight to the device you are trying to control. Try moving the IR blaster closer and try facing the red window in different directions to find the optimal placement.
 
