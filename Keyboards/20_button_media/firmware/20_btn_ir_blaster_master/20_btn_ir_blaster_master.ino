@@ -17,6 +17,11 @@
 #include <driver/rtc_io.h>
 #include <Keypad_Matrix.h>
 
+// IR Blaster MAC address used once to set EEPROM data
+// No changes will be made when address is all 0xFF or
+// this address matches what is in EEPROM
+const uint8_t IR_BLASTER_MAC[6] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
+
 enum key_cmd {
   send_ir,
   learn_ir,
@@ -74,12 +79,17 @@ unsigned long lastPwrKeyDown = 0;
 // TODO: Redesign hardware to use RTC pins for all rows and columns.
 // RTC GPIO for wake up, We can only use GPIO 4, 14, 15, 32 from key matrix.
 // Rows as Wake Interrupt Triggers
-const uint32_t WAKE_PINS_BITMASK = 0x100008010; // GPIO: 4, 15, 32
+const gpio_num_t WAKE_PIN = GPIO_NUM_4;
 // Cols as Outputs.
-const byte RTC_COLS = 1; // Ideally we would just us COLS, but not all cols are RTC
+const byte RTC_COLS = 1; // Ideally we would just use COLS from earlier, but not all cols are RTC
 const gpio_num_t RTC_COL_PINS[RTC_COLS] = {GPIO_NUM_14};
 
 const byte VBAT_SENSE_PIN = A2;
+
+const byte INTERNAL_BTN_PIN = 0;
+const uint16_t DO_CALIBRATION_HOLD_MS = 2000;
+bool int_btn_is_down = false;
+unsigned long lastIntBtnDown = 0;
 
 const byte HAPTIC_PIN = 25;
 const uint8_t HAPTIC_DUR_MS = 200;
@@ -104,8 +114,6 @@ uint16_t backlightPatDurMs = 0;
 uint8_t backlightPatTimes = 0;
 
 // These values are use to determine when to consider the battery at certain states.
-// Since this can fluctuate between board builds, these values will need to be
-// determined for each board.
 const uint16_t VBAT_LOW = 3680;
 const uint16_t VBAT_CRITICAL = 3630;
 bool lowBattery = false;
@@ -190,7 +198,12 @@ void updateHaptic() {
 
 ///////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////
-/// Use only when vBat is at 3600 mV
+// Since this analog input reading for the battery voltage varies
+// between each device. An offset is calculated to ensure they all 
+// at the very least will recognize 3600 analog reading as 3600 mV.
+//
+// Calculates and saves the offset of the current analog read to 3600.
+// To do this this function can only be called when vBat is at 3600 mV.
 ///////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////
 void calcSaveAnalogOffset() {
@@ -211,13 +224,20 @@ void calcSaveAnalogOffset() {
   backlightDataSaved();
 }
 
-void saveBrodcastAddr(uint8_t macAddr[]) {
-  // TODO: Call from from serial command.
-  memcpy(edata.broadcastAddress, macAddr, 6);
-  printBrodcastAddress();
-  EEPROM.put(EEPROM_DATA_ADDR, edata);
-  EEPROM.commit();
-  backlightDataSaved();
+void setBrodcastAddr() {
+  const uint8_t NULL_ADDR[6] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
+  bool isNullAddr = (memcmp(NULL_ADDR, IR_BLASTER_MAC, sizeof(IR_BLASTER_MAC)) == 0);
+
+  if (!isNullAddr) {
+    bool isNewAddr = (memcmp(edata.broadcastAddress, IR_BLASTER_MAC, sizeof(IR_BLASTER_MAC)) != 0);
+    if (isNewAddr) {    
+      memcpy(edata.broadcastAddress, IR_BLASTER_MAC, 6);
+      printBrodcastAddress();
+      EEPROM.put(EEPROM_DATA_ADDR, edata);
+      EEPROM.commit();
+      backlightDataSaved();
+    }
+  }
 }
 
 // Key Press Handler
@@ -268,7 +288,7 @@ void keyUp (const char which) {
   
 }
 
-void checkLongPress() {
+void checkLongKeyPress() {
   unsigned long now = millis();
   if (pwr_key_is_down && (now - lastPwrKeyDown) > FACTORY_RESET_HOLD_MS) {
     cmdData.cmd = f_reset;
@@ -312,7 +332,11 @@ void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
 void print_wakeup_trigger(){
   switch(esp_sleep_get_wakeup_cause()) {
     case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("Wakeup triggered by EXT0 (RTC_IO)"); break;
-    case ESP_SLEEP_WAKEUP_EXT1 : Serial.println("Wakeup triggered by EXT1 (RTC_CNTL)"); break;
+    case ESP_SLEEP_WAKEUP_EXT1 :
+        Serial.println("Wakeup triggered by EXT1 (RTC_CNTL)");
+        Serial.print("GPIO that triggered the wake up: GPIO ");
+        Serial.println((log(esp_sleep_get_ext1_wakeup_status()))/log(2), 0);
+      break;
     case ESP_SLEEP_WAKEUP_TIMER : Serial.println("Wakeup triggerd by Timer"); break;
     case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("Wakeup Triggerd by Touchpad"); break;
     case ESP_SLEEP_WAKEUP_ULP : Serial.println("Wakeup Triggerd by ULP Program"); break;
@@ -323,8 +347,10 @@ void print_wakeup_trigger(){
 /* Configure RTC GPIO to use the keyboard matrix as an external trigger */
 void initRtcGpio() {
   // Configure the wake up source as external triggers.
-  esp_sleep_enable_ext1_wakeup(WAKE_PINS_BITMASK,ESP_EXT1_WAKEUP_ANY_HIGH);
-
+  esp_sleep_enable_ext0_wakeup(WAKE_PIN, HIGH);
+  // Ensure wake pin is pulled down to prevent false triggers.
+  pinMode(WAKE_PIN, INPUT_PULLDOWN);
+  
   // Set all keyboard matrix columns to be on during sleep.
   for (uint8_t i = 0; i < RTC_COLS; i++) {
     rtc_gpio_init(RTC_COL_PINS[i]);
@@ -364,7 +390,14 @@ void checkBattery() {
   
   if (vbatAveVal < VBAT_CRITICAL) {
     Serial.println (F("Battery CRITICAL!"));
-    startDeepSleep();
+    checkInternalButton();
+    if (int_btn_is_down) {
+      Serial.println (F("Skipping deep-sleep on CRITICAL battery for calibration"));
+      backlightLearnModeSent();
+      lowBattery = true;
+    } else {
+      startDeepSleep();
+    }
   } else  if (vbatAveVal < VBAT_LOW) {
     if (!lowBattery) {
       Serial.println (F("Battery Low!"));
@@ -390,8 +423,25 @@ void printBrodcastAddress() {
   Serial.println();
 }
 
+void checkInternalButton() {
+  unsigned long now = millis();
+  bool btnIsDown = (digitalRead(INTERNAL_BTN_PIN) == LOW);
+  
+  if (int_btn_is_down != btnIsDown) {
+      int_btn_is_down = btnIsDown;
+      if (int_btn_is_down) {
+        lastIntBtnDown = now;
+      }
+  }
+  
+  if (int_btn_is_down && (now - lastIntBtnDown) > DO_CALIBRATION_HOLD_MS) {
+    calcSaveAnalogOffset();
+    int_btn_is_down = false;
+  }
+}
+
 void startSleepTimer() {
-  sleepTimer = timerBegin(0, 80, true); // timer 0, div 80
+  sleepTimer = timerBegin(0, 80, true);
   timerAttachInterrupt(sleepTimer, &startDeepSleep, true);
   if (lowBattery) {
     timerAlarmWrite(sleepTimer, LOWBAT_SLEEP_TIMEOUT_S * 1000000, false);
@@ -413,12 +463,13 @@ void initEsp32Now() {
     return;
   }
 
-  // Register for Send CB to get the status of TX data
+  // Register for send CB to get the status of TX data
   esp_now_register_send_cb(OnDataSent);
  
   // register peer
   esp_now_peer_info_t peerInfo;
-   
+
+  setBrodcastAddr();
   memcpy(peerInfo.peer_addr, edata.broadcastAddress, 6);
   peerInfo.channel = 0;  
   peerInfo.encrypt = false;
@@ -443,6 +494,7 @@ void setup() {
   print_wakeup_trigger();
 
   pinMode(VBAT_SENSE_PIN, INPUT);
+  pinMode(INTERNAL_BTN_PIN, INPUT_PULLUP);
  
   pinMode(HAPTIC_PIN, OUTPUT);
   digitalWrite(HAPTIC_PIN, LOW);
@@ -450,7 +502,6 @@ void setup() {
   // Setup PWM timer and attach to backlight pin
   ledcSetup(BACKLIGHT_CH, LEDC_BASE_FREQ, LEDC_TIMER_13_BIT);
   ledcAttachPin(BACKLIGHT_PIN, BACKLIGHT_CH);
-  setBacklight(backlightBrightness);
 
   Serial.print(F("Analog Offset: "));
   Serial.println(edata.analogOffset);
@@ -471,12 +522,14 @@ void setup() {
   
   cmdData.cmd = send_ir;
 
-  startSleepTimer();  
+  setBacklight(backlightBrightness);
+  startSleepTimer();
 }
 
 void loop() {
   kpd.scan();
-  checkLongPress();
+  checkLongKeyPress();
   updateBacklight();
   updateHaptic();
+  checkInternalButton();
 }
