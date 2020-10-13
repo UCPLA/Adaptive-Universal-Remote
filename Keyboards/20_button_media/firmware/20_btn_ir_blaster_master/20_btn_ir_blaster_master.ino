@@ -1,15 +1,22 @@
 /*****************************************************************************
-   AUTHOR: Ruben Kackstaetter
-   DATE: September 14, 2020
-   
-   DESCRIPTION: Keyboard firmware for SparkFun Thing Plus (ESP32 WROOM).
-   Developed to be paired to the Sparkfun WiFi IR Blaster over ESP-NOW, and
-   Configured as a Roku TV remote.
 
-    Depends on:
-   * https://github.com/espressif/arduino-esp32
-   * https://github.com/nickgammon/Keypad_Matrix
- ****************************************************************************/
+AUTHOR: Ruben Kackstaetter
+DATE: September 14, 2020
+   
+DESCRIPTION:
+   Keyboard firmware for the Adaptive Universal remote powered with the 
+   SparkFun Thing Plus (ESP32 WROOM). Designed to be paired to the Sparkfun
+   WiFi IR Blaster over ESP-NOW, and Configured as a Roku TV remote.
+
+LIBRARIES:
+ * https://github.com/espressif/arduino-esp32
+ * https://github.com/nickgammon/Keypad_Matrix
+
+*****************************************************************************/
+
+/*****************************************************************************
+                                   INCLUDES
+*****************************************************************************/
 
 #include "WiFi.h"
 #include <EEPROM.h>
@@ -17,10 +24,93 @@
 #include <driver/rtc_io.h>
 #include <Keypad_Matrix.h>
 
+/*****************************************************************************
+                             CONSTANTS - HARDWARE
+*****************************************************************************/
+
 // IR Blaster MAC address used once to set EEPROM data
 // No changes will be made when address is all 0xFF or
 // this address matches what is in EEPROM
 const uint8_t IR_BLASTER_MAC[6] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
+
+const uint16_t EEPROM_DATA_ADDR = 0;
+
+const byte VBAT_SENSE_PIN = A2;
+const byte INTERNAL_BTN_PIN = 0;
+const byte HAPTIC_PIN = 25;
+
+// GPIO for the key matrix scanning
+const byte ROWS = 5;
+const byte ROW_PINS[ROWS] = {19, 5, 4, 15, 32};
+
+const byte COLS = 5;
+const byte COL_PINS[COLS] = {16, 18, 14, 21, 17};
+
+// TODO: Redesign hardware to use RTC pins for all rows and columns.
+// RTC GPIO for wake up, We can only use GPIO 4, 14, 15, 32 from key matrix.
+// Ideally we would just use COLS from earlier, but not all cols are RTC
+
+// Cols as Outputs for waking from deep-sleep.
+const byte RTC_COLS = 1;
+const gpio_num_t RTC_COL_PINS[RTC_COLS] = {GPIO_NUM_14};
+
+// Rows as Wake Interrupt Triggers
+const gpio_num_t WAKE_PIN = GPIO_NUM_4;
+
+// Pin used to control backlight
+const byte BACKLIGHT_PIN = 26;
+// Use first PWM channel of 16 channels
+const uint8_t BACKLIGHT_CH = 0;
+// Use 13 bit precision for LEDC timer
+const uint8_t LEDC_TIMER_13_BIT = 13;
+// Use 5000 Hz as a LEDC base frequency
+const uint32_t LEDC_BASE_FREQ = 5000;
+// Maximum duty cycle from bit precision
+const uint32_t MAX_DUTY_CYCLE = (2^LEDC_TIMER_13_BIT) - 1;
+
+
+/*****************************************************************************
+                             CONSTANTS - SETTINGS
+*****************************************************************************/
+
+const uint8_t DEFAULT_SLEEP_TIMEOUT_S = 60;
+const uint8_t LOWBAT_SLEEP_TIMEOUT_S = 10;
+
+const uint16_t DO_CALIBRATION_HOLD_MS = 2000;
+const uint16_t FACTORY_RESET_HOLD_MS = 8000;
+const uint8_t HAPTIC_DUR_MS = 200;
+
+// These values are use to determine when to consider the battery low
+// While the system is calibrated to detect a 3600mV at 3600 analog read
+// the exact voltage that will trigger these states will vary.
+const uint16_t VBAT_LOW = 3680;
+const uint16_t VBAT_CRITICAL = 3630;
+
+// Define how the keypad is laid out
+const char KEY_LAYOUT[ROWS][COLS] = {
+  { 0, 1, 2, 3, 4},
+  { 5, 6, 7, 8, 9},
+  {10,11,12,13,14},
+  {15,16,17,18,19},
+  {20,21,22,23,24},
+};
+
+const char FN_KEY = 20;
+const char PWR_KEY = 5;
+
+// Set max value for PWM channel and number of steps
+const uint32_t BACKLIGHT_MAX_VAL = 255;
+const uint8_t BACKLIGHT_MAX_STEPS = 5;
+
+// Backlight brightness and step amount with each key press
+const uint8_t BACKLIGHT_STEP = BACKLIGHT_MAX_VAL / BACKLIGHT_MAX_STEPS;
+
+// The number of times to retry sending a command.
+const uint32_t MAX_TX_RETRY = 24;
+
+/*****************************************************************************
+                               GLOBAL VARIABLES
+*****************************************************************************/
 
 enum key_cmd {
   send_ir,
@@ -35,178 +125,224 @@ typedef struct cmd_data {
 
 } cmd_data;
 
-// Declare cmdData
-cmd_data cmdData;
+// Declare g_cmd_data
+cmd_data g_cmd_data;
 
 RTC_DATA_ATTR uint32_t bootCount = 0;
 
 typedef struct eeprom_data {
-  uint8_t broadcastAddress[6];
+  uint8_t broadcast_addr[6];
   int analogOffset;
 } eeprom_data;
 
 // Declare EEPROM data
-eeprom_data edata;
+eeprom_data g_edata;
 
-const uint16_t EEPROM_DATA_ADDR = 0;
+bool g_rst_key_down = false;
+unsigned long g_rst_key_last_ms = 0;
 
-const uint8_t DEFAULT_SLEEP_TIMEOUT_S = 60;
-const uint8_t LOWBAT_SLEEP_TIMEOUT_S = 10;
+bool g_int_btn_down = false;
+unsigned long g_int_btn_last_ms = 0;
 
-// GPIO for the key matrix scanning
-const byte ROWS = 5;
-const byte ROW_PINS[ROWS] = {19, 5, 4, 15, 32}; 
+unsigned long g_haptic_stop_ms = 0;
 
-const byte COLS = 5;
-const byte COL_PINS[COLS] = {16, 18, 14, 21, 17}; 
+RTC_DATA_ATTR int g_backlight_brightness = BACKLIGHT_STEP;
 
-// Define how the keypad is laid out
-const char KEY_LAYOUT[ROWS][COLS] = {
-  { 0, 1, 2, 3, 4},
-  { 5, 6, 7, 8, 9},
-  {10,11,12,13,14},
-  {15,16,17,18,19},
-  {20,21,22,23,24},
-};
-
-const char FN_KEY = 20;
-const char PWR_KEY = 5;
-const uint16_t FACTORY_RESET_HOLD_MS = 8000;
-
-bool pwr_key_is_down = false;
-unsigned long lastPwrKeyDown = 0;
-
-// TODO: Redesign hardware to use RTC pins for all rows and columns.
-// RTC GPIO for wake up, We can only use GPIO 4, 14, 15, 32 from key matrix.
-// Rows as Wake Interrupt Triggers
-const gpio_num_t WAKE_PIN = GPIO_NUM_4;
-// Cols as Outputs.
-const byte RTC_COLS = 1; // Ideally we would just use COLS from earlier, but not all cols are RTC
-const gpio_num_t RTC_COL_PINS[RTC_COLS] = {GPIO_NUM_14};
-
-const byte VBAT_SENSE_PIN = A2;
-
-const byte INTERNAL_BTN_PIN = 0;
-const uint16_t DO_CALIBRATION_HOLD_MS = 2000;
-bool int_btn_is_down = false;
-unsigned long lastIntBtnDown = 0;
-
-const byte HAPTIC_PIN = 25;
-const uint8_t HAPTIC_DUR_MS = 200;
-unsigned long hapticStopMils = 0;
-
-const byte BACKLIGHT_PIN = 26;
-// Use first PWM channel of 16 channels
-const uint8_t BACKLIGHT_CH = 0;
-// Use 13 bit precision for LEDC timer
-const uint8_t LEDC_TIMER_13_BIT = 13;
-// Use 5000 Hz as a LEDC base frequency
-const uint32_t LEDC_BASE_FREQ = 5000;
-// Set Max Value for PWM Channel
-const uint32_t BACKLIGHT_MAX_VAL = 255;
-// Backlight Brightness and step amount with each fn key press
-const uint8_t BACKLIGHT_BRIGHTNESS_STEP = BACKLIGHT_MAX_VAL/5;
-RTC_DATA_ATTR int backlightBrightness = BACKLIGHT_BRIGHTNESS_STEP;
 // Backlight Pattern Variables
-unsigned long backlightMilOld = 0;
-uint8_t backlightPatCnt = 0;
-uint16_t backlightPatDurMs = 0;
-uint8_t backlightPatTimes = 0;
+unsigned long g_backlight_pat_last_ms = 0;
+uint8_t g_backlight_pat_cnt = 0;
+uint16_t g_backlight_pat_dur_ms = 0;
+uint8_t g_backlight_pat_cnt_target = 0;
 
-// These values are use to determine when to consider the battery at certain states.
-const uint16_t VBAT_LOW = 3680;
-const uint16_t VBAT_CRITICAL = 3630;
-bool lowBattery = false;
+bool g_low_battery = false;
 
-// Esp now tx retry
-const uint32_t MAX_TX_RETRY = 24;
-int txRetryCount = 0;
+int g_tx_retry_cnt = 0;
 
-Keypad_Matrix kpd = Keypad_Matrix( makeKeymap (KEY_LAYOUT), ROW_PINS, COL_PINS, ROWS, COLS );
+Keypad_Matrix kpd = Keypad_Matrix(makeKeymap(KEY_LAYOUT),
+                                  ROW_PINS,
+                                  COL_PINS,
+                                  ROWS,
+                                  COLS);
 
-hw_timer_t *sleepTimer = NULL;
+hw_timer_t *g_sleep_timer = NULL;
 
-// LED Analog Write function to set backlight brightness
-void setBacklight(uint32_t value) {
-  // calculate duty, 8191 from 2 ^ 13 - 1
-  uint32_t duty = (8191 / BACKLIGHT_MAX_VAL) * min(value, BACKLIGHT_MAX_VAL);
+/*****************************************************************************
+                                  FUNCTIONS
+*****************************************************************************/
+
+
+/*****************************************************************************
+
+FUNCTION NAME: set_backlight
+
+PARAMATERS:
+   value - the brightness value to set the backlight to
+
+DESCRIPTION:
+   Sets the backlight brightness by setting the PWM duty associated with the
+   backlight control pin.
+
+*****************************************************************************/
+void set_backlight(uint32_t value) {
+  uint32_t duty = ((MAX_DUTY_CYCLE / BACKLIGHT_MAX_VAL) *
+                   min(value, BACKLIGHT_MAX_VAL));
   ledcWrite(BACKLIGHT_CH, duty);
 }
 
-// Increase Brightness by one step
-void stepBacklightBrightness() {
-  if (backlightBrightness < BACKLIGHT_MAX_VAL && !lowBattery) {
-    backlightBrightness += BACKLIGHT_BRIGHTNESS_STEP;
+/*****************************************************************************
+
+FUNCTION NAME: step_backlight_brightness
+
+DESCRIPTION:
+   Increases g_backlight_brightness by one step only if battery is not low,
+   then sets the brightness level.
+
+*****************************************************************************/
+void step_backlight_brightness() {
+  if (g_backlight_brightness < BACKLIGHT_MAX_VAL && !g_low_battery) {
+    g_backlight_brightness += BACKLIGHT_STEP;
   } else {
-    backlightBrightness = BACKLIGHT_BRIGHTNESS_STEP;
+    g_backlight_brightness = BACKLIGHT_STEP;
   }
 
-  if (lowBattery) {
-    backlightLowBattery();
+  if (g_low_battery) {
+    backlight_low_battery();
   }
   
   Serial.print(F("Backlight: "));
-  Serial.println(backlightBrightness);
-  setBacklight(backlightBrightness);
+  Serial.println(g_backlight_brightness);
+  set_backlight(g_backlight_brightness);
 }
 
-// Non repeating flash pattern for backlight
-// First entry always turns the backlight on
-void updateBacklight () {
-  if(backlightPatCnt < backlightPatTimes) {
-    if((backlightMilOld + backlightPatDurMs) < millis()) {
-      backlightMilOld = millis();
-      if(backlightPatCnt % 2 == 0) {
-          setBacklight(backlightBrightness);
+/*****************************************************************************
+
+FUNCTION NAME: backlight_update
+
+DESCRIPTION:
+   Non-blocking function that toggles the backlight state (on/off) based on
+   a set number of times to display a blink pattern to the user. Backlight
+   always starts in the on state.
+   Must be called at regular intervals, to be able to update the backlight
+   state at the appropriate times.
+
+*****************************************************************************/
+void backlight_update () {
+  if (g_backlight_pat_cnt < g_backlight_pat_cnt_target) {
+    if ((g_backlight_pat_last_ms + g_backlight_pat_dur_ms) < millis()) {
+      g_backlight_pat_last_ms = millis();
+      if (g_backlight_pat_cnt % 2 == 0) {
+          set_backlight(g_backlight_brightness);
       } else {
-          setBacklight(0);
+          set_backlight(0);
       }
-      backlightPatCnt++;
+      g_backlight_pat_cnt++;
     }
   }
 }
 
-void backlightSetPattern(uint16_t duration, uint8_t times) {
-  backlightPatCnt = 0;
-  backlightMilOld = 0;
-  backlightPatDurMs = duration;
-  backlightPatTimes = times;
+/*****************************************************************************
+
+FUNCTION NAME: backlight_set_blink_pattern
+
+PARAMATERS:
+   duration_ms - the length of time between toggles in milliseconds
+   toggle_cnt - the number of times to toggle the backlight between on and off
+
+DESCRIPTION:
+   Sets a uniform non repeating blink pattern that is implemented by the
+   backlight_update function.
+
+*****************************************************************************/
+void backlight_set_blink_pattern(uint16_t duration_ms, uint8_t toggle_cnt) {
+  g_backlight_pat_cnt = 0;
+  g_backlight_pat_last_ms = 0;
+  g_backlight_pat_dur_ms = duration_ms;
+  g_backlight_pat_cnt_target = toggle_cnt;
 }
 
-void backlightLowBattery() {
-  backlightSetPattern(100, 7);
+/*****************************************************************************
+
+FUNCTION NAME: backlight_low_battery
+
+DESCRIPTION:
+   Low battery backlight blink pattern
+
+*****************************************************************************/
+void backlight_low_battery() {
+  backlight_set_blink_pattern(100, 7);
 }
 
-void backlightLearnModeSent() {
-  backlightSetPattern(100, 5);
+/*****************************************************************************
+
+FUNCTION NAME: backlight_learn_mode
+
+DESCRIPTION:
+   Lean mode backlight blink pattern
+
+*****************************************************************************/
+void backlight_learn_mode() {
+  backlight_set_blink_pattern(100, 5);
 }
 
-void backlightDataSaved() {
-  backlightSetPattern(100, 11);
+/*****************************************************************************
+
+FUNCTION NAME: backlight_data_saved
+
+DESCRIPTION:
+   Data save to EEPROM backlight blink pattern
+
+*****************************************************************************/
+void backlight_data_saved() {
+  backlight_set_blink_pattern(100, 11);
 }
 
-void hapticVibrate() {
-  hapticStopMils = millis() + HAPTIC_DUR_MS;
+/*****************************************************************************
+
+FUNCTION NAME: haptic_vibrate
+
+DESCRIPTION:
+   Activates the haptic vibrator motor and stores the time the vibrate motor
+   should stop at. Relies on the haptic_update function to stop the haptic
+   feedback at the right time.
+
+*****************************************************************************/
+void haptic_vibrate() {
+  g_haptic_stop_ms = millis() + HAPTIC_DUR_MS;
   digitalWrite(HAPTIC_PIN, HIGH);
 }
 
-void updateHaptic() {
-  if (millis() >= hapticStopMils) {
+/*****************************************************************************
+
+FUNCTION NAME: haptic_update
+
+DESCRIPTION:
+   Non-blocking function that stops the haptic vibrate after a preset time.
+   Must be called at regular intervals, to be able to update stop the vibrator
+   at the appropriate times.
+
+*****************************************************************************/
+void haptic_update() {
+  if (millis() >= g_haptic_stop_ms) {
     digitalWrite(HAPTIC_PIN, LOW);
   }
 }
 
-///////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
-// Since this analog input reading for the battery voltage varies
-// between each device. An offset is calculated to ensure they all 
-// at the very least will recognize 3600 analog reading as 3600 mV.
-//
-// Calculates and saves the offset of the current analog read to 3600.
-// To do this this function can only be called when vBat is at 3600 mV.
-///////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
-void calcSaveAnalogOffset() {
+/*****************************************************************************
+
+FUNCTION NAME: calc_save_analog_offset
+
+DESCRIPTION:
+   Calculates an offset from the the current vbat analog reading to 3600, then
+   saves this value to EEPROM. 
+
+   THIS FUNCTION MUST ONLY BE CALLED WHEN THE VBAT PIN IS AT 3600 mV.
+
+   Since the analog input reading for the battery voltage varies
+   between each device. An offset is calculated to ensure that a critical
+   battery voltage will recognized at an analog reading of 3600.
+
+*****************************************************************************/
+void calc_save_analog_offset() {
   uint32_t vbatValue = 0;
   const uint8_t samples = 30;
   
@@ -216,136 +352,231 @@ void calcSaveAnalogOffset() {
 
   int vbatAveVal = vbatValue / samples;
 
-  edata.analogOffset = (3600 - vbatAveVal);
-  EEPROM.put(EEPROM_DATA_ADDR, edata);
+  g_edata.analogOffset = (3600 - vbatAveVal);
+  EEPROM.put(EEPROM_DATA_ADDR, g_edata);
   EEPROM.commit();
   Serial.print(F("Analog Offset: "));
-  Serial.println(edata.analogOffset);
-  backlightDataSaved();
+  Serial.println(g_edata.analogOffset);
+  backlight_data_saved();
 }
 
-void setBrodcastAddr() {
+/*****************************************************************************
+
+FUNCTION NAME: set_brodcast_addr
+
+DESCRIPTION:
+   Sets the IR_BLASTER_MAC constant as the ESP-NOW broadcast address in EEPROM
+   only when it is not the NULL_ADDR and is different than what is already
+   saved in EEPROM.
+
+*****************************************************************************/
+void set_brodcast_addr() {
   const uint8_t NULL_ADDR[6] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
-  bool isNullAddr = (memcmp(NULL_ADDR, IR_BLASTER_MAC, sizeof(IR_BLASTER_MAC)) == 0);
+  bool isNullAddr = (memcmp(NULL_ADDR,
+                            IR_BLASTER_MAC,
+                            sizeof(IR_BLASTER_MAC)) == 0);
 
   if (!isNullAddr) {
-    bool isNewAddr = (memcmp(edata.broadcastAddress, IR_BLASTER_MAC, sizeof(IR_BLASTER_MAC)) != 0);
+    bool isNewAddr = (memcmp(g_edata.broadcast_addr,
+                             IR_BLASTER_MAC,
+                             sizeof(IR_BLASTER_MAC)) != 0);
     if (isNewAddr) {    
-      memcpy(edata.broadcastAddress, IR_BLASTER_MAC, 6);
-      printBrodcastAddress();
-      EEPROM.put(EEPROM_DATA_ADDR, edata);
+      memcpy(g_edata.broadcast_addr, IR_BLASTER_MAC, 6);
+      print_broadcast_addr();
+      EEPROM.put(EEPROM_DATA_ADDR, g_edata);
       EEPROM.commit();
-      backlightDataSaved();
+      backlight_data_saved();
     }
   }
 }
 
-// Key Press Handler
+/*****************************************************************************
+
+FUNCTION NAME: keyDown
+
+PARAMATERS:
+   which - the key that triggered the call of this function 
+
+DESCRIPTION:
+   They keyboard_matrix handler for any time a key is pressed down. 
+
+*****************************************************************************/
 void keyDown (const char which) {
 
   // Reset sleep timer on any key press
-  timerWrite(sleepTimer, 0);
+  timerWrite(g_sleep_timer, 0);
   
-  if (backlightBrightness == BACKLIGHT_MAX_VAL) { 
-    hapticVibrate();
+  if (g_backlight_brightness == BACKLIGHT_MAX_VAL) { 
+    haptic_vibrate();
   }
   
-  cmdData.key = (int)which;
+  g_cmd_data.key = (int)which;
 
   if (which == FN_KEY) {
-    cmdData.cmd = learn_ir;
+    g_cmd_data.cmd = learn_ir;
   }
 
   if (which == PWR_KEY) {
-    pwr_key_is_down = true;
-    lastPwrKeyDown = millis();
+    g_rst_key_down = true;
+    g_rst_key_last_ms = millis();
   }
   
   Serial.print (F("Key down: "));
-  Serial.println (cmdData.key);
+  Serial.println (g_cmd_data.key);
 }
 
-// Key Release Handler
+/*****************************************************************************
+
+FUNCTION NAME: keyDown
+
+PARAMATERS:
+   which - the key that triggered the call of this function
+
+DESCRIPTION:
+   They keyboard_matrix handler any time a key is released. 
+
+*****************************************************************************/
 void keyUp (const char which) {
   Serial.print (F("Key up: "));
   Serial.println ((int)which);
   
-  if (which == FN_KEY || cmdData.cmd == f_reset) {
-    cmdData.cmd = send_ir;
-    if (cmdData.key == FN_KEY) {
-      stepBacklightBrightness();
+  if (which == FN_KEY || g_cmd_data.cmd == f_reset) {
+    g_cmd_data.cmd = send_ir;
+    if (g_cmd_data.key == FN_KEY) {
+      step_backlight_brightness();
     }
   } else {
-    sendCmd(cmdData);
-    if(cmdData.cmd == learn_ir) {
-      backlightLearnModeSent();
+    send_cmd();
+    if(g_cmd_data.cmd == learn_ir) {
+      backlight_learn_mode();
     }
   }
 
   if (which == PWR_KEY) {
-    pwr_key_is_down = false;
+    g_rst_key_down = false;
   }
   
 }
 
-void checkLongKeyPress() {
+/*****************************************************************************
+
+FUNCTION NAME: check_long_key_press
+
+DESCRIPTION:
+   Non-blocking function used to perform an action after a key has been held
+   down for a certain amount of time.
+
+   We use it here to do a factory reset if the power button is held down long
+   enough (duration defined by setting constant FACTORY_RESET_HOLD_MS) 
+
+*****************************************************************************/
+void check_long_key_press() {
   unsigned long now = millis();
-  if (pwr_key_is_down && (now - lastPwrKeyDown) > FACTORY_RESET_HOLD_MS) {
-    cmdData.cmd = f_reset;
-    sendCmd(cmdData);
-    pwr_key_is_down = false;
-    backlightDataSaved();
+  if (g_rst_key_down && (now - g_rst_key_last_ms) > FACTORY_RESET_HOLD_MS) {
+    g_cmd_data.cmd = f_reset;
+    send_cmd();
+    g_rst_key_down = false;
+    backlight_data_saved();
     Serial.println(F("Sending Factory Reset"));
   }
 }
 
-void sendCmd(cmd_data cmdData) {     
-  esp_err_t result = esp_now_send(edata.broadcastAddress, (uint8_t *) &cmdData, sizeof(cmd_data));
+/*****************************************************************************
+
+FUNCTION NAME: send_cmd
+
+DESCRIPTION:
+   Transmit the current cmd_data values to the target using ESP-NOW
+
+*****************************************************************************/
+void send_cmd() {     
+  esp_err_t result = esp_now_send(g_edata.broadcast_addr,
+                                  (uint8_t *) &g_cmd_data,
+                                  sizeof(cmd_data));
      
   if (result != ESP_OK) {
     Serial.println(F("Error sending the data"));
   }
   
   Serial.print(F("key: "));
-  Serial.print(cmdData.key);
+  Serial.print(g_cmd_data.key);
   Serial.print(F(", cmd: "));
-  Serial.println(cmdData.cmd);
+  Serial.println(g_cmd_data.cmd);
 }
 
-/* ESPNOW Callback after data is sent */
-void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
+/*****************************************************************************
+
+FUNCTION NAME: on_data_sent
+
+PARAMATERS:
+   mac_addr - MAC address of target device
+   status - Status of data sent
+
+DESCRIPTION:
+   ESP-NOW Callback routine that is triggered after sending data.
+   If data was not successfully transmitted, retry a fixed number of times
+   before giving up.
+
+*****************************************************************************/
+void on_data_sent(const uint8_t *mac_addr, esp_now_send_status_t status) {
   Serial.print(F("\nLast Packet:\t"));
   if (status == ESP_NOW_SEND_SUCCESS) {
     Serial.println(F("Delivery Success"));
   } else {
     Serial.println(F("Delivery Failed, Retrying last command"));
-    if (txRetryCount < MAX_TX_RETRY) {
-      sendCmd(cmdData);
-      txRetryCount += 1;
+    if (g_tx_retry_cnt < MAX_TX_RETRY) {
+      send_cmd();
+      g_tx_retry_cnt += 1;
     } else {
-      txRetryCount = 0;
+      g_tx_retry_cnt = 0;
     }
   }
 }
 
-/* Print what triggered ESP32 wakeup from sleep */
-void print_wakeup_trigger(){
+/*****************************************************************************
+
+FUNCTION NAME: print_wakeup_trigger
+
+DESCRIPTION:
+   Print what triggered the device to wake from sleep. Used to for debugging.
+
+*****************************************************************************/
+void print_wakeup_trigger() {
   switch(esp_sleep_get_wakeup_cause()) {
-    case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("Wakeup triggered by EXT0 (RTC_IO)"); break;
-    case ESP_SLEEP_WAKEUP_EXT1 :
-        Serial.println("Wakeup triggered by EXT1 (RTC_CNTL)");
-        Serial.print("GPIO that triggered the wake up: GPIO ");
+    case ESP_SLEEP_WAKEUP_EXT0:
+        Serial.println(F("Wakeup triggered by EXT0 (RTC_IO)"));
+      break;
+    case ESP_SLEEP_WAKEUP_EXT1:
+        Serial.println(F("Wakeup triggered by EXT1 (RTC_CNTL)"));
+        Serial.print(F("GPIO that triggered the wake up: GPIO "));
         Serial.println((log(esp_sleep_get_ext1_wakeup_status()))/log(2), 0);
       break;
-    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("Wakeup triggerd by Timer"); break;
-    case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("Wakeup Triggerd by Touchpad"); break;
-    case ESP_SLEEP_WAKEUP_ULP : Serial.println("Wakeup Triggerd by ULP Program"); break;
-    default : Serial.printf("Wakeup Triggered by Unknown: %d\n",esp_sleep_get_wakeup_cause()); break;
+    case ESP_SLEEP_WAKEUP_TIMER:
+        Serial.println(F("Wakeup triggered by Timer"));
+      break;
+    case ESP_SLEEP_WAKEUP_TOUCHPAD:
+        Serial.println(F("Wakeup triggered by Touchpad"));
+      break;
+    case ESP_SLEEP_WAKEUP_ULP:
+        Serial.println(F("Wakeup triggered by ULP Program"));
+      break;
+    default:
+        Serial.print(F("Wakeup Triggered by Unknown: "));
+        Serial.println(esp_sleep_get_wakeup_cause());
+      break;
   }
 }
 
-/* Configure RTC GPIO to use the keyboard matrix as an external trigger */
-void initRtcGpio() {
+/*****************************************************************************
+
+FUNCTION NAME: init_rtc_gpio
+
+DESCRIPTION:
+   Configure RTC GPIO to use the keyboard matrix as an external trigger to 
+   wake the device from sleep.
+
+*****************************************************************************/
+void init_rtc_gpio() {
   // Configure the wake up source as external triggers.
   esp_sleep_enable_ext0_wakeup(WAKE_PIN, HIGH);
   // Ensure wake pin is pulled down to prevent false triggers.
@@ -360,21 +591,47 @@ void initRtcGpio() {
   }
 }
 
-/* Remove GPIO holds for all keyboard matrix columns */
-void clearRtcGpioHolds() {
+/*****************************************************************************
+
+FUNCTION NAME: clear_rtc_gpio_holds
+
+DESCRIPTION:
+   Removes GPIO holds for all keyboard matrix columns that were set by
+   init_rtc_gpio.
+
+*****************************************************************************/
+void clear_rtc_gpio_holds() {
   for (uint8_t i = 0; i < RTC_COLS; i++) {
     rtc_gpio_hold_dis(RTC_COL_PINS[i]);
   }
 }
 
-void IRAM_ATTR startDeepSleep() {
-  initRtcGpio();
+/*****************************************************************************
+
+FUNCTION NAME: start_deep_sleep
+
+DESCRIPTION:
+   This function can be called from a timer. Causes the device to enter
+   deep-sleep to conserve battery.
+
+*****************************************************************************/
+void IRAM_ATTR start_deep_sleep() {
+  init_rtc_gpio();
   Serial.println("Entering Deep Sleep");
   delay(1000);
   esp_deep_sleep_start();
 }
 
-void checkBattery() {
+/*****************************************************************************
+
+FUNCTION NAME: check_battery
+
+DESCRIPTION:
+   Determines the battery status based on the voltage level. This is a very
+   basic way to detect a low battery.
+
+*****************************************************************************/
+void check_battery() {
   uint32_t vbatValue = 0;
   const uint8_t samples = 30;
   
@@ -383,39 +640,47 @@ void checkBattery() {
   }
 
   uint16_t vbatAveVal = vbatValue / samples;
-  vbatAveVal += edata.analogOffset;
+  vbatAveVal += g_edata.analogOffset;
 
   Serial.print (F("Battery Level: "));
   Serial.println (vbatAveVal);
   
   if (vbatAveVal < VBAT_CRITICAL) {
     Serial.println (F("Battery CRITICAL!"));
-    checkInternalButton();
-    if (int_btn_is_down) {
-      Serial.println (F("Skipping deep-sleep on CRITICAL battery for calibration"));
-      backlightLearnModeSent();
-      lowBattery = true;
+    check_internal_button();
+    if (g_int_btn_down) {
+      Serial.println (F("Skipping deep-sleep for calibration"));
+      backlight_learn_mode();
+      g_low_battery = true;
     } else {
-      startDeepSleep();
+      start_deep_sleep();
     }
   } else  if (vbatAveVal < VBAT_LOW) {
-    if (!lowBattery) {
+    if (!g_low_battery) {
       Serial.println (F("Battery Low!"));
-      lowBattery = true;
-      backlightLowBattery();
+      g_low_battery = true;
+      backlight_low_battery();
     }
   } else {
-    if (lowBattery) {
+    if (g_low_battery) {
       Serial.println (F("Battery No longer Low"));
-      lowBattery = false;
+      g_low_battery = false;
     }
   }
 }
 
-void printBrodcastAddress() {
+/*****************************************************************************
+
+FUNCTION NAME: print_broadcast_addr
+
+DESCRIPTION:
+   Prints the broadcast address that is stored in EEPROM.
+
+*****************************************************************************/
+void print_broadcast_addr() {
   Serial.print(F("Paired to MAC: "));
   for (uint8_t i = 0; i < 6; i++) {
-    Serial.print(edata.broadcastAddress[i],HEX);
+    Serial.print(g_edata.broadcast_addr[i],HEX);
     if (i < 5) {
       Serial.print(":");
     }
@@ -423,35 +688,64 @@ void printBrodcastAddress() {
   Serial.println();
 }
 
-void checkInternalButton() {
+/*****************************************************************************
+
+FUNCTION NAME: check_internal_button
+
+DESCRIPTION:
+   Checks the status of the internal button and triggers the
+   calc_save_analog_offset if held down for a fixed amount of time.
+
+*****************************************************************************/
+void check_internal_button() {
   unsigned long now = millis();
   bool btnIsDown = (digitalRead(INTERNAL_BTN_PIN) == LOW);
   
-  if (int_btn_is_down != btnIsDown) {
-      int_btn_is_down = btnIsDown;
-      if (int_btn_is_down) {
-        lastIntBtnDown = now;
+  if (g_int_btn_down != btnIsDown) {
+      g_int_btn_down = btnIsDown;
+      if (g_int_btn_down) {
+        g_int_btn_last_ms = now;
       }
   }
   
-  if (int_btn_is_down && (now - lastIntBtnDown) > DO_CALIBRATION_HOLD_MS) {
-    calcSaveAnalogOffset();
-    int_btn_is_down = false;
+  if (g_int_btn_down && (now - g_int_btn_last_ms) > DO_CALIBRATION_HOLD_MS) {
+    calc_save_analog_offset();
+    g_int_btn_down = false;
   }
 }
 
-void startSleepTimer() {
-  sleepTimer = timerBegin(0, 80, true);
-  timerAttachInterrupt(sleepTimer, &startDeepSleep, true);
-  if (lowBattery) {
-    timerAlarmWrite(sleepTimer, LOWBAT_SLEEP_TIMEOUT_S * 1000000, false);
+/*****************************************************************************
+
+FUNCTION NAME: start_sleep_timer
+
+DESCRIPTION:
+   Begins an interrupt watch-dog timer to trigger deep sleep after a set
+   amount of time. A different timeout duration is used for when running on a
+   low battery.
+
+*****************************************************************************/
+void start_sleep_timer() {
+  g_sleep_timer = timerBegin(0, 80, true);
+  timerAttachInterrupt(g_sleep_timer, &start_deep_sleep, true);
+  if (g_low_battery) {
+    timerAlarmWrite(g_sleep_timer, LOWBAT_SLEEP_TIMEOUT_S * 1000000, false);
   } else {
-    timerAlarmWrite(sleepTimer, DEFAULT_SLEEP_TIMEOUT_S * 1000000, false);
+    timerAlarmWrite(g_sleep_timer, DEFAULT_SLEEP_TIMEOUT_S * 1000000, false);
   }
-  timerAlarmEnable(sleepTimer);
+  timerAlarmEnable(g_sleep_timer);
 }
 
-void initEsp32Now() {
+/*****************************************************************************
+
+FUNCTION NAME: init_esp_now
+
+DESCRIPTION:
+   Initializes the system to use ESP-NOW in a master slave configuration with
+   this device as the master. Register a single device by the MAC address
+   saved in EEPROM as its target.
+
+*****************************************************************************/
+void init_esp_now() {
   WiFi.mode(WIFI_STA);
  
   Serial.println();
@@ -464,13 +758,13 @@ void initEsp32Now() {
   }
 
   // Register for send CB to get the status of TX data
-  esp_now_register_send_cb(OnDataSent);
+  esp_now_register_send_cb(on_data_sent);
  
   // register peer
   esp_now_peer_info_t peerInfo;
 
-  setBrodcastAddr();
-  memcpy(peerInfo.peer_addr, edata.broadcastAddress, 6);
+  set_brodcast_addr();
+  memcpy(peerInfo.peer_addr, g_edata.broadcast_addr, 6);
   peerInfo.channel = 0;  
   peerInfo.encrypt = false;
          
@@ -480,16 +774,25 @@ void initEsp32Now() {
   }
 }
 
+/*****************************************************************************
+
+FUNCTION NAME: setup
+
+DESCRIPTION:
+   System setup return called at boot. Triggered at initial power on and
+   after waking from sleep.
+
+*****************************************************************************/
 void setup() {
   Serial.begin(115200);
 
-  EEPROM.begin(sizeof(edata));
-  EEPROM.get(EEPROM_DATA_ADDR, edata);
+  EEPROM.begin(sizeof(g_edata));
+  EEPROM.get(EEPROM_DATA_ADDR, g_edata);
 
   // There is some timing issue I don't understand here.
-  // initEsp32Now() must be called as soon as possible to avoid
+  // init_esp_now() must be called as soon as possible to avoid
   // "ESPNOW: Peer interface is invalid" error.
-  initEsp32Now();
+  init_esp_now();
 
   print_wakeup_trigger();
 
@@ -504,32 +807,40 @@ void setup() {
   ledcAttachPin(BACKLIGHT_PIN, BACKLIGHT_CH);
 
   Serial.print(F("Analog Offset: "));
-  Serial.println(edata.analogOffset);
+  Serial.println(g_edata.analogOffset);
   
-  checkBattery();
+  check_battery();
   
   ++bootCount;
   Serial.print(F("Boot number: "));
   Serial.println(bootCount);
 
-  printBrodcastAddress();
+  print_broadcast_addr();
 
-  clearRtcGpioHolds();
+  clear_rtc_gpio_holds();
   
   kpd.begin();
   kpd.setKeyDownHandler(keyDown);
   kpd.setKeyUpHandler(keyUp);
   
-  cmdData.cmd = send_ir;
+  g_cmd_data.cmd = send_ir;
 
-  setBacklight(backlightBrightness);
-  startSleepTimer();
+  set_backlight(g_backlight_brightness);
+  start_sleep_timer();
 }
 
+/*****************************************************************************
+
+FUNCTION NAME: loop
+
+DESCRIPTION:
+   The main function called as a forever loop during system runtime.
+
+*****************************************************************************/
 void loop() {
   kpd.scan();
-  checkLongKeyPress();
-  updateBacklight();
-  updateHaptic();
-  checkInternalButton();
+  check_long_key_press();
+  backlight_update();
+  haptic_update();
+  check_internal_button();
 }
