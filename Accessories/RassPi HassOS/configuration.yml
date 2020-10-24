@@ -1,0 +1,21 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include_dir_merge_named script_configs
+scene: !include scenes.yaml
+
+roku:
+    - host: 192.168.2.44
+
+sensor:
+  - platform: serial
+    serial_port: /dev/ttyUSB0
+    baudrate: 115200
+    name: atom 

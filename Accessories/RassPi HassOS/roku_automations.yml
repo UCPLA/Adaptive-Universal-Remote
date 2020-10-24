@@ -1,0 +1,131 @@
+-   alias: "Serial to Roku Left"
+    trigger:
+        platform: state
+        entity_id: sensor.atom
+        to: "LEFT"
+    action:
+    -   service: remote.send_command
+        data:
+            entity_id: remote.roku_bedroom
+            command:
+                - left
+
+-   alias: "Serial to Roku Right"
+    trigger:
+        platform: state
+        entity_id: sensor.atom
+        to: "RIGHT"
+    action:
+    -   service: remote.send_command
+        data:
+            entity_id: remote.roku_bedroom
+            command:
+                - right
+
+-   alias: "Serial to Roku Down"
+    trigger:
+        platform: state
+        entity_id: sensor.atom
+        to: "DOWN"
+    action:
+    -   service: remote.send_command
+        data:
+            entity_id: remote.roku_bedroom
+            command:
+                - down
+                
+-   alias: "Serial to Roku Up"
+    trigger:
+        platform: state
+        entity_id: sensor.atom
+        to: "UP"
+    action:
+    -   service: remote.send_command
+        data:
+            entity_id: remote.roku_bedroom
+            command:
+                - up
+                
+-   alias: "Serial to Roku Select"
+    trigger:
+        platform: state
+        entity_id: sensor.atom
+        to: "SELECT"
+    action:
+    -   service: remote.send_command
+        data:
+            entity_id: remote.roku_bedroom
+            command:
+                - select
+
+-   alias: "Serial to Roku Home"
+    trigger:
+        platform: state
+        entity_id: sensor.atom
+        to: "HOME"
+    action:
+    -   service: remote.send_command
+        data:
+            entity_id: remote.roku_bedroom
+            command:
+                - home
+                
+-   alias: "Serial to Roku Back"
+    trigger:
+        platform: state
+        entity_id: sensor.atom
+        to: "BACK"
+    action:
+    -   service: remote.send_command
+        data:
+            entity_id: remote.roku_bedroom
+            command:
+                - back
+
+-   alias: "Serial to Roku Asterisk"
+    trigger:
+        platform: state
+        entity_id: sensor.atom
+        to: "ASTERISK"
+    action:
+    -   service: remote.send_command
+        data:
+            entity_id: remote.roku_bedroom
+            command:
+                - info
+
+-   alias: "Serial to Roku Rewind"
+    trigger:
+        platform: state
+        entity_id: sensor.atom
+        to: "RWD"
+    action:
+    -   service: remote.send_command
+        data:
+            entity_id: remote.roku_bedroom
+            command:
+                - reverse
+
+-   alias: "Serial to Roku Fast Forward"
+    trigger:
+        platform: state
+        entity_id: sensor.atom
+        to: "FWD"
+    action:
+    -   service: remote.send_command
+        data:
+            entity_id: remote.roku_bedroom
+            command:
+                - forward
+
+-   alias: "Serial to Roku Play"
+    trigger:
+        platform: state
+        entity_id: sensor.atom
+        to: "PLAY"
+    action:
+    -   service: remote.send_command
+        data:
+            entity_id: remote.roku_bedroom
+            command:
+                - play
