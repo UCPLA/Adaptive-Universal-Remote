@@ -1,3 +1,7 @@
+layout: page
+title: "Keyboard and IR Blaster - Fabrication Guide"
+permalink: /keyboard_ir_blaster/guides/
+
 # Keyboard and IR Blaster Fabrication Guide
 
 This guide focuses on recreating the project as we delivered it to UCPLA as the final prototypes for the [2020 Hackaday Prize UCPLA Dream Team](https://hackaday.io/project/173454-2020-hdp-dream-team-ucpla).
@@ -34,7 +38,7 @@ Cost: ~$35.00
 Assembly Time: 30 min  
 3D Print Time: 4 hrs
 
-You can find the BOM in the [IR Blaster Hardware Readme](/Accessories/IRblaster/hardware/).
+You can find the BOM in the [IR Blaster Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/Accessories/IRblaster/hardware/).
 
 ### IR Blaster Enclosure
 
@@ -42,7 +46,7 @@ Since this part takes the longest it is placed first.
 
 ### IR Blaster Hardware
 
-Review the [IR Blaster Hardware Readme](/Accessories/IRblaster/hardware/) for an overview of the parts and schematics.
+Review the [IR Blaster Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/Accessories/IRblaster/hardware/) for an overview of the parts and schematics.
 
 **Equipment Needed**:
 * Soldering Iron
@@ -85,7 +89,7 @@ Cost: ~$96.00
 Assembly Time: 3.5 hrs  
 3D Print Time: 25 hrs  
 
-You can find the BOM in the [Keyboard Hardware Readme](/Keyboards/20_button_media/hardware/).
+You can find the BOM in the [Keyboard Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/Keyboards/20_button_media/hardware/).
 
 ### Keyboard Enclosure
 
@@ -93,7 +97,7 @@ Since this part takes the longest it is placed first.
 
 ### Keyboard Hardware
 
-Review the [Keyboard Hardware Readme](/Keyboards/20_button_media/hardware/) for an overview of the parts and schematics.
+Review the [Keyboard Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/Keyboards/20_button_media/hardware/) for an overview of the parts and schematics.
 
 **Equipment Needed**:
 * Soldering Iron
@@ -103,7 +107,7 @@ Review the [Keyboard Hardware Readme](/Keyboards/20_button_media/hardware/) for 
 * Fine point ESD tweezers
 
 **Keyboard Assembly**:
-1. Preform the ESP32 Thing Power Saving Modification as described in the [Hardware Readme](/Keyboards/20_button_media/hardware/).
+1. Preform the ESP32 Thing Power Saving Modification as described in the [Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/Keyboards/20_button_media/hardware/).
 1. Solder on all of the other components on the PCB.
 1. Cut the excess leads of the bottom side of the board, save enough of them to use to help solder the ESP32 Thing to the PCB.
 1. Attach the ESP32 Thing on the PCB temporarily secure with two nuts and bolts through the mounting holes near the micro USB port. Make sure all of the pins are aligned before tightening the bolts. Don't over tighten.

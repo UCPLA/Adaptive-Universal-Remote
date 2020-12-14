@@ -1,3 +1,7 @@
+layout: page
+title: "Keyboard and IR Blaster - Quickstart Guide"
+permalink: /keyboard_ir_blaster/guides/
+
 # Adaptive Universal Remote (AUR) Quickstart Guide
 
 Adaptive Universal Remote Kit
