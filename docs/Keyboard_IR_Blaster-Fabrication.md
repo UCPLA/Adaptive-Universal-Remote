@@ -1,6 +1,6 @@
 layout: page
 title: "Keyboard and IR Blaster - Fabrication Guide"
-permalink: /keyboard_ir_blaster/guides/
+permalink: /keyboard_ir_blaster/guides/fabrication
 
 # Keyboard and IR Blaster Fabrication Guide
 
