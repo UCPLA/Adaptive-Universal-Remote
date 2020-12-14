@@ -5,9 +5,20 @@ This project is brought to you by the [UCPLA Hackaday Prize 2020 Dream Team Chal
 
 ## Repository Contents
 
+### Main contents
+
 * **Accessories** - Additional products to be used with Universal Remote joysticks and or keyboards
-* **Joysticks** - Products that resemble or are used for direction input
-* **Keyboards** - Products designed as a button gird
+* **Gesture Control** - Products that use gesture control as an imput
+* **Keyboards** - Products designed as keyboard with a grid of buttons
+* **docs** - Project website and documentation
+
+### Product contents
+
+Any item that is a product will contain a directory for each aspect of the design with detailed readmes.
+
+* **components** - All CAD files needed to create the mechanical components needed for the project
+* **firmware** - The code that runs on the microcontoller
+* **hardware** - Schematics and board designs along with a bill of material (BOM)
 
 ## License Information
 
