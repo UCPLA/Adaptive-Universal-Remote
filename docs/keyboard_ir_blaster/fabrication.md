@@ -28,11 +28,11 @@ The Adaptive Universal Remote comprises of 2 products:
 
 They keyboard and IR blaster communicate using the ESP-NOW WiFi protocol. The keyboard is configured to send commands to one specific IR blaster. The IR blaster stores and sends IR codes when instructed to do so from the keyboard. They keyboard simply forwards commands per key to the IR blaster. They IR blaster can be pre-configured to work with any device that accepts IR commands. The commands can also be changed by the user using the learning feature.
 
-![](/assets/images/setup_overview.png)
+![](../../assets/images/setup_overview.png)
 
 ## IR Blaster
 
-![](/assets/images/ir_blaster.png)
+![](../../assets/images/ir_blaster.png)
 
 Dimensions: 43mm x 43mm x 25mm
 Control Range: 2.5m
@@ -84,7 +84,7 @@ Once finished, open the serial terminal and copy and save the devices MAC addres
 
 ## Keyboard
 
-![](/assets/images/keyboard_red.png)
+![](../../assets/images/keyboard_red.png)
 
 Dimensions: 222mm x 174mm x 65mm  
 Battery Life: 36-216 hours  

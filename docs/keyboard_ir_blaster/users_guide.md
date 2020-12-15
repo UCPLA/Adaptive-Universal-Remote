@@ -7,7 +7,7 @@ permalink: keyboard_ir_blaster/guides/users_guide
 
 Adaptive Universal Remote Kit
 
-![](/assets/images/starter_kit.png)
+![](../../assets/images/starter_kit.png)
 
 ## Table of Contents
 
@@ -35,23 +35,23 @@ Adaptive Universal Remote Kit
 
 The shipment includes three Adaptive Universal Remotes individually packaged in their own box. It will also contain a Roku Express for each AUR.
 
-![](/assets/images/starter_kits_initial_unboxing.png)
+![](../../assets/images/starter_kits_initial_unboxing.png)
 
 Carefully open the individual boxes - take care not to cut the contents inside the box when cutting through the tape.
 
-![](/assets/images/starter_kit_unboxing.png)
+![](../../assets/images/starter_kit_unboxing.png)
 
 *Important*: Keep the contents of each box separate to prevent mixing up the IR blasters that are linked to a specific keyboard.
-![](/assets/images/starter_kits_initial.png)
+![](../../assets/images/starter_kits_initial.png)
 
 *You can compare the labels on the backs of the keyboard(s) and IR blaster(s) to verify the "Device MAC" number on the IR blaster matches the "Paired Device" number on the keyboard.*
 
 Remove the small piece of masking tape used to keep the power switch in the off position during shipping.\
-![](/assets/images/power_switch.png)
+![](../../assets/images/power_switch.png)
 
 ### Contents
 
-![](/assets/images/starter_kit_content_map.png)
+![](../../assets/images/starter_kit_content_map.png)
 
 1. AUR Keyboard
 2. AUR IR Blaster
@@ -63,19 +63,19 @@ Remove the small piece of masking tape used to keep the power switch in the off 
 
 ### Setup Overview
 
-![](/assets/images/setup_overview.png)
+![](../../assets/images/setup_overview.png)
 
 The Adaptive Universal Remote is pre-configured to work out of the box with any Roku device that is compatible with an IR remote (including Roku Smart TV's). 
 
 ### Roku
 
-![](/assets/images/roku_logo.png)
+![](../../assets/images/roku_logo.png)
 
 Please follow the instructions in the Getting Started Guide that came with your Roku. You can also find helpful videos at [Roku - Setup and troubleshooting](https://support.roku.com/en-gb/category/115001360548).
 
 ### IR Blaster
 
-![](/assets/images/ir_blaster.png) 
+![](../../assets/images/ir_blaster.png) 
 
 
 If you are using this with a Roku Smart TV then no setup is required. Simply place the IR Blaster as instructed and use the keyboard just like any other Roku Remote.
@@ -114,7 +114,7 @@ That's it! Be sure to test this button to be sure it is working as expected. Rep
 
 ### Keyboard
 
-![](/assets/images/keyboard_red.png)
+![](../../assets/images/keyboard_red.png)
 
 Each keyboard is wirelessly linked to a specific IR blaster. No line of sight is needed between the keyboard and th IR blaster, as long as they are withing range (300 ft) of each other.
 
@@ -149,7 +149,7 @@ The keyboard will automatically go into a deep-sleep state after 60 seconds of i
 
 To wake up the keyboard you will need to press the skip-back or left arrow button. When awake the keyboard backlight will be on. 
 
-![](/assets/images/wake_buttons.png)
+![](../../assets/images/wake_buttons.png)
 
 ## Troubleshooting
 
