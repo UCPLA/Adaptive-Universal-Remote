@@ -1,7 +1,6 @@
 ---
-layout: page
 title: "Keyboard and IR Blaster - Fabrication Guide"
-permalink: /keyboard_ir_blaster/guides/fabrication
+permalink: keyboard_ir_blaster/guides/fabrication
 ---
 
 # Keyboard and IR Blaster Fabrication Guide
@@ -29,18 +28,20 @@ The Adaptive Universal Remote comprises of 2 products:
 
 They keyboard and IR blaster communicate using the ESP-NOW WiFi protocol. The keyboard is configured to send commands to one specific IR blaster. The IR blaster stores and sends IR codes when instructed to do so from the keyboard. They keyboard simply forwards commands per key to the IR blaster. They IR blaster can be pre-configured to work with any device that accepts IR commands. The commands can also be changed by the user using the learning feature.
 
-![](Images/setup_overview.png)
+![](/assets/images/setup_overview.png)
 
 ## IR Blaster
 
-Dimensions: 43mm x 43mm x 25mm  
-Control Range: 2.5m  
+![](/assets/images/ir_blaster.png)
+
+Dimensions: 43mm x 43mm x 25mm
+Control Range: 2.5m
 
 Cost: ~$35.00  
 Assembly Time: 30 min  
 3D Print Time: 4 hrs
 
-You can find the BOM in the [IR Blaster Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/Accessories/IRblaster/hardware/).
+You can find the BOM in the [IR Blaster Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/tree/master/Accessories/IRblaster/hardware/).
 
 ### IR Blaster Enclosure
 
@@ -48,7 +49,7 @@ Since this part takes the longest it is placed first.
 
 ### IR Blaster Hardware
 
-Review the [IR Blaster Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/Accessories/IRblaster/hardware/) for an overview of the parts and schematics.
+Review the [IR Blaster Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/tree/master/Accessories/IRblaster/hardware/) for an overview of the parts and schematics.
 
 **Equipment Needed**:
 * Soldering Iron
@@ -83,6 +84,8 @@ Once finished, open the serial terminal and copy and save the devices MAC addres
 
 ## Keyboard
 
+![](/assets/images/keyboard_red.png)
+
 Dimensions: 222mm x 174mm x 65mm  
 Battery Life: 36-216 hours  
 Control Range: 100m  
@@ -91,7 +94,7 @@ Cost: ~$96.00
 Assembly Time: 3.5 hrs  
 3D Print Time: 25 hrs  
 
-You can find the BOM in the [Keyboard Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/Keyboards/20_button_media/hardware/).
+You can find the BOM in the [Keyboard Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/tree/master/Keyboards/20_button_media/hardware/).
 
 ### Keyboard Enclosure
 
@@ -99,7 +102,7 @@ Since this part takes the longest it is placed first.
 
 ### Keyboard Hardware
 
-Review the [Keyboard Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/Keyboards/20_button_media/hardware/) for an overview of the parts and schematics.
+Review the [Keyboard Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/tree/master/Keyboards/20_button_media/hardware/) for an overview of the parts and schematics.
 
 **Equipment Needed**:
 * Soldering Iron
@@ -109,7 +112,7 @@ Review the [Keyboard Hardware Readme](https://github.com/UCPLA/Adaptive-Universa
 * Fine point ESD tweezers
 
 **Keyboard Assembly**:
-1. Preform the ESP32 Thing Power Saving Modification as described in the [Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/Keyboards/20_button_media/hardware/).
+1. Preform the ESP32 Thing Power Saving Modification as described in the [Hardware Readme](https://github.com/UCPLA/Adaptive-Universal-Remote/tree/master/Keyboards/20_button_media/hardware/).
 1. Solder on all of the other components on the PCB.
 1. Cut the excess leads of the bottom side of the board, save enough of them to use to help solder the ESP32 Thing to the PCB.
 1. Attach the ESP32 Thing on the PCB temporarily secure with two nuts and bolts through the mounting holes near the micro USB port. Make sure all of the pins are aligned before tightening the bolts. Don't over tighten.

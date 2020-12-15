@@ -2,3 +2,6 @@
 *.pro
 *.b#*
 *.s#*
+_site
+.sass-cache
+*.lock
