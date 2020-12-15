@@ -85,7 +85,7 @@ const uint64_t irDefaults[] = {0,              0,                 0,            
 // The IR transmitter.
 IRsend irsend(kIrLedPin);
 
-// Use turn on the save buffer feature for m7ore complete capture coverage.
+// Use turn on the save buffer feature for more complete capture coverage.
 IRrecv irrecv(kRecvPin, kCaptureBufferSize, kTimeout, true);
 decode_results results;  // Somewhere to store the results
 
